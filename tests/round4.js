@@ -28,7 +28,7 @@ async function newPage(e,title,tpl){await e.p.evaluate(()=>{document.querySelect
  ok('11 going back anyway returns to Home with the address bar and dropdown in step',await e.p.evaluate(()=>location.search==='?page=index'&&document.querySelector('#page').value==='index'),await e.p.evaluate(()=>location.search+' '+document.querySelector('#page').value));
  ok('16 no console errors',e.errs.length===0,JSON.stringify(e.errs.slice(0,2)));await e.ctx.close();}
 // 9 offline recovery + stale toolbar
-{const e=await open('index');const pg2=SITE==='dave'?'live':'faqs';
+{const e=await open('index');const pg2=SITE==='dave'?'live':'gallery';
  await e.F().evaluate(()=>{const h=document.querySelector('main h1,main h2,main p');h&&h.click();});await e.p.waitForTimeout(300);
  await e.ctx.setOffline(true);await e.p.evaluate(x=>DYE.goPage(x),pg2).catch(()=>{});await e.p.waitForTimeout(2500);
  ok('9 offline: friendly message instead of the browser error page',await e.p.evaluate(()=>!document.querySelector('#frameerr').hidden));
@@ -36,7 +36,7 @@ async function newPage(e,title,tpl){await e.p.evaluate(()=>{document.querySelect
  await e.ctx.setOffline(false);await e.p.waitForTimeout(3500);
  ok('9 back online: page recovers by itself',await e.p.evaluate(()=>document.querySelector('#frameerr').hidden)&&await e.F().evaluate(()=>!!window.DYI));await e.ctx.close();}
 // 12 add block + 14 keyboard
-{const e=await open(SITE==='dave'?'index':'faqs');const sec=SITE==='dave'?'main>.hero,main>section:first-of-type,.hero':'main>section:nth-of-type(2)';
+{const e=await open(SITE==='dave'?'index':'gallery');const sec=SITE==='dave'?'main>.hero,main>section:first-of-type,.hero':'main>section:nth-of-type(2)';
  const bb=await e.F().locator(sec).first().boundingBox();const fr=await e.p.locator('#frame').boundingBox();
  await e.p.mouse.click(fr.x+bb.x+4,fr.y+bb.y+Math.min(bb.height/2,120));await e.p.waitForTimeout(300);
  let opened=[];for(let i=0;i<4;i++){const bt=e.p.locator('#selbar button:has-text("+ Add block")');if(!await bt.count()){opened.push('nobtn');continue;}await bt.first().click();await e.p.waitForTimeout(300);const o=await e.p.evaluate(()=>!document.querySelector('#pickm').hidden);opened.push(o);if(i<3){await e.p.keyboard.press('Escape');await e.p.waitForTimeout(200);}}

@@ -108,12 +108,12 @@ await p.context().close();}
 
 /* stale drafts: an old demo draft (made before this content.json version) must not bring back DATE TBC */
 {const ctx=await b.newContext({viewport:{width:1280,height:900}});const base=await (await fetch(BASE+'/content.json?x='+Date.now())).json();
- const old=JSON.parse(JSON.stringify(base));old.faqs[0].q='DATE TBC';delete old.version;
+ const old=JSON.parse(JSON.stringify(base));old.testimonials[0].who='DATE TBC';delete old.version;
  await ctx.addInitScript(o=>{if(!sessionStorage.getItem('y')){sessionStorage.setItem('y',1);localStorage.clear();localStorage.setItem('dy-mode','demo');localStorage.setItem('dy2-draft-demo',JSON.stringify({content:o,uploads:{}}));}},old);
- const p=await ctx.newPage();await p.goto(BASE+'/admin/?page=faqs');await p.waitForFunction(()=>{try{return document.querySelector('#frame').contentWindow.DYI}catch(e){}});await p.waitForTimeout(800);
- const txt=await p.frame({url:/edit=1/}).evaluate(()=>document.querySelector('[data-cms=faqs]').innerText);
+ const p=await ctx.newPage();await p.goto(BASE+'/admin/?page=index');await p.waitForFunction(()=>{try{return document.querySelector('#frame').contentWindow.DYI}catch(e){}});await p.waitForTimeout(800);
+ const txt=await p.frame({url:/edit=1/}).evaluate(()=>document.querySelector('[data-cms=testimonials]').innerText);
  ok('stale draft without the current version is dropped (no DATE TBC)',!/TBC/.test(txt)&&await p.evaluate(()=>!localStorage.getItem('dy2-draft-demo')||JSON.parse(localStorage.getItem('dy2-draft-demo')).base),txt.replace(/\n/g,' '));
  // a current draft is kept
- await p.evaluate(()=>window.DYE.change(c=>{c.faqs[0].q='KEEP ME';}));await p.reload();await p.waitForTimeout(2000);
- ok('a draft made from the current version is kept',/KEEP ME/.test(await p.frame({url:/edit=1/}).evaluate(()=>document.querySelector('[data-cms=faqs]').innerText)));await ctx.close();}
+ await p.evaluate(()=>window.DYE.change(c=>{c.testimonials[0].who='KEEP ME';}));await p.reload();await p.waitForTimeout(2000);
+ ok('a draft made from the current version is kept',/KEEP ME/.test(await p.frame({url:/edit=1/}).evaluate(()=>document.querySelector('[data-cms=testimonials]').innerText)));await ctx.close();}
 await b.close();console.log('SUMMARY',res.filter(r=>r[1]).length+'/'+res.length);})().catch(e=>{console.error('CRASH',e);process.exit(1);});

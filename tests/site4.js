@@ -2,7 +2,7 @@
 const {chromium}=require('playwright');const B=process.argv[2]||'http://localhost:8765';const res=[];const ok=(n,c,x)=>{res.push([n,!!c]);console.log((c?'PASS ':'FAIL ')+n+(x?' '+x:''));};
 (async()=>{const b=await chromium.launch({executablePath:process.env.CHROME||'/usr/bin/google-chrome',args:['--no-sandbox']});
 const ctx=await b.newContext({viewport:{width:390,height:800},isMobile:true,hasTouch:true});const p=await ctx.newPage();const msgs=[];p.on('console',m=>msgs.push(m.type()+': '+m.text()));
-for(const pg of ['index','videos','testimonials','faqs','blog','contact']){await p.goto(B+'/'+pg+'.html',{waitUntil:'networkidle'});
+for(const pg of ['index','about','testimonials','gallery','blog','contact']){await p.goto(B+'/'+pg+'.html',{waitUntil:'networkidle'});
  const r=await p.evaluate(()=>({tab:document.getElementById('main').getAttribute('tabindex'),og:document.querySelector('meta[property="og:image"]').content,rob:document.querySelector('meta[name=robots]').content}));
  ok(pg+': #main is focusable (skip link lands on it)',r.tab==='-1');ok(pg+': og:image is absolute',/^https:\/\//.test(r.og),r.og);ok(pg+': noindex,nofollow',/noindex/.test(r.rob)&&/nofollow/.test(r.rob));
  const small=await p.evaluate(()=>[...document.querySelectorAll('a')].filter(a=>{const r=a.getBoundingClientRect(),cs=getComputedStyle(a);return r.width&&cs.visibility!=='hidden'&&!a.matches('.skip')&&(r.height<43.5||r.width<43.5);}).map(a=>a.textContent.trim().slice(0,20)+' '+Math.round(a.getBoundingClientRect().width)+'x'+Math.round(a.getBoundingClientRect().height)));
@@ -22,7 +22,7 @@ await p.fill('form.enq input[name=Name]','Test Person');await p.fill('form.enq i
 const [req]=await Promise.all([p.waitForEvent('framenavigated',{timeout:1500}).catch(()=>null),p.click('form.enq button[type=submit]')]);await p.waitForTimeout(300);
 ok('Send keeps the page where it is (opens the email app only)',/contact\.html/.test(p.url())&&!/\?Name=/.test(p.url()),p.url());
 // FAQ: click each question at the bottom of the screen; dock must not steal the click
-await p.goto(B+'/faqs.html',{waitUntil:'networkidle'});let stolen=0,n=await p.locator('summary').count();
+await p.goto(B+'/gallery.html',{waitUntil:'networkidle'});let stolen=0,n=await p.locator('summary').count();
 for(let i=0;i<n;i++){const s=p.locator('summary').nth(i);await s.scrollIntoViewIfNeeded();const r=await s.boundingBox();await p.evaluate(y=>scrollBy(0,y),Math.max(0,r.y+r.height-(800-70)));const bb=await s.boundingBox();await p.touchscreen.tap(bb.x+30,bb.y+bb.height/2);await p.waitForTimeout(120);if(!/faqs\.html/.test(p.url())){stolen++;break;}}
 ok('FAQ questions near the bottom edge never trigger the sticky dock',stolen===0,'questions '+n);
 // westlife wide
@@ -31,7 +31,7 @@ ok('Westlife group photo is a wide rounded rectangle (all four faces)',w&&w.w>w.
 
 // round 5: menu Escape, 320px, 12px subtext, 8px gaps between taps
 {const c2=await b.newContext({viewport:{width:320,height:700},isMobile:true,hasTouch:true});const q=await c2.newPage();
- for(const pg of ['index','videos','faqs','blog','contact']){await q.goto(B+'/'+pg+'.html',{waitUntil:'networkidle'});
+ for(const pg of ['index','about','gallery','blog','contact']){await q.goto(B+'/'+pg+'.html',{waitUntil:'networkidle'});
   const r=await q.evaluate(()=>{const de=document.documentElement;const small=getComputedStyle(document.querySelector('.brand small')).fontSize;
    const els=[...document.querySelectorAll('footer a, header a, header button')].filter(e=>e.offsetParent!==null&&!e.matches('.skip')&&getComputedStyle(e).position!=='fixed');let min=99;
    for(let i=0;i<els.length;i++)for(let j=i+1;j<els.length;j++){const a=els[i],b=els[j];if(a.contains(b)||b.contains(a))continue;const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();const dx=Math.max(x.left-y.right,y.left-x.right),dy=Math.max(x.top-y.bottom,y.top-x.bottom);if(dx<0&&dy<0)continue;const g=dx<0?dy:dy<0?dx:Math.max(dx,dy);if(g<min)min=g;}

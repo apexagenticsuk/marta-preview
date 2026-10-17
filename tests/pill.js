@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');(async()=>{const B=process.argv[2]||'http://localhost:8765';const b=await chromium.launch({executablePath:process.env.CHROME||'/usr/bin/google-chrome',args:['--no-sandbox']});
 const W=+(process.env.W||1400),H=+(process.env.H||900);
-for(const pg of (process.argv[3]||'index,videos,testimonials,faqs,blog,contact').split(',')){
+for(const pg of (process.argv[3]||'index,about,gallery,testimonials,blog,contact').split(',')){
 const c=await b.newContext({viewport:{width:W,height:H}});await c.addInitScript(()=>{if(!sessionStorage.x){localStorage.clear();localStorage.setItem('dy-mode','demo');sessionStorage.x=1}});
 const p=await c.newPage();await p.goto(B+'/admin/?page='+pg);await p.waitForFunction(()=>{try{return document.querySelector('#frame').contentWindow.DYI}catch(e){}});await p.waitForTimeout(1500);
 const F=()=>p.frame({url:/edit=1/});const order=()=>F().evaluate(()=>[...document.querySelectorAll('main>.dy-sec')].map(e=>e.getAttribute('data-dy').split(' ')[0]).join());

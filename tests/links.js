@@ -2,7 +2,7 @@
 // probed and reported (warn only, third-party sites may block bots). Usage: node tests/links.js [base]
 const {chromium}=require('playwright');
 const BASE=(process.argv[2]||'http://localhost:8765').replace(/\/$/,'')+'/';
-const PAGES=['index','videos','testimonials','faqs','blog','contact','page'];
+const PAGES=['index','about','testimonials','gallery','blog','contact','page'];
 (async()=>{const b=await chromium.launch({executablePath:process.env.CHROME||undefined,args:['--no-sandbox']});
 const ctx=await b.newContext();const p=await ctx.newPage();const errs=[];p.on('pageerror',e=>errs.push(e.message));
 const seen=new Map(),ext=new Map();let fail=0,ok=0;
@@ -14,7 +14,7 @@ for(const pg of PAGES){await p.goto(BASE+pg+'.html',{waitUntil:'networkidle'});
   bad:[...document.images].filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src),
   ids:[...document.querySelectorAll('[id]')].map(e=>e.id)}));
  d.bad.forEach(u=>{console.log('FAIL broken image',pg,u);fail++});
- for(const h of [...d.a,...d.s]){if(!h||/^(mailto:|tel:|javascript:|data:)/.test(h))continue;
+ for(const h of [...d.a,...d.s]){if(!h||/^(mailto:|tel:|sms:|javascript:|data:)/.test(h))continue;
   if(h[0]==='#'){if(h.length>1&&!d.ids.includes(h.slice(1))){console.log('FAIL anchor',pg,h);fail++}else ok++;continue}
   if(/^https?:/.test(h)&&!h.startsWith(BASE)){ext.set(h,pg);continue}
   const u=new URL(h,BASE+pg+'.html');u.hash='';const k=u.href;if(seen.has(k))continue;

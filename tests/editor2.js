@@ -54,15 +54,15 @@ ok(M+': Move up is disabled on the first section',await first.isDisabled());
 // no text selection / sideways scroll
 ok(M+': no text selection while editing (outside typing)',await F().evaluate(()=>getComputedStyle(document.body).userSelect==='none'));
 // browse all pages + Shared tabs
-for(const pg of ['videos','testimonials','faqs','blog','contact','index']){await go(pg);
+for(const pg of ['about','testimonials','gallery','blog','contact','index']){await go(pg);
  ok(M+': no sideways scroll in the editor on '+pg,await F().evaluate(()=>{const d=document.documentElement;return d.scrollWidth<=d.clientWidth+1;}));}
-for(const k of ['posts','testimonials','clips','faqs','praise','gallery','facts','set','contact']){await p.evaluate(x=>DYE.openShared(x),k);await p.evaluate(()=>document.querySelectorAll('#sharedm details.shrow').forEach(d=>d.open=true));await p.waitForTimeout(250);}
+for(const k of ['posts','testimonials','clips','gallery','praise','gallery','facts','set','contact']){await p.evaluate(x=>DYE.openShared(x),k);await p.evaluate(()=>document.querySelectorAll('#sharedm details.shrow').forEach(d=>d.open=true));await p.waitForTimeout(250);}
 ok(M+': no console errors or failed requests',errs.length===0,JSON.stringify(errs.slice(0,4)));
 await ctx.close();}
 // layout shift between plain preview and editing (classic scrollbars)
 {const ctx=await b.newContext({viewport:{width:1400,height:900}});await ctx.addInitScript(()=>{localStorage.setItem('dy-mode','demo')});
 const q=()=>{const h=document.querySelector('main .wrap h2, main h1');return Math.round(h.getBoundingClientRect().left)+'/'+document.documentElement.clientWidth};
-for(const pg of ['index','faqs','contact']){const p=await ctx.newPage();await p.goto(BASE+'/admin/?page='+pg);await p.waitForTimeout(3000);const ed=await p.frame({url:/edit=1/}).evaluate(q);await p.close();
+for(const pg of ['index','gallery','contact']){const p=await ctx.newPage();await p.goto(BASE+'/admin/?page='+pg);await p.waitForTimeout(3000);const ed=await p.frame({url:/edit=1/}).evaluate(q);await p.close();
  const p2=await ctx.newPage();await p2.setViewportSize({width:1400,height:794});await p2.goto(BASE+'/'+pg+'.html');await p2.waitForTimeout(1200);const pv=await p2.evaluate(q);await p2.close();ok('no layout shift between preview and editing on '+pg,ed===pv,ed+' vs '+pv);}
 await ctx.close();}
 await b.close();console.log('SUMMARY',res.filter(r=>r[1]).length+'/'+res.length);process.exit(res.every(r=>r[1])?0:1);})().catch(e=>{console.error('CRASH',e.message);process.exit(1);});

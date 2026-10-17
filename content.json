@@ -1,815 +1,1288 @@
 {
- "version": 1,
- "_help": "Every fact is written once here. Pages are built from it. Edit in /admin/.",
- "siteUrl": "https://apexagenticsuk.github.io/marta-preview/",
- "theme": {
-  "accent": "rose"
- },
- "contact": {
-  "phone": "087-2616-317",
-  "email": "info@martasmagic.com",
-  "org": "Marta's Magic Kids Show",
-  "brand": "Magic Marta",
-  "person": "Marta",
-  "base": "Co. Dublin",
-  "tagline": "Fun, interactive shows for children's parties and family events",
-  "website": "kidsshow.ie",
-  "sayhello": "Can't wait to have Magic Marta at my party!"
- },
- "nav": [
-  {
-   "key": "index",
-   "label": "Home",
-   "show": "menu"
-  },
-  {
-   "key": "about",
-   "label": "About",
-   "show": "menu"
-  },
-  {
-   "key": "gallery",
-   "label": "Gallery",
-   "show": "menu"
-  },
-  {
-   "key": "testimonials",
-   "label": "Testimonials",
-   "show": "menu"
-  },
-  {
-   "key": "blog",
-   "label": "What’s Up?",
-   "show": "menu"
-  },
-  {
-   "key": "contact",
-   "label": "Contact",
-   "show": "menu"
-  }
- ],
- "socials": [
-  {
-   "network": "facebook",
-   "url": "https://www.facebook.com/kidsshow"
-  },
-  {
-   "network": "instagram",
-   "url": "https://www.instagram.com/magiciandublin"
-  },
-  {
-   "network": "youtube",
-   "url": "https://www.youtube.com/user/magiciandublin"
-  },
-  {
-   "network": "tiktok",
-   "url": "https://www.tiktok.com/@magiciandublin"
-  },
-  {
-   "network": "x",
-   "url": "https://twitter.com/martasmagic"
-  },
-  {
-   "network": "linkedin",
-   "url": "https://www.linkedin.com/in/martasmagic/"
-  }
- ],
- "sites": [
-  {
-   "key": "dave-main",
-   "name": "Dave Young",
-   "live": "https://daveyounglive.com",
-   "preview": "https://apexagenticsuk.github.io/dave-preview/"
-  },
-  {
-   "key": "wedding",
-   "name": "The Wedding Comedian",
-   "live": "https://theweddingcomedian.ie",
-   "preview": "https://apexagenticsuk.github.io/wedding-preview/"
-  },
-  {
-   "key": "marta",
-   "name": "Magic Marta",
-   "live": "https://www.kidsshow.ie",
-   "preview": "https://apexagenticsuk.github.io/marta-preview/"
-  }
- ],
- "services": [
-  {
-   "id": "birthday",
-   "icon": "cake",
-   "title": "Birthday parties",
-   "text": ""
-  },
-  {
-   "id": "communion",
-   "icon": "star",
-   "title": "Communions",
-   "text": "Now Booking for 2026 Communion Celebrations!"
-  },
-  {
-   "id": "christening",
-   "icon": "heart",
-   "title": "Christenings",
-   "text": ""
-  },
-  {
-   "id": "wedding",
-   "icon": "gift",
-   "title": "Weddings",
-   "text": "Thinking of new and interesting ways to entertain your younger guests?"
-  },
-  {
-   "id": "corporate",
-   "icon": "building",
-   "title": "Corporate events",
-   "text": ""
-  },
-  {
-   "id": "christmas",
-   "icon": "tree",
-   "title": "Christmas parties",
-   "text": ""
-  },
-  {
-   "id": "festival",
-   "icon": "tent",
-   "title": "Festivals",
-   "text": ""
-  },
-  {
-   "id": "shopping",
-   "icon": "bag",
-   "title": "Shopping centres",
-   "text": ""
-  }
- ],
- "testimonials": [
-  {
-   "id": "t01",
-   "place": "home",
-   "who": "Claire",
-   "role": "Woodstown Dental Centre",
-   "text": "“Great job, kept the kids entertained and stress free before their appoinment! The magic sweets helped lol!”"
-  },
-  {
-   "id": "t02",
-   "place": "home",
-   "who": "George",
-   "role": "The Square Tallaght",
-   "text": "“5 stars for Marta's Magic! She so deserves it. She was very prompt from the start and gave a great magic show at our event. All of the little ones enjoyed themselves and she had us all laughing the whole time. In addition, her balloon twisting skills is very impressive!”"
-  },
-  {
-   "id": "t03",
-   "place": "home",
-   "who": "Judy",
-   "role": "Axis Insurance",
-   "text": "“Xmas Party was fabulous, Marta you are simply magic! Thank You from all at Axis.”"
-  },
-  {
-   "id": "t04",
-   "place": "page",
-   "who": "Bernie",
-   "role": "Christ Church Cathedral",
-   "text": "“It was great to have such a lovely girl magician work with us, thank you again Marta the festival wouldn't be the same without you! And hope you weren't affraid to work in the crypt!”"
-  },
-  {
-   "id": "t05",
-   "place": "page",
-   "who": "Michelle",
-   "role": "Tinahely Festival",
-   "text": "“When she arrived, she was really friendly, she told us what she was going to do, she kept us informed of everything which I loved! Cool performance.”"
-  },
-  {
-   "id": "t06",
-   "place": "page",
-   "who": "Mia",
-   "role": "Steam Museum",
-   "text": "“Marta our fun day entertainer was simply excellent. She was extremely professional, friendly, easy to work with, and more to the point, very entertaining. It was a great day and a stress free experience.”"
-  },
-  {
-   "id": "t07",
-   "place": "page",
-   "who": "Ann",
-   "role": "Bumblebee Montessori & Childcare",
-   "text": "“I just want to thank you again for coming to our event last Friday. Every child and parent loved you so much”"
-  },
-  {
-   "id": "t08",
-   "place": "page",
-   "who": "Dennis",
-   "role": "Newlands Golf Club",
-   "text": "“It was certainly wonderful having you at the Children's Christmas Party on the 9th Dec! We will definately keep you in mind for future events!”"
-  },
-  {
-   "id": "t09",
-   "place": "page",
-   "who": "Tim",
-   "role": "The National Yacht Club",
-   "text": "“The party was excellent and the children's faces were a joy to watch as they had a great time. The magician arrived nice and early and really knew her stuff and booking her couldn't have been easier.”"
-  },
-  {
-   "id": "t10",
-   "place": "page",
-   "who": "Caroline",
-   "role": "St. Michaels House",
-   "text": "“Fantastic show for kids and adults. Marta the magician keeps you entertained the whole time and her magic is great, absolutely recommended for all parties, great fun!”"
-  },
-  {
-   "id": "t11",
-   "place": "page",
-   "who": "Cecilie",
-   "role": "Cocoon Childcare",
-   "text": "“She arrived with a sweet set-up beyond our expectations. And in addition to completely keeping the kids occupied with wonder and smiles for an hour +, she did a wonderful job of showing magic and created a wonderful show.”"
-  },
-  {
-   "id": "t12",
-   "place": "page",
-   "who": "Phillip",
-   "role": "SuperValu",
-   "text": "“A huge thanks to Marta for making our store opening so special. We were impressed immediately, she got the children into the party spirit instantly. Magic, face painting, balloons and above all fun in our busy store!”"
-  },
-  {
-   "id": "t13",
-   "place": "page",
-   "who": "Jane",
-   "role": "Druids Glen",
-   "text": "“A big thank you for entertaining the children at our event at the Druids Glen Club House. The children had a fabulous time and certainly enjoyed the balloon swords and little animals that you made for them. And who could forget the beautiful face painting!”"
-  },
-  {
-   "id": "t14",
-   "place": "page",
-   "who": "Bob",
-   "role": "Durcans",
-   "text": "“Thanks for the performance in our store. Your face painting was very impressive, your balloon making and magic show were well performed too!”"
-  },
-  {
-   "id": "t15",
-   "place": "page",
-   "who": "Michael",
-   "role": "Ana Liffey Drug Project",
-   "text": "“Just wanted to send a quick email to say thank you for the great time! The kids in ALDP loved you! We will see ya soon!”"
-  },
-  {
-   "id": "t16",
-   "place": "page",
-   "who": "Lynn",
-   "role": "Liffey Valley",
-   "text": "“Marta was the most popular addition to our Alice In Wonderland Theme. We had over 500+ visitors that day and she did a great job entertaining the children (and adults too) with her magic show and balloon twisting!”"
-  },
-  {
-   "id": "t17",
-   "place": "page",
-   "who": "Marlene",
-   "role": "Vodafone",
-   "text": "“Just wanted to send a quick email to thank you for your services last weekend. You did more than we expected and we really appreciate it! The children had a wonderful time and they are very fond of you - children fall in love with you instantly!”"
-  }
- ],
- "clients": [
-  {
-   "name": "IKEA",
-   "img": "assets/logo_ikea.webp"
-  },
-  {
-   "name": "Bank of Ireland",
-   "img": "assets/logo_bank_of_ireland.webp"
-  },
-  {
-   "name": "Citibank",
-   "img": "assets/logo_citibank.webp"
-  },
-  {
-   "name": "J.P. Morgan",
-   "img": "assets/logo_jp_morgan.webp"
-  },
-  {
-   "name": "Tesco",
-   "img": "assets/logo_tesco.webp"
-  },
-  {
-   "name": "Web Summit",
-   "img": "assets/logo_web_summit.webp"
-  },
-  {
-   "name": "Harvey Norman",
-   "img": "assets/logo_harvey_norman.webp"
-  },
-  {
-   "name": "BMW",
-   "img": "assets/logo_bmw.webp"
-  },
-  {
-   "name": "SuperValu",
-   "img": "assets/logo_supervalu.webp"
-  },
-  {
-   "name": "Coca-Cola",
-   "img": "assets/logo_coca_cola.webp"
-  },
-  {
-   "name": "Flying Tiger",
-   "img": "assets/logo_flying_tiger.webp"
-  },
-  {
-   "name": "Cystic Fibrosis Ireland",
-   "img": "assets/logo_cystic_fibrosis_ireland.webp"
-  },
-  {
-   "name": "Matheson",
-   "img": "assets/logo_matheson.webp"
-  },
-  {
-   "name": "Lidl",
-   "img": "assets/logo_lidl.webp"
-  },
-  {
-   "name": "Salesforce",
-   "img": "assets/logo_salesforce.webp"
-  },
-  {
-   "name": "Fitbit",
-   "img": "assets/logo_fitbit.webp"
-  },
-  {
-   "name": "Vodafone",
-   "img": "assets/logo_vodafone.webp"
-  }
- ],
- "awards": [
-  {
-   "title": "Mrs2be.ie Bride’s Choice Awards",
-   "year": "2015",
-   "text": "Nominated for the second year running.",
-   "img": "assets/post_34.webp"
-  },
-  {
-   "title": "Weddings Online blog: Alternative Entertainment",
-   "year": "2024",
-   "text": "Magic Marta was featured in the Weddings Online blog.",
-   "img": ""
-  }
- ],
- "gallery": [
-  {
-   "img": "assets/g_magic_show.webp",
-   "alt": "A magic show set-up with a top hat and sign in front of pink balloons",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_witch_hat.webp",
-   "alt": "A little girl in a pointed witch’s hat",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_face_paint_drink.webp",
-   "alt": "A girl with white face paint in a red frilly dress holding a glass",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_balloon_hat_boy.webp",
-   "alt": "A toddler in a balloon hat with balloon animals",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_face_paint_cheer.webp",
-   "alt": "A face-painted girl cheering with her arms up",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_frog_hat.webp",
-   "alt": "A boy in a green frog balloon hat",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_black_white_face.webp",
-   "alt": "A black and white photo of a child with face paint",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_face_paint_girl.webp",
-   "alt": "A girl with a pattern painted across her face",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_face_paint_group.webp",
-   "alt": "Children with face paint and balloon models",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_blue_face.webp",
-   "alt": "A boy with his face painted blue",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_marta_red_jacket.webp",
-   "alt": "Marta in a red jacket making a balloon animal",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_marta_balloons.webp",
-   "alt": "Marta sitting among balloon animals",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_toddler_balloons.webp",
-   "alt": "A toddler with a balloon crown and sparkles",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_wedding_guests.webp",
-   "alt": "A bride in a white dress next to a woman",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_party_kids.webp",
-   "alt": "Children with face paint and balloon swords",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_marta_kids_pool.webp",
-   "alt": "Marta with two girls",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_marta_shop.webp",
-   "alt": "Marta with a girl and a woman holding a pink teddy",
-   "cap": ""
-  },
-  {
-   "img": "assets/g_marta_peppa.webp",
-   "alt": "Marta next to someone dressed as Peppa Pig",
-   "cap": ""
-  }
- ],
- "clips": [
-  {
-   "id": "c-home",
-   "vid": "mTJYoEMKo8o",
-   "title": "Marta's Magic Kids Show",
-   "cap": "",
-   "thumb": "assets/yt_mTJYoEMKo8o.webp",
-   "place": "both"
-  },
-  {
-   "id": "c-magic",
-   "vid": "UevRhQEmBcc",
-   "title": "Add a little magic...",
-   "cap": "From the What’s Up? post of 16 Oct 2019",
-   "thumb": "assets/yt_UevRhQEmBcc.webp",
-   "place": "gallery"
-  },
-  {
-   "id": "c-party",
-   "vid": "oWKJjb4UorU",
-   "title": "Make your kids party fun & memorable",
-   "cap": "From the What’s Up? post of 24 Jan 2017",
-   "thumb": "assets/yt_oWKJjb4UorU.webp",
-   "place": "gallery"
-  }
- ],
- "posts": [
-  {
-   "id": "post-01",
-   "title": "🌟 Now Booking for 2025 Communion Celebrations! 🌟",
-   "by": "Magic Marta",
-   "date": "2024-09-12",
-   "body": "Exciting news! Magic Marta is now accepting bookings for children's entertainment for communion celebrations in 2025! 🎉\nIf you’re planning a special communion event and want to ensure the kids have an unforgettable time, now’s the perfect moment to secure an entertainer who brings joy, excitement, and engaging activities to the party.\n🎩 What's on offer:\nInteractive magic shows\nFun games and activities\nBalloon modelling\nAnd much more!\nBooking Information: Contact us at www.kidsshow.ie to reserve your date and discuss how we can make your communion celebration extra special!\nDon’t miss out on the chance to create lasting memories for your little one and their friends. Get in touch today to book Magic Marta and make your event truly magical!",
-   "img": "assets/post_01.webp",
-   "alt": "Poster for communion bookings in 2025, with a magic show scene"
-  },
-  {
-   "id": "post-02",
-   "title": "Alternative Entertainment",
-   "by": "Weddings Online",
-   "date": "2024-03-07",
-   "body": "I'm delighted to be featured in the Weddings Online Blog : Alternative Entertainment\nRead the article here\nhttps://www.weddingsonline.ie/blog/wol-loves-18-alternative-entertainment-ideas/",
-   "img": "assets/post_02.webp",
-   "alt": "Marta holding a heart-shaped balloon beside a Weddings Online card"
-  },
-  {
-   "id": "post-03",
-   "title": "Good news!",
-   "by": "Magic Marta",
-   "date": "2021-05-03",
-   "body": "Covid restrictions are easing,  soon we can meet outdoors to socialise, including in private gardens. Limit does not include children so it's a great time to catch up on missed birthdays and celebrations.\nHere's  to a great summer, give your little ones a great time!"
-  },
-  {
-   "id": "post-04",
-   "title": "Get to know Magic Marta",
-   "by": "Hamish Urquhart",
-   "date": "2021-01-31",
-   "body": "Quickfire questions with Magic Marta\nHow did you get into magic and kid’s entertainment?\nMy partner is a professional entertainer and magician. So, through the fun and magic he showed me, I formed a love for magic I never knew I had.\nHe taught me it’s not about the props and tricks, it’s all about the fun and the interaction with children. That’s the real magic!\nDo you remember your first show?\nI’ll never forget it.  I was so nervous, not because I didn’t know the tricks, but because I wasn’t sure how the kids would react to me.\nI remember walking through the doors of this big house in Malahide and there must have been around 50 kids, and I thought to myself ‘Well there’s only me and them, let’s do this.  All I can do is my best and be myself’.\nAnd to my great surprise they warmed to me immediately and the show was a big success.\nLooking back, I don’t know why I was so nervous.  But I feel it’s important to always be a little bit nervous because that energy encourages you to be the best you can be, and children of all ages inherently sense that.\nTell us a bit about your regular show\nMy Magic show is pretty much tailored to suit different customers’ needs.\nIt is full of magic, music, games, treats, balloons, puppetry, face painting, and includes a super cool magical gift!\nWith my entertainment skills and their imaginations, together we create an unforgettable hour of laughter and fun!\nThat’s a lot of different activities – how did you learn all of those things?\nI was always good at art, I enjoy learning new skills, and I am self-taught.\nI used to practice face painting on my niece and nephew. I needed models so badly that I went to the extreme and I made my own model… my daughter Charlee.\nShe loves it; at least four times a week she’s asks me “Mummy let’s play funny faces!”\nHave you had any memorable shows that perhaps didn’t go to plan?\nYes, there was one I will never forget!… It was the month of May, Communion season, probably the busiest month for all kids’ entertainers.\nI arrived at the hotel, set up, and needed to use the bathroom. Then my biggest nightmare happened – the lock in the bathroom door broke and I got locked in! I was stuck there for a good half an hour.\nThe poor manager of the hotel had to drive to B&Q to get tools and then to rescue me.\nI got the biggest cheer when I got out and of course a slagging that I was ‘some magician’…they all said ‘why couldn’t you use your magic to get out?’  ‘I’m a magician not an escapologist!’ I replied.\nAnd how did you build the business?\nI could tell you I spent a lot of money on face book ads, websites, advertising and the like, but actually it was word of mouth.\nI built my own website, I got stuck in, and I got out there and just started performing.\nThe business grew and grew from parents and customers recommending me.\nYou see, when you do something you love, it’s not work – it’s a joy and people pick up on that and they want to share it with their friends.\nWho are your biggest inspirations?\nMy Mam & Dad inspired me a lot and gave me the confidence and the skills in life to work hard, to be honest and to be kind to people. My partner Dave taught me how to be funny, engaging and entertaining.\nWhen I was only starting out, I was worried; what if the trick didn’t go right?\nDave explained to me that only you know if the trick went right or wrong, the real magic is the fun.\nThis advice has stood me well.  If only he was as optimistic about my cooking! Or ‘burning’ as he calls it!!\nWhy do you enjoy doing what you do?\nI can’t think of a better way to make a living; bringing fun and joy and a little magic to people’s lives…. can you?\nIn what other profession can you see the charm and unreserved happiness in people.  Children are the real magic in life!\nWhat makes a great kids’ entertainer?\nI don’t think you could make someone a kids’ entertainer, I think it’s either in them or it’s not.\nIf money is your motivation, well then you will never be an entertainer because it’s not a life with a guaranteed steady income; there’s no sick or holiday pay and you never know from one week to the next if you’re working.\nBut when you enjoy what it is you do, the work comes!  I think you unconsciously attract it with your energy that in turn attracts people towards you.\nYou prosper from that, I’m sure there’s a little LOOK involved too. That’s not a typo or my Polish English (!); it’s my philosophy ‘Look and you will find!’\nI gather you have recently had a second baby – that was good timing?!\nYes, my second daughter, Nicci, was born in the middle of this pandemic; it was great timing to be on maternity leave and to really enjoy motherhood.\nAll my shows were postponed so it gave me priceless time to spend with my girls, and my biggest kid Dave Young! lol\nHow are you planning to adapt your business in light of the current restrictions?\nWell, the only option at the moment seems to be virtual.\nIt would not be my first preference because I think you can’t beat the interaction with a live audience. We built a studio where myself and my partner perform from.\nI’ve performed some virtual shows over the Christmas, and they have gone exceptionally well, but I really can’t wait to get back to doing what I love to do, which is live shows.\nThere’s no comparison to the atmosphere of a live show versus a computer screen.\nYou know the old saying “the smell of the crowd, the roar of the greasepaint!”\nDid I say that right? Hey I’m Polrish! (That’s what you get when you mix Polish with Irish…Polrish!)\nTell us something we wouldn’t know about you\nMy first love in life is my partner and my two girls, my second love is entertaining, and my third love is cooking.\nIn a way it’s entertainment for me to take something from nothing and turn it into something beautiful and then eat it.\nNow that’s magic! haha\nWhat do you think of PartyWizz?\nWhat I like about PartyWizz is they are one of the few entertainment companies that take a genuine interest in their performers.\nThey are very easy to work with and their ability to present their clients with an entertainer suitable for their needs is insightful.\nThank you PartyWizz, it was a pleasure talking to you, and I’m looking forward to a prosperous 2021.\nNo matter what happens, I will keep the little ones entertained and keep the magic going! After all there are no restrictions on imagination!",
-   "img": "assets/post_04.webp",
-   "alt": "Marta in a dark jacket with her arms in the air among balloon animals"
-  },
-  {
-   "id": "post-05",
-   "title": "Online Magic Shows",
-   "by": "Magic Marta",
-   "date": "2020-09-01",
-   "body": "Easy to organise plus cost effective solutions for Lockdown!\nMarta's Magic Zoom Birthday Parties are a fun filled 35 minute magic show with lots of Comedy magic and interaction.\nContact me today for availability and more info",
-   "img": "assets/post_05.webp",
-   "alt": "A magic show set-up with balloons beside a television screen"
-  },
-  {
-   "id": "post-06",
-   "title": "The Society of Irish Magicians ♠️♥️♦️♣️",
-   "by": "Magic Marta",
-   "date": "2020-03-05",
-   "body": "Had a wonderful time at the 80th anniversary show for the Society of Irish Magicians\nWell done to the whole production!",
-   "img": "assets/post_06.webp",
-   "alt": "Poster for the Society of Irish Magicians 80th anniversary show"
-  },
-  {
-   "id": "post-07",
-   "title": "Up The Dubs! 💙💙💙",
-   "by": "Magic Marta",
-   "date": "2020-02-17",
-   "body": "I was working in the Lamartine Showrooms the other day, I'm delighted I got to see the Sam Maguire cup & I've met Brian Fenton - What a gent!",
-   "img": "assets/post_07.webp",
-   "alt": "Two people with a large silver cup"
-  },
-  {
-   "id": "post-08",
-   "title": "New customers!",
-   "by": "Magic Marta",
-   "date": "2020-01-07",
-   "body": "I'm delighted and thankful for all my existing and new customers i've gained in the past few weeks\nLooking forward to entertaining you throughout 2020",
-   "img": "assets/post_08.webp",
-   "alt": "Banner of client logos with Marta in costume"
-  },
-  {
-   "id": "post-09",
-   "title": "Add a little magic...",
-   "by": "Magic Marta",
-   "date": "2019-10-16",
-   "body": "... to your special occasion with Marta's Magic Kidsshow.ie ⭐⭐⭐⭐⭐\nNow booking for all occassions {contact.phone}",
-   "clip": "c-magic"
-  },
-  {
-   "id": "post-10",
-   "title": "Communions 2020",
-   "by": "Magic Marta",
-   "date": "2019-10-15",
-   "body": "The super busy communion season is approaching quicker then you think..\nwell is definitely booking up quickly :)\nDublin only\nLimited availability 2nd May\nLimited availability 3rd May\nFully booked 9th May\nLimited availability 10th May\nFully booked 16th May\nLimited availability 17th May\nLimited availability 23rd May\nLimited availability 24th May\nCall or txt now to avoid disappointment...",
-   "img": "assets/post_10.webp",
-   "alt": "Banner: Communions 2020 with Magic Marta"
-  },
-  {
-   "id": "post-11",
-   "title": "Back to School 📚📚📚",
-   "by": "Magic Marta",
-   "date": "2018-08-29",
-   "body": "Best of luck in your new school year, kids!\n🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎\n#kidspartyireland #magicianireland #magicmarta #magiciandublin#kidsmagician #drseussquote #backtoschool",
-   "img": "assets/post_11.webp",
-   "alt": "Chalkboard style Back to School message"
-  },
-  {
-   "id": "post-12",
-   "title": "🌞🌞🌞 Summer 2018 🌞🌞🌞",
-   "by": "Magic Marta",
-   "date": "2018-05-10",
-   "body": "Summer is just around the corner and iam available to perform my award winning magic shows at festivals, picnics, hotels, shopping centres and at all kids gatherings nationwide.\nBook early to avoid disappointment! You will be in for a magical time... !!!\nBest Magic Marta x\n{contact.phone}",
-   "img": "assets/post_12.webp",
-   "alt": "Collage of photos from a summer garden party"
-  },
-  {
-   "id": "post-13",
-   "title": "Happy Mother's Day!",
-   "by": "Magic Marta",
-   "date": "2018-03-18",
-   "body": "",
-   "img": "assets/post_13.webp",
-   "alt": "Mother’s Day card from Magic Marta with pink flowers"
-  },
-  {
-   "id": "post-14",
-   "title": "Roses are red... 💞",
-   "by": "Magic Marta",
-   "date": "2018-02-14",
-   "body": "Happy Valentine's Day! 💖",
-   "img": "assets/post_14.webp",
-   "alt": "Marta holding a heart-shaped balloon"
-  },
-  {
-   "id": "post-15",
-   "title": "Christmas Party Entertainment",
-   "by": "Magic Marta",
-   "date": "2017-10-24",
-   "body": "Yes we can't believe it either... it's that time of the year again 🎄🎄🎄🎄🎄\nNow booking for Christmas Parties 2017\n✔️ For your office\n✔️For your corporate event\n✔️ For your festival\n✔️ For your private event\n✔️ Or  anywhere little ones need entertaining!\nContact Magic Marta today {contact.phone}",
-   "img": "assets/post_15.webp",
-   "alt": "Christmas Entertainment banner with Marta and children"
-  },
-  {
-   "id": "post-16",
-   "title": "Happy Halloween",
-   "by": "Magic Marta",
-   "date": "2017-10-10",
-   "body": "I just love Halloween\nBook your little ones party today\n{contact.phone} 🤣🤣🤣"
-  },
-  {
-   "id": "post-17",
-   "title": "Just for Kids Ireland",
-   "by": "Magic Marta",
-   "date": "2017-07-06",
-   "body": "Join Facebook latest group www.facebook.com/justforkidsireland for all upcoming events, advertising, deals and more!",
-   "img": "assets/post_17.webp",
-   "alt": "Just for Kids Ireland banner with colourful sweets"
-  },
-  {
-   "id": "post-18",
-   "title": "Back in Mount Congreve!",
-   "by": "Magic Marta",
-   "date": "2017-07-02",
-   "body": "Very pleased to be back in Mount Congreve Gardens in Waterford for their annual festival!\nYou can find me performing my magic show on the 16th July 2017 from 12-5pm\nSee you then!",
-   "img": "assets/post_18.webp",
-   "alt": "Photos of a garden event at Mount Congreve"
-  },
-  {
-   "id": "post-19",
-   "title": "💞 Baby Luna 💞",
-   "by": "Magic Marta",
-   "date": "2017-06-30",
-   "body": "Meet my latest adition to my magic family...\n💞 Baby Luna 💞\nThis little one, is going to teach all the little ones some cool magic this summer!\nHope she's not too naughty....",
-   "img": "assets/post_19.webp",
-   "alt": "A smiling puppet toy"
-  },
-  {
-   "id": "post-20",
-   "title": "Hello Summer!",
-   "by": "Magic Marta",
-   "date": "2017-06-28",
-   "body": "I'm delighted to announce I will be performing my award winning magic show in the lovely Upton Court Hotel in Wexford this summer!\nSee you every Tuesday from the 11th July - 15th Aug for lots of magic & fun xxx\nLove Magic Marta",
-   "img": "assets/post_20.webp",
-   "alt": "Flyer for Marta’s Magic Kids Show at Upton Court Hotel"
-  },
-  {
-   "id": "post-21",
-   "title": "How to spoil your Mum",
-   "by": "Magic Marta",
-   "date": "2017-03-06",
-   "body": "Mother's Day 2017 is approaching fast... Here's some great ideas on how to treat your mammy this Mother's Day...\n1. Beautiful, handmade gifts are in demand at the moment - they are always unique, quirky, and can be personalised at a great price too :) I like to find mine on Facebook,\nEtsy.com or local markets. Here's where i got a pressie for my mum last year :)\n2. Head over to Allie's Hair & Beauty - no better way to start the day than with the gorgeous blow dry - more details here.\n3. Send your Mommy over to Hard Rock Nail Salon in Palmerstown to get fabulous Shellac nails - don't forget to book early to avoid disappointment more details here.\n4. When all the pampering is done its time for a delicious treat - how about an afternoon tea in one of the popular Dublin's spots...\nIndependent.ie picked 5 top spots here .\n5. Why not experience a lovely trip to the Wicklow mountains .\nGet your runners on and do some exploring around the garden of Ireland. Whether it's a walk through Glendalough, or coffee in\nRussborough House or some photos by the Powerscourt Waterfall, you're sure to create memories you'll cherish forever!\n6. Why not book a relaxing two night break in The Castleknock Hotel, (at the moment if you book any Sunday and Monday night you'll receive a discount of 25% ;)\n7. And best of all why not give your mommy a great laugh at The Red\nCow Inn this Mother's Day with Ireland's favourite comedian\nDave Young. Tickets are going fast so book early - more about Dave here.",
-   "img": "assets/post_21.webp",
-   "alt": "Mother’s Day ideas banner with tulips"
-  },
-  {
-   "id": "post-22",
-   "title": "Super Sundays is back!",
-   "by": "Magic Marta",
-   "date": "2017-03-01",
-   "body": "Due to popular demand Super Sundays is back!\nHave your little ones party on a Sunday in March and save money.\nCall or text now, quote \"Super Sundays\" and receive 25% discount -\nNow... that's magic...\n{contact.phone}"
-  },
-  {
-   "id": "post-23",
-   "title": "St. Patrick's Day Fun Ideas",
-   "by": "Magic Marta",
-   "date": "2017-02-24",
-   "body": "Kids parties have become hugely popular over the St. Partick's Day Bank Holiday weekend. There's no better time to let your little ones invite over a few friends for some holiday fun. Here's a few fun ideas for St. Patrick's Day including party crafts, games and food...\n1. Silly Mcgilly\nStart a new St. Patrick's Day tradition by inviting the magic of Silly McGilly into your home or classroom.  Silly McGilly is an adorable leprechaun who loves playing fun little tricks on children throughout the St. Patrick's Day season.  Read Silly McGilly's book with your children and place his doll in the window overnight.\nIf you are lucky, Silly might just play a trick on you as you sleep!\n2. Cool party games\nGold Hunt\nHide gold coins around the house or garden and have the kids hunt for them. The child that collects the most coins wins!\nKiss the Blarney Stone\nPrint out photo of the Blarney Stone and hang it on a wall. Put lipstick or face paint on the little ones, blindfold them and send them to plant a kiss on the Blarney Stone. Players who come closest to kissing the stone win a prize.\nSt. Patrick's Day Parade\nCan't make it to the parade? No problem :)\nGather fun props, wigs, flags & banners and let them parade on their own, right in your home and garden!\nIrish dancing competition\nJust play some Irish music and let the kids show off their best attempts at Irish dancing.\n3. Fun green & rainbow food\nPractically any food can be dyed green with a little food coloring!\nHow about green pasta with pesto for a quick snack and green cupcakes and some rainbow jelly for a nice dessert. You could make your own shamrocks milkshakes - that's always a hit!",
-   "img": "assets/post_23.webp",
-   "alt": "Kids party ideas for St. Patrick’s Day on a green shamrock background"
-  },
-  {
-   "id": "post-24",
-   "title": "🌟 Entertainer for Your event 🌟",
-   "by": "Magic Marta",
-   "date": "2017-02-20",
-   "body": "kids magician dublin kids party magician magician for event kids party magician\nMarta's Magic Kids Show Entertainment is your one-stop shop for children's entertainment in Dublin. Marta's mission is simple: to deliver the very best in children's entertainment. Whether you're looking for something to keep the kids entertained at an upcoming birthday party or a full stage show for your family fun day, no event is too big or too small. 🎪🎭🎨🎈🎀🎉🎁🃏🍭🍬\nEverything we do is tailored to the specific event so please contact us to discuss your requirements and we'll put together the perfect package for you. Options include:\n🌟 Magic Show\n🌟 Balloon Modelling\n🌟 Face Painting\n🌟 Puppets\n🌟 Dance Parties\n🌟 Festival Entertainment\n🌟 Shopping Centres Entertainment\n🌟 Corporate Event Entertainment & Much More!\nFor more info contact us here\nOr call {contact.phone}",
-   "img": "assets/post_24.webp",
-   "alt": "A girl holding a pink teddy beside Marta in a shop"
-  },
-  {
-   "id": "post-25",
-   "title": "Swimming Birthday Party",
-   "by": "Magic Marta",
-   "date": "2017-02-09",
-   "body": "Recently I had the pleasure of performing at a pool party in Ballyfermot Leisure Centre. It was my first time to perform at a party beside a swimming pool. I really loved the idea - once all the little ones arrived, light snacks were given and then off they went to the pool for an hour of play under supervision from the fully trained and experienced pool staff. Then after the kids dried off and changed their clothes my superpowers kicked in to manage over Fifty 6 years olds,baffled them with cool magic tricks, paint their faces, run a dancing competition during a magic disco and announce my winner! Later on all the little ones had a lunch and we all sang Happy Birthday and cut the cake of course.\nEveryone had a great time, kids and parents and I couldn't recommend this place more - definitely a party to remember... Magical!",
-   "img": "assets/post_25.webp",
-   "alt": "Sports and fitness swimming pool venue banner"
-  },
-  {
-   "id": "post-26",
-   "title": "Make your kids party fun & memorable",
-   "by": "Magic Marta",
-   "date": "2017-01-24",
-   "body": "Hi guys, here's just a little taste of the fun and great time kids have during my award winning magic show...\nEnjoy!",
-   "clip": "c-party"
-  },
-  {
-   "id": "post-27",
-   "title": "Happy New Year!",
-   "by": "Magic Marta",
-   "date": "2017-01-01",
-   "body": "Happy New Year! 🌟🎉🌟 I want to wish all my customers and little friends the most magical and spectacular birthdays in 2017 💗🎂💗\nAnd as a treat for the new year I would like to offer 20% discount for the month of January for all bookings now that's Magic! call or txt {contact.phone}",
-   "img": "assets/post_27.webp",
-   "alt": "Children in a photo booth with Happy New Year signs"
-  },
-  {
-   "id": "post-28",
-   "title": "Ho, ho, ho...",
-   "by": "Magic Marta",
-   "date": "2016-12-24",
-   "body": "Well it's been the most exciting and most adventures year so far for me...\nI want to wish you all the most magical and warm Christmas ever and say a big thank you to my customers big and small who i had the pleasure of performing to in the last year 💖\nSee you all in the New Year & don't forget to go to bed early boys & girls cause Santa is on the way\nBest Magic Marta x",
-   "img": "assets/post_28.webp",
-   "alt": "People dressed as Santa and Mrs Claus"
-  },
-  {
-   "id": "post-29",
-   "title": "First Holy Communion Entertainment",
-   "by": "Magic Marta",
-   "date": "2016-03-21",
-   "body": "Do you need Communion entertainment that will provide long lasting memories for your little ones First Holy Communion?\nMy award winning Magic show is filled with the coolest magic tricks, tastiest sweets, colourful balloon animals, mini disco but my show doesn’t stop there, it also includes a free magic gift!\nMy fee is tailored just for you so Call or Text today {contact.phone}\n& I will get you the best deal around!\nHave a great day, looking forward to your call\nMagic Marta",
-   "img": "assets/post_29.webp",
-   "alt": "A girl in a white communion dress inside a decorative frame"
-  },
-  {
-   "id": "post-30",
-   "title": "Super Sundays!",
-   "by": "Magic Marta",
-   "date": "2016-02-12",
-   "body": "Have your Kids party on a Sunday and save money! Offer valid untill 1st April only, call or text now {contact.phone} and let the Magic begin xxx"
-  },
-  {
-   "id": "post-31",
-   "title": "8 Fun Ideas for Kids at Weddings",
-   "by": "Magic Marta",
-   "date": "2015-09-17",
-   "body": "The discussion of whether to invite children to a wedding always becomes a passionate one. In one corner, you have people who think kids add a certain magic to the atmosphere. In the other corner, you have those who feel as though that \"magic\" is more the dark variety - the screaming, the messing, the ruining. But including kids in your festivities doesn't have to be a horror movie in the making. Follow these guidelines to ensure that your wedding is fun for all ages...\n1. Kids Only Space\nGive them their own space so that they feel all grown up. These cute signs will make them feel important and you’ll know exactly where to find them.\n2. Cute Place Names\nHave some fun with the table setting and use letter shaped cookies to spell out the littlest members of the wedding party’s names. Other cute alternatives are tags tied to lollipops or little Lego men figurines next to their name card!\n3. A Special Toast\nLet little folk be a part of the toast with their own special kid-friendly drink. Old time favourites like milk and cookies or milk topped with mini doughnuts will go down a treat as will milkshakes, smoothies, mini bottles of lemonade or hot chocolates for chillier winter wedding celebrations.\n4. Craft Corner\nSwap your fancy table cloth for a sheet of Kraft paper or some blackboard place mats and leave a bunch of colouring pencils, chalk or crayons in the middle so they can doodle as they dine. Bonus – you don’t have to worry about spillages, stains and dry cleaning bills.\n5. Party Bags\nGive them their own little stash of goodies to keep them amused. Fill party bags with bits and bobs from sweets and games to colouring pencils, jigsaws, Lego, bubbles and stickers to pass the hours.\n6. Fun & Games\nGames are a great way to keep kids occupied. If you’re having a summer wedding, set up some outdoor games to let them burn some energy. Or if you’re worried about the weather, some board games will work a treat indoors. There are also some great printables available online that you can download for free (Martha Stewart have an I Spy game). We also love the idea of having a big bowl of Lego as a centrepiece so they can dig and get creative after dinner.\n7. Movie Night\nOne of the handiest ways to keep them happy is with a favourite movie! Check with your venue whether there’s a room close by that you can use for a bit of a movie night or if you’ve no one to keep an eye on them, create a movie corner close to where you’re sitting. Pop on a Disney fave and let them wile away the hours with some popcorn and a few sweets.\n8. The Professionals\nAn easy, stress free way to entertain the kids is by hiring a professional!  If you’re after an activity to keep them busy, there are a wealth of amazing magicians you can hire for a few hours to kill some time and keep them laughing like Marta’s Magic Show.\nwww.weddingsonline.ie",
-   "img": "assets/post_31.webp",
-   "alt": "Wooden Kids Only signs and a table of sweets"
-  },
-  {
-   "id": "post-32",
-   "title": "One thing every wedding needs!",
-   "by": "Magic Marta",
-   "date": "2015-06-25",
-   "body": "A fantastic addition to every wedding!\nRecently i had a pleasure of working with The Wedding Comedian at a wedding in Trim Castle and i can safely say he's the funniest man in the World! The whole room was bursting with laughter and happines it was something i never saw at any wedding, so I decided I have to share this with you here!\nHere's few quotes from his website that explains what The Wedding Comedian is all about:\n\"So, you're gonna get yourself married?\nOk, you've got a lot of work to do, and of course, never enough time to do it all!\nWith over 20 years of experience, countless awards and hi-profile achievements Dave Young knows how to make them laugh and keep them smiling long after the day is over!\nTailor made to your specific requirements, Dave will create a live show  that will have both sides of the family laughing together as one and lets face it, isn't that what it's all about?\nEach story, fantastic set pieces and audience interaction will be highly entertaining and always original with your own personal stories and anecdotes of family members interwoven into a truly special event!\"\nCheck out his website here: www.theweddingcomedian.ie",
-   "img": "assets/post_32.webp",
-   "alt": "A toy car with a Just Married sign"
-  },
-  {
-   "id": "post-33",
-   "title": "#ThrowbackThursday",
-   "by": "Magic Marta",
-   "date": "2015-05-28",
-   "body": "I just came across a post on the website tickledpinkmusic and they wrote a while back about Magic Marta, it's explaining a little bit more about wedding entertainment that I provide:\nToday in Tickled Pink’s blog we continue talking about entertaining children at weddings by introducing a professional kid’s entertainer: Marta’s Magic Kids Show. We have seen Marta perform in various occasions and we were very impressed by her well prepared, dynamic and fun performance.\nWe invited Marta to Tickled Pink’s blog to learn a bit more about her work and how she can help couples give the little ones a fab day at their wedding.\n\"Hi, my name is Marta and I’m a professional full time magician who specializes in cool and entertaining magic shows for family audiences. I have been performing now for many years up and down the country, with my special brand of magic.\nMy magic show is hugely popular for birthdays, communions, christenings, corporate events, Christmas parties, festivals and of course weddings!\nThe secret is in my special blend of Magic, Comedy, Face Painting, Balloon modelling and audience participation that involves and entertains children, as well as making them laugh! And the sound of children’s laughter filling a room is magical.\nWeddings are a big part of my working week.\nWhen you have kids coming to your wedding, usually they are of various ages, so keeping them entertained can be tricky. I help to take the strain off the parents with my magic and let all the guests enjoy the wedding day. You know it’s a fantastic way to keep all the kids happy and in one place throughout your special day.\nI usually entertain the little ones during the speeches (a time when it’s very hard for a kid to concentrate and behave). As soon as I arrive I quietly set up and start what I do best – show all the kids a great time, let the grown-ups enjoy themselves, make sure everyone is happy and give the Bride & Groom a wedding to remember….now that’s magic!\"\nThanks Tickledpinkmusic :)",
-   "img": "assets/post_33.webp",
-   "alt": "Children with face paint and balloon models"
-  },
-  {
-   "id": "post-34",
-   "title": "Mrs2be Bride's Choice Awards",
-   "by": "Magic Marta",
-   "date": "2015-03-02",
-   "body": "Great news guys I've just been nominated for the second year running for the Mrs2be.ie Bride's Choice Awards.\nA Massive thank you to all of my brides and grooms for having me entertain all the little ones & guests at their weddings.\nI'll be in touch shortly for your reviews.\nThanks again Magic Marta xxx",
-   "img": "assets/post_34.webp",
-   "alt": "Mrs2be Bride’s Choice Awards 2015 nominated badge"
-  },
-  {
-   "id": "post-35",
-   "title": "Wedding Entertainment",
-   "by": "Magic Marta",
-   "date": "2015-02-16",
-   "body": "It's not just the fantastic show I give the little ones, its the professionalism, my great time keeping, and my own enthusiasm and love for what I do it's the real Magic!\nWeddings are really aimed at adults and the little ones can become quite bored and forgotten, but when I arrive they light up and are transported to my wonderful world of Magic where they are fully entertained with everything from my coolest Magic tricks, tastiest sweets, my colourful balloon animals, amazing face painting, mini disco but my show doesn't stop there it includes genuine love for what I do, and that's the real Magic!",
-   "img": "assets/post_35.webp",
-   "alt": "A bride in a white dress next to a woman"
-  },
-  {
-   "id": "post-36",
-   "title": "Happy Christmas",
-   "by": "Magic Marta",
-   "date": "2014-12-23",
-   "body": "Mrs Claus :) reading the wish lists of all the boys and girls of Valleymount National School, a magical time for all xxx",
-   "img": "assets/post_36.webp",
-   "alt": "A girl in a Santa hat writing cards at a Christmas table"
-  }
- ],
- "seo": {
-  "index": {
-   "title": "Kids Magician | Marta's Magic Kids Show | Dublin",
-   "description": "Magic Marta | Children's Party Entertainer | Children's Magician | Face Painting | Balloon Modelling | Magic Show | Magician Dublin | Ireland"
-  },
-  "about": {
-   "title": "About Marta | Marta's Magic Kids Show",
-   "description": "Meet Magic Marta: a full-time professional children's entertainer and award-winning magician based in Co. Dublin."
-  },
-  "gallery": {
-   "title": "Gallery | Marta's Magic Kids Show",
-   "description": "Photos and videos of Magic Marta's magic shows, face painting and balloon modelling."
-  },
-  "testimonials": {
-   "title": "Testimonials | Marta's Magic Kids Show",
-   "description": "What parents, schools, shops and companies say about Magic Marta."
-  },
-  "blog": {
-   "title": "What's Up? | Marta's Magic Kids Show",
-   "description": "News, ideas and party tips from Magic Marta."
+  "version": 1,
+  "_help": "Every fact is written once here. Pages are built from it. Edit in /admin/.",
+  "siteUrl": "https://apexagenticsuk.github.io/marta-preview/",
+  "theme": {
+    "accent": "rose"
   },
   "contact": {
-   "title": "Contact Magic Marta | Marta's Magic Kids Show",
-   "description": "Call or text 087-2616-317, or send an enquiry to Magic Marta."
+    "phone": "087-2616-317",
+    "email": "info@martasmagic.com",
+    "org": "Marta's Magic Kids Show",
+    "brand": "Magic Marta",
+    "person": "Marta",
+    "base": "Co. Dublin",
+    "tagline": "Fun, interactive shows for children's parties and family events",
+    "website": "kidsshow.ie",
+    "sayhello": "Can't wait to have Magic Marta at my party!"
+  },
+  "nav": [
+    {
+      "key": "index",
+      "label": "Home",
+      "show": "menu"
+    },
+    {
+      "key": "about",
+      "label": "About",
+      "show": "menu"
+    },
+    {
+      "key": "gallery",
+      "label": "Gallery",
+      "show": "menu"
+    },
+    {
+      "key": "testimonials",
+      "label": "Testimonials",
+      "show": "menu"
+    },
+    {
+      "key": "blog",
+      "label": "What’s Up?",
+      "show": "menu"
+    },
+    {
+      "key": "contact",
+      "label": "Contact",
+      "show": "menu"
+    }
+  ],
+  "socials": [
+    {
+      "network": "facebook",
+      "url": "https://www.facebook.com/kidsshow"
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/magiciandublin"
+    },
+    {
+      "network": "youtube",
+      "url": "https://www.youtube.com/user/magiciandublin"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@magiciandublin"
+    },
+    {
+      "network": "x",
+      "url": "https://twitter.com/martasmagic"
+    },
+    {
+      "network": "linkedin",
+      "url": "https://www.linkedin.com/in/martasmagic/"
+    }
+  ],
+  "sites": [
+    {
+      "key": "dave-main",
+      "name": "Dave Young",
+      "live": "https://daveyounglive.com",
+      "preview": "https://apexagenticsuk.github.io/dave-preview/"
+    },
+    {
+      "key": "wedding",
+      "name": "The Wedding Comedian",
+      "live": "https://theweddingcomedian.ie",
+      "preview": "https://apexagenticsuk.github.io/wedding-preview/"
+    },
+    {
+      "key": "marta",
+      "name": "Magic Marta",
+      "live": "https://www.kidsshow.ie",
+      "preview": "https://apexagenticsuk.github.io/marta-preview/"
+    }
+  ],
+  "services": [
+    {
+      "id": "birthday",
+      "icon": "cake",
+      "title": "Birthday parties",
+      "text": ""
+    },
+    {
+      "id": "communion",
+      "icon": "star",
+      "title": "Communions",
+      "text": ""
+    },
+    {
+      "id": "christening",
+      "icon": "heart",
+      "title": "Christenings",
+      "text": ""
+    },
+    {
+      "id": "wedding",
+      "icon": "gift",
+      "title": "Weddings",
+      "text": ""
+    },
+    {
+      "id": "corporate",
+      "icon": "building",
+      "title": "Corporate events",
+      "text": ""
+    },
+    {
+      "id": "christmas",
+      "icon": "tree",
+      "title": "Christmas parties",
+      "text": ""
+    },
+    {
+      "id": "festival",
+      "icon": "tent",
+      "title": "Festivals",
+      "text": ""
+    },
+    {
+      "id": "shopping",
+      "icon": "bag",
+      "title": "Shopping centres",
+      "text": ""
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t01",
+      "place": "home",
+      "who": "Claire",
+      "role": "Woodstown Dental Centre",
+      "text": "“Great job, kept the kids entertained and stress free before their appoinment! The magic sweets helped lol!”"
+    },
+    {
+      "id": "t02",
+      "place": "home",
+      "who": "George",
+      "role": "The Square Tallaght",
+      "text": "“5 stars for Marta's Magic! She so deserves it. She was very prompt from the start and gave a great magic show at our event. All of the little ones enjoyed themselves and she had us all laughing the whole time. In addition, her balloon twisting skills is very impressive!”"
+    },
+    {
+      "id": "t03",
+      "place": "home",
+      "who": "Judy",
+      "role": "Axis Insurance",
+      "text": "“Xmas Party was fabulous, Marta you are simply magic! Thank You from all at Axis.”"
+    },
+    {
+      "id": "t04",
+      "place": "page",
+      "who": "Bernie",
+      "role": "Christ Church Cathedral",
+      "text": "“It was great to have such a lovely girl magician work with us, thank you again Marta the festival wouldn't be the same without you! And hope you weren't affraid to work in the crypt!”"
+    },
+    {
+      "id": "t05",
+      "place": "page",
+      "who": "Michelle",
+      "role": "Tinahely Festival",
+      "text": "“When she arrived, she was really friendly, she told us what she was going to do, she kept us informed of everything which I loved! Cool performance.”"
+    },
+    {
+      "id": "t06",
+      "place": "page",
+      "who": "Mia",
+      "role": "Steam Museum",
+      "text": "“Marta our fun day entertainer was simply excellent. She was extremely professional, friendly, easy to work with, and more to the point, very entertaining. It was a great day and a stress free experience.”"
+    },
+    {
+      "id": "t07",
+      "place": "page",
+      "who": "Ann",
+      "role": "Bumblebee Montessori & Childcare",
+      "text": "“I just want to thank you again for coming to our event last Friday. Every child and parent loved you so much”"
+    },
+    {
+      "id": "t08",
+      "place": "page",
+      "who": "Dennis",
+      "role": "Newlands Golf Club",
+      "text": "“It was certainly wonderful having you at the Children's Christmas Party on the 9th Dec! We will definately keep you in mind for future events!”"
+    },
+    {
+      "id": "t09",
+      "place": "page",
+      "who": "Tim",
+      "role": "The National Yacht Club",
+      "text": "“The party was excellent and the children's faces were a joy to watch as they had a great time. The magician arrived nice and early and really knew her stuff and booking her couldn't have been easier.”"
+    },
+    {
+      "id": "t10",
+      "place": "page",
+      "who": "Caroline",
+      "role": "St. Michaels House",
+      "text": "“Fantastic show for kids and adults. Marta the magician keeps you entertained the whole time and her magic is great, absolutely recommended for all parties, great fun!”"
+    },
+    {
+      "id": "t11",
+      "place": "page",
+      "who": "Cecilie",
+      "role": "Cocoon Childcare",
+      "text": "“She arrived with a sweet set-up beyond our expectations. And in addition to completely keeping the kids occupied with wonder and smiles for an hour +, she did a wonderful job of showing magic and created a wonderful show.”"
+    },
+    {
+      "id": "t12",
+      "place": "page",
+      "who": "Phillip",
+      "role": "SuperValu",
+      "text": "“A huge thanks to Marta for making our store opening so special. We were impressed immediately, she got the children into the party spirit instantly. Magic, face painting, balloons and above all fun in our busy store!”"
+    },
+    {
+      "id": "t13",
+      "place": "page",
+      "who": "Jane",
+      "role": "Druids Glen",
+      "text": "“A big thank you for entertaining the children at our event at the Druids Glen Club House. The children had a fabulous time and certainly enjoyed the balloon swords and little animals that you made for them. And who could forget the beautiful face painting!”"
+    },
+    {
+      "id": "t14",
+      "place": "page",
+      "who": "Bob",
+      "role": "Durcans",
+      "text": "“Thanks for the performance in our store. Your face painting was very impressive, your balloon making and magic show were well performed too!”"
+    },
+    {
+      "id": "t15",
+      "place": "page",
+      "who": "Michael",
+      "role": "Ana Liffey Drug Project",
+      "text": "“Just wanted to send a quick email to say thank you for the great time! The kids in ALDP loved you! We will see ya soon!”"
+    },
+    {
+      "id": "t16",
+      "place": "page",
+      "who": "Lynn",
+      "role": "Liffey Valley",
+      "text": "“Marta was the most popular addition to our Alice In Wonderland Theme. We had over 500+ visitors that day and she did a great job entertaining the children (and adults too) with her magic show and balloon twisting!”"
+    },
+    {
+      "id": "t17",
+      "place": "page",
+      "who": "Marlene",
+      "role": "Vodafone",
+      "text": "“Just wanted to send a quick email to thank you for your services last weekend. You did more than we expected and we really appreciate it! The children had a wonderful time and they are very fond of you - children fall in love with you instantly!”"
+    }
+  ],
+  "clients": [
+    {
+      "name": "IKEA",
+      "img": "assets/logo_ikea.webp"
+    },
+    {
+      "name": "Bank of Ireland",
+      "img": "assets/logo_bank_of_ireland.webp"
+    },
+    {
+      "name": "Citibank",
+      "img": "assets/logo_citibank.webp"
+    },
+    {
+      "name": "J.P. Morgan",
+      "img": "assets/logo_jp_morgan.webp"
+    },
+    {
+      "name": "Tesco",
+      "img": "assets/logo_tesco.webp"
+    },
+    {
+      "name": "Web Summit",
+      "img": "assets/logo_web_summit.webp"
+    },
+    {
+      "name": "Harvey Norman",
+      "img": "assets/logo_harvey_norman.webp"
+    },
+    {
+      "name": "BMW",
+      "img": "assets/logo_bmw.webp"
+    },
+    {
+      "name": "SuperValu",
+      "img": "assets/logo_supervalu.webp"
+    },
+    {
+      "name": "Coca-Cola",
+      "img": "assets/logo_coca_cola.webp"
+    },
+    {
+      "name": "Flying Tiger",
+      "img": "assets/logo_flying_tiger.webp"
+    },
+    {
+      "name": "Cystic Fibrosis Ireland",
+      "img": "assets/logo_cystic_fibrosis_ireland.webp"
+    },
+    {
+      "name": "Matheson",
+      "img": "assets/logo_matheson.webp"
+    },
+    {
+      "name": "Lidl",
+      "img": "assets/logo_lidl.webp"
+    },
+    {
+      "name": "Salesforce",
+      "img": "assets/logo_salesforce.webp"
+    },
+    {
+      "name": "Fitbit",
+      "img": "assets/logo_fitbit.webp"
+    },
+    {
+      "name": "Vodafone",
+      "img": "assets/logo_vodafone.webp"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Mrs2be.ie Bride’s Choice Awards",
+      "year": "2015",
+      "text": "Nominated for the second year running.",
+      "img": "assets/post_34.webp"
+    },
+    {
+      "title": "Weddings Online blog: Alternative Entertainment",
+      "year": "2024",
+      "text": "Magic Marta was featured in the Weddings Online blog.",
+      "img": ""
+    }
+  ],
+  "gallery": [
+    {
+      "img": "assets/g_magic_show.webp",
+      "alt": "A magic show set-up with a top hat and sign in front of pink balloons",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_witch_hat.webp",
+      "alt": "A little girl in a pointed witch’s hat",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_face_paint_drink.webp",
+      "alt": "A girl with white face paint in a red frilly dress holding a glass",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_balloon_hat_boy.webp",
+      "alt": "A toddler in a balloon hat with balloon animals",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_face_paint_cheer.webp",
+      "alt": "A face-painted girl cheering with her arms up",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_frog_hat.webp",
+      "alt": "A boy in a green frog balloon hat",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_black_white_face.webp",
+      "alt": "A black and white photo of a child with face paint",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_face_paint_girl.webp",
+      "alt": "A girl with a pattern painted across her face",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_face_paint_group.webp",
+      "alt": "Children with face paint and balloon models",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_blue_face.webp",
+      "alt": "A boy with his face painted blue",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_marta_red_jacket.webp",
+      "alt": "Marta in a red jacket making a balloon animal",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_marta_balloons.webp",
+      "alt": "Marta sitting among balloon animals",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_toddler_balloons.webp",
+      "alt": "A toddler with a balloon crown and sparkles",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_wedding_guests.webp",
+      "alt": "A bride in a white dress next to a woman",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_party_kids.webp",
+      "alt": "Children with face paint and balloon swords",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_marta_kids_pool.webp",
+      "alt": "Marta with two girls",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_marta_shop.webp",
+      "alt": "Marta with a girl and a woman holding a pink teddy",
+      "cap": ""
+    },
+    {
+      "img": "assets/g_marta_peppa.webp",
+      "alt": "Marta next to someone dressed as Peppa Pig",
+      "cap": ""
+    }
+  ],
+  "clips": [
+    {
+      "id": "c-home",
+      "vid": "mTJYoEMKo8o",
+      "title": "Marta's Magic Kids Show",
+      "cap": "",
+      "thumb": "assets/yt_mTJYoEMKo8o.webp",
+      "place": "both"
+    },
+    {
+      "id": "c-magic",
+      "vid": "UevRhQEmBcc",
+      "title": "Add a little magic...",
+      "cap": "From the What’s Up? post of 16 Oct 2019",
+      "thumb": "assets/yt_UevRhQEmBcc.webp",
+      "place": "gallery"
+    },
+    {
+      "id": "c-party",
+      "vid": "oWKJjb4UorU",
+      "title": "Make your kids party fun & memorable",
+      "cap": "From the What’s Up? post of 24 Jan 2017",
+      "thumb": "assets/yt_oWKJjb4UorU.webp",
+      "place": "gallery"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-01",
+      "title": "🌟 Now Booking for 2025 Communion Celebrations! 🌟",
+      "by": "Magic Marta",
+      "date": "2024-09-12",
+      "body": "Exciting news! Magic Marta is now accepting bookings for children's entertainment for communion celebrations in 2025! 🎉\nIf you’re planning a special communion event and want to ensure the kids have an unforgettable time, now’s the perfect moment to secure an entertainer who brings joy, excitement, and engaging activities to the party.\n🎩 What's on offer:\nInteractive magic shows\nFun games and activities\nBalloon modelling\nAnd much more!\nBooking Information: Contact us at www.kidsshow.ie to reserve your date and discuss how we can make your communion celebration extra special!\nDon’t miss out on the chance to create lasting memories for your little one and their friends. Get in touch today to book Magic Marta and make your event truly magical!",
+      "img": "assets/post_01.webp",
+      "alt": "Poster for communion bookings in 2025, with a magic show scene"
+    },
+    {
+      "id": "post-02",
+      "title": "Alternative Entertainment",
+      "by": "Weddings Online",
+      "date": "2024-03-07",
+      "body": "I'm delighted to be featured in the Weddings Online Blog : Alternative Entertainment\nRead the article here\nhttps://www.weddingsonline.ie/blog/wol-loves-18-alternative-entertainment-ideas/",
+      "img": "assets/post_02.webp",
+      "alt": "Marta holding a heart-shaped balloon beside a Weddings Online card"
+    },
+    {
+      "id": "post-03",
+      "title": "Good news!",
+      "by": "Magic Marta",
+      "date": "2021-05-03",
+      "body": "Covid restrictions are easing,  soon we can meet outdoors to socialise, including in private gardens. Limit does not include children so it's a great time to catch up on missed birthdays and celebrations.\nHere's  to a great summer, give your little ones a great time!"
+    },
+    {
+      "id": "post-04",
+      "title": "Get to know Magic Marta",
+      "by": "Hamish Urquhart",
+      "date": "2021-01-31",
+      "body": "Quickfire questions with Magic Marta\nHow did you get into magic and kid’s entertainment?\nMy partner is a professional entertainer and magician. So, through the fun and magic he showed me, I formed a love for magic I never knew I had.\nHe taught me it’s not about the props and tricks, it’s all about the fun and the interaction with children. That’s the real magic!\nDo you remember your first show?\nI’ll never forget it.  I was so nervous, not because I didn’t know the tricks, but because I wasn’t sure how the kids would react to me.\nI remember walking through the doors of this big house in Malahide and there must have been around 50 kids, and I thought to myself ‘Well there’s only me and them, let’s do this.  All I can do is my best and be myself’.\nAnd to my great surprise they warmed to me immediately and the show was a big success.\nLooking back, I don’t know why I was so nervous.  But I feel it’s important to always be a little bit nervous because that energy encourages you to be the best you can be, and children of all ages inherently sense that.\nTell us a bit about your regular show\nMy Magic show is pretty much tailored to suit different customers’ needs.\nIt is full of magic, music, games, treats, balloons, puppetry, face painting, and includes a super cool magical gift!\nWith my entertainment skills and their imaginations, together we create an unforgettable hour of laughter and fun!\nThat’s a lot of different activities – how did you learn all of those things?\nI was always good at art, I enjoy learning new skills, and I am self-taught.\nI used to practice face painting on my niece and nephew. I needed models so badly that I went to the extreme and I made my own model… my daughter Charlee.\nShe loves it; at least four times a week she’s asks me “Mummy let’s play funny faces!”\nHave you had any memorable shows that perhaps didn’t go to plan?\nYes, there was one I will never forget!… It was the month of May, Communion season, probably the busiest month for all kids’ entertainers.\nI arrived at the hotel, set up, and needed to use the bathroom. Then my biggest nightmare happened – the lock in the bathroom door broke and I got locked in! I was stuck there for a good half an hour.\nThe poor manager of the hotel had to drive to B&Q to get tools and then to rescue me.\nI got the biggest cheer when I got out and of course a slagging that I was ‘some magician’…they all said ‘why couldn’t you use your magic to get out?’  ‘I’m a magician not an escapologist!’ I replied.\nAnd how did you build the business?\nI could tell you I spent a lot of money on face book ads, websites, advertising and the like, but actually it was word of mouth.\nI built my own website, I got stuck in, and I got out there and just started performing.\nThe business grew and grew from parents and customers recommending me.\nYou see, when you do something you love, it’s not work – it’s a joy and people pick up on that and they want to share it with their friends.\nWho are your biggest inspirations?\nMy Mam & Dad inspired me a lot and gave me the confidence and the skills in life to work hard, to be honest and to be kind to people. My partner Dave taught me how to be funny, engaging and entertaining.\nWhen I was only starting out, I was worried; what if the trick didn’t go right?\nDave explained to me that only you know if the trick went right or wrong, the real magic is the fun.\nThis advice has stood me well.  If only he was as optimistic about my cooking! Or ‘burning’ as he calls it!!\nWhy do you enjoy doing what you do?\nI can’t think of a better way to make a living; bringing fun and joy and a little magic to people’s lives…. can you?\nIn what other profession can you see the charm and unreserved happiness in people.  Children are the real magic in life!\nWhat makes a great kids’ entertainer?\nI don’t think you could make someone a kids’ entertainer, I think it’s either in them or it’s not.\nIf money is your motivation, well then you will never be an entertainer because it’s not a life with a guaranteed steady income; there’s no sick or holiday pay and you never know from one week to the next if you’re working.\nBut when you enjoy what it is you do, the work comes!  I think you unconsciously attract it with your energy that in turn attracts people towards you.\nYou prosper from that, I’m sure there’s a little LOOK involved too. That’s not a typo or my Polish English (!); it’s my philosophy ‘Look and you will find!’\nI gather you have recently had a second baby – that was good timing?!\nYes, my second daughter, Nicci, was born in the middle of this pandemic; it was great timing to be on maternity leave and to really enjoy motherhood.\nAll my shows were postponed so it gave me priceless time to spend with my girls, and my biggest kid Dave Young! lol\nHow are you planning to adapt your business in light of the current restrictions?\nWell, the only option at the moment seems to be virtual.\nIt would not be my first preference because I think you can’t beat the interaction with a live audience. We built a studio where myself and my partner perform from.\nI’ve performed some virtual shows over the Christmas, and they have gone exceptionally well, but I really can’t wait to get back to doing what I love to do, which is live shows.\nThere’s no comparison to the atmosphere of a live show versus a computer screen.\nYou know the old saying “the smell of the crowd, the roar of the greasepaint!”\nDid I say that right? Hey I’m Polrish! (That’s what you get when you mix Polish with Irish…Polrish!)\nTell us something we wouldn’t know about you\nMy first love in life is my partner and my two girls, my second love is entertaining, and my third love is cooking.\nIn a way it’s entertainment for me to take something from nothing and turn it into something beautiful and then eat it.\nNow that’s magic! haha\nWhat do you think of PartyWizz?\nWhat I like about PartyWizz is they are one of the few entertainment companies that take a genuine interest in their performers.\nThey are very easy to work with and their ability to present their clients with an entertainer suitable for their needs is insightful.\nThank you PartyWizz, it was a pleasure talking to you, and I’m looking forward to a prosperous 2021.\nNo matter what happens, I will keep the little ones entertained and keep the magic going! After all there are no restrictions on imagination!",
+      "img": "assets/post_04.webp",
+      "alt": "Marta in a dark jacket with her arms in the air among balloon animals"
+    },
+    {
+      "id": "post-05",
+      "title": "Online Magic Shows",
+      "by": "Magic Marta",
+      "date": "2020-09-01",
+      "body": "Easy to organise plus cost effective solutions for Lockdown!\nMarta's Magic Zoom Birthday Parties are a fun filled 35 minute magic show with lots of Comedy magic and interaction.\nContact me today for availability and more info",
+      "img": "assets/post_05.webp",
+      "alt": "A magic show set-up with balloons beside a television screen"
+    },
+    {
+      "id": "post-06",
+      "title": "The Society of Irish Magicians ♠️♥️♦️♣️",
+      "by": "Magic Marta",
+      "date": "2020-03-05",
+      "body": "Had a wonderful time at the 80th anniversary show for the Society of Irish Magicians\nWell done to the whole production!",
+      "img": "assets/post_06.webp",
+      "alt": "Poster for the Society of Irish Magicians 80th anniversary show"
+    },
+    {
+      "id": "post-07",
+      "title": "Up The Dubs! 💙💙💙",
+      "by": "Magic Marta",
+      "date": "2020-02-17",
+      "body": "I was working in the Lamartine Showrooms the other day, I'm delighted I got to see the Sam Maguire cup & I've met Brian Fenton - What a gent!",
+      "img": "assets/post_07.webp",
+      "alt": "Two people with a large silver cup"
+    },
+    {
+      "id": "post-08",
+      "title": "New customers!",
+      "by": "Magic Marta",
+      "date": "2020-01-07",
+      "body": "I'm delighted and thankful for all my existing and new customers i've gained in the past few weeks\nLooking forward to entertaining you throughout 2020",
+      "img": "assets/post_08.webp",
+      "alt": "Banner of client logos with Marta in costume"
+    },
+    {
+      "id": "post-09",
+      "title": "Add a little magic...",
+      "by": "Magic Marta",
+      "date": "2019-10-16",
+      "body": "... to your special occasion with Marta's Magic Kidsshow.ie ⭐⭐⭐⭐⭐\nNow booking for all occassions {contact.phone}",
+      "clip": "c-magic"
+    },
+    {
+      "id": "post-10",
+      "title": "Communions 2020",
+      "by": "Magic Marta",
+      "date": "2019-10-15",
+      "body": "The super busy communion season is approaching quicker then you think..\nwell is definitely booking up quickly :)\nDublin only\nLimited availability 2nd May\nLimited availability 3rd May\nFully booked 9th May\nLimited availability 10th May\nFully booked 16th May\nLimited availability 17th May\nLimited availability 23rd May\nLimited availability 24th May\nCall or txt now to avoid disappointment...",
+      "img": "assets/post_10.webp",
+      "alt": "Banner: Communions 2020 with Magic Marta"
+    },
+    {
+      "id": "post-11",
+      "title": "Back to School 📚📚📚",
+      "by": "Magic Marta",
+      "date": "2018-08-29",
+      "body": "Best of luck in your new school year, kids!\n🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎\n#kidspartyireland #magicianireland #magicmarta #magiciandublin#kidsmagician #drseussquote #backtoschool",
+      "img": "assets/post_11.webp",
+      "alt": "Chalkboard style Back to School message"
+    },
+    {
+      "id": "post-12",
+      "title": "🌞🌞🌞 Summer 2018 🌞🌞🌞",
+      "by": "Magic Marta",
+      "date": "2018-05-10",
+      "body": "Summer is just around the corner and iam available to perform my award winning magic shows at festivals, picnics, hotels, shopping centres and at all kids gatherings nationwide.\nBook early to avoid disappointment! You will be in for a magical time... !!!\nBest Magic Marta x\n{contact.phone}",
+      "img": "assets/post_12.webp",
+      "alt": "Collage of photos from a summer garden party"
+    },
+    {
+      "id": "post-13",
+      "title": "Happy Mother's Day!",
+      "by": "Magic Marta",
+      "date": "2018-03-18",
+      "body": "",
+      "img": "assets/post_13.webp",
+      "alt": "Mother’s Day card from Magic Marta with pink flowers"
+    },
+    {
+      "id": "post-14",
+      "title": "Roses are red... 💞",
+      "by": "Magic Marta",
+      "date": "2018-02-14",
+      "body": "Happy Valentine's Day! 💖",
+      "img": "assets/post_14.webp",
+      "alt": "Marta holding a heart-shaped balloon"
+    },
+    {
+      "id": "post-15",
+      "title": "Christmas Party Entertainment",
+      "by": "Magic Marta",
+      "date": "2017-10-24",
+      "body": "Yes we can't believe it either... it's that time of the year again 🎄🎄🎄🎄🎄\nNow booking for Christmas Parties 2017\n✔️ For your office\n✔️For your corporate event\n✔️ For your festival\n✔️ For your private event\n✔️ Or  anywhere little ones need entertaining!\nContact Magic Marta today {contact.phone}",
+      "img": "assets/post_15.webp",
+      "alt": "Christmas Entertainment banner with Marta and children"
+    },
+    {
+      "id": "post-16",
+      "title": "Happy Halloween",
+      "by": "Magic Marta",
+      "date": "2017-10-10",
+      "body": "I just love Halloween\nBook your little ones party today\n{contact.phone} 🤣🤣🤣"
+    },
+    {
+      "id": "post-17",
+      "title": "Just for Kids Ireland",
+      "by": "Magic Marta",
+      "date": "2017-07-06",
+      "body": "Join Facebook latest group www.facebook.com/justforkidsireland for all upcoming events, advertising, deals and more!",
+      "img": "assets/post_17.webp",
+      "alt": "Just for Kids Ireland banner with colourful sweets"
+    },
+    {
+      "id": "post-18",
+      "title": "Back in Mount Congreve!",
+      "by": "Magic Marta",
+      "date": "2017-07-02",
+      "body": "Very pleased to be back in Mount Congreve Gardens in Waterford for their annual festival!\nYou can find me performing my magic show on the 16th July 2017 from 12-5pm\nSee you then!",
+      "img": "assets/post_18.webp",
+      "alt": "Photos of a garden event at Mount Congreve"
+    },
+    {
+      "id": "post-19",
+      "title": "💞 Baby Luna 💞",
+      "by": "Magic Marta",
+      "date": "2017-06-30",
+      "body": "Meet my latest adition to my magic family...\n💞 Baby Luna 💞\nThis little one, is going to teach all the little ones some cool magic this summer!\nHope she's not too naughty....",
+      "img": "assets/post_19.webp",
+      "alt": "A smiling puppet toy"
+    },
+    {
+      "id": "post-20",
+      "title": "Hello Summer!",
+      "by": "Magic Marta",
+      "date": "2017-06-28",
+      "body": "I'm delighted to announce I will be performing my award winning magic show in the lovely Upton Court Hotel in Wexford this summer!\nSee you every Tuesday from the 11th July - 15th Aug for lots of magic & fun xxx\nLove Magic Marta",
+      "img": "assets/post_20.webp",
+      "alt": "Flyer for Marta’s Magic Kids Show at Upton Court Hotel"
+    },
+    {
+      "id": "post-21",
+      "title": "How to spoil your Mum",
+      "by": "Magic Marta",
+      "date": "2017-03-06",
+      "body": "Mother's Day 2017 is approaching fast... Here's some great ideas on how to treat your mammy this Mother's Day...\n1. Beautiful, handmade gifts are in demand at the moment - they are always unique, quirky, and can be personalised at a great price too :) I like to find mine on Facebook,\nEtsy.com or local markets. Here's where i got a pressie for my mum last year :)\n2. Head over to Allie's Hair & Beauty - no better way to start the day than with the gorgeous blow dry - more details here.\n3. Send your Mommy over to Hard Rock Nail Salon in Palmerstown to get fabulous Shellac nails - don't forget to book early to avoid disappointment more details here.\n4. When all the pampering is done its time for a delicious treat - how about an afternoon tea in one of the popular Dublin's spots...\nIndependent.ie picked 5 top spots here .\n5. Why not experience a lovely trip to the Wicklow mountains .\nGet your runners on and do some exploring around the garden of Ireland. Whether it's a walk through Glendalough, or coffee in\nRussborough House or some photos by the Powerscourt Waterfall, you're sure to create memories you'll cherish forever!\n6. Why not book a relaxing two night break in The Castleknock Hotel, (at the moment if you book any Sunday and Monday night you'll receive a discount of 25% ;)\n7. And best of all why not give your mommy a great laugh at The Red\nCow Inn this Mother's Day with Ireland's favourite comedian\nDave Young. Tickets are going fast so book early - more about Dave here.",
+      "img": "assets/post_21.webp",
+      "alt": "Mother’s Day ideas banner with tulips"
+    },
+    {
+      "id": "post-22",
+      "title": "Super Sundays is back!",
+      "by": "Magic Marta",
+      "date": "2017-03-01",
+      "body": "Due to popular demand Super Sundays is back!\nHave your little ones party on a Sunday in March and save money.\nCall or text now, quote \"Super Sundays\" and receive 25% discount -\nNow... that's magic...\n{contact.phone}"
+    },
+    {
+      "id": "post-23",
+      "title": "St. Patrick's Day Fun Ideas",
+      "by": "Magic Marta",
+      "date": "2017-02-24",
+      "body": "Kids parties have become hugely popular over the St. Partick's Day Bank Holiday weekend. There's no better time to let your little ones invite over a few friends for some holiday fun. Here's a few fun ideas for St. Patrick's Day including party crafts, games and food...\n1. Silly Mcgilly\nStart a new St. Patrick's Day tradition by inviting the magic of Silly McGilly into your home or classroom.  Silly McGilly is an adorable leprechaun who loves playing fun little tricks on children throughout the St. Patrick's Day season.  Read Silly McGilly's book with your children and place his doll in the window overnight.\nIf you are lucky, Silly might just play a trick on you as you sleep!\n2. Cool party games\nGold Hunt\nHide gold coins around the house or garden and have the kids hunt for them. The child that collects the most coins wins!\nKiss the Blarney Stone\nPrint out photo of the Blarney Stone and hang it on a wall. Put lipstick or face paint on the little ones, blindfold them and send them to plant a kiss on the Blarney Stone. Players who come closest to kissing the stone win a prize.\nSt. Patrick's Day Parade\nCan't make it to the parade? No problem :)\nGather fun props, wigs, flags & banners and let them parade on their own, right in your home and garden!\nIrish dancing competition\nJust play some Irish music and let the kids show off their best attempts at Irish dancing.\n3. Fun green & rainbow food\nPractically any food can be dyed green with a little food coloring!\nHow about green pasta with pesto for a quick snack and green cupcakes and some rainbow jelly for a nice dessert. You could make your own shamrocks milkshakes - that's always a hit!",
+      "img": "assets/post_23.webp",
+      "alt": "Kids party ideas for St. Patrick’s Day on a green shamrock background"
+    },
+    {
+      "id": "post-24",
+      "title": "🌟 Entertainer for Your event 🌟",
+      "by": "Magic Marta",
+      "date": "2017-02-20",
+      "body": "kids magician dublin kids party magician magician for event kids party magician\nMarta's Magic Kids Show Entertainment is your one-stop shop for children's entertainment in Dublin. Marta's mission is simple: to deliver the very best in children's entertainment. Whether you're looking for something to keep the kids entertained at an upcoming birthday party or a full stage show for your family fun day, no event is too big or too small. 🎪🎭🎨🎈🎀🎉🎁🃏🍭🍬\nEverything we do is tailored to the specific event so please contact us to discuss your requirements and we'll put together the perfect package for you. Options include:\n🌟 Magic Show\n🌟 Balloon Modelling\n🌟 Face Painting\n🌟 Puppets\n🌟 Dance Parties\n🌟 Festival Entertainment\n🌟 Shopping Centres Entertainment\n🌟 Corporate Event Entertainment & Much More!\nFor more info contact us here\nOr call {contact.phone}",
+      "img": "assets/post_24.webp",
+      "alt": "A girl holding a pink teddy beside Marta in a shop"
+    },
+    {
+      "id": "post-25",
+      "title": "Swimming Birthday Party",
+      "by": "Magic Marta",
+      "date": "2017-02-09",
+      "body": "Recently I had the pleasure of performing at a pool party in Ballyfermot Leisure Centre. It was my first time to perform at a party beside a swimming pool. I really loved the idea - once all the little ones arrived, light snacks were given and then off they went to the pool for an hour of play under supervision from the fully trained and experienced pool staff. Then after the kids dried off and changed their clothes my superpowers kicked in to manage over Fifty 6 years olds,baffled them with cool magic tricks, paint their faces, run a dancing competition during a magic disco and announce my winner! Later on all the little ones had a lunch and we all sang Happy Birthday and cut the cake of course.\nEveryone had a great time, kids and parents and I couldn't recommend this place more - definitely a party to remember... Magical!",
+      "img": "assets/post_25.webp",
+      "alt": "Sports and fitness swimming pool venue banner"
+    },
+    {
+      "id": "post-26",
+      "title": "Make your kids party fun & memorable",
+      "by": "Magic Marta",
+      "date": "2017-01-24",
+      "body": "Hi guys, here's just a little taste of the fun and great time kids have during my award winning magic show...\nEnjoy!",
+      "clip": "c-party"
+    },
+    {
+      "id": "post-27",
+      "title": "Happy New Year!",
+      "by": "Magic Marta",
+      "date": "2017-01-01",
+      "body": "Happy New Year! 🌟🎉🌟 I want to wish all my customers and little friends the most magical and spectacular birthdays in 2017 💗🎂💗\nAnd as a treat for the new year I would like to offer 20% discount for the month of January for all bookings now that's Magic! call or txt {contact.phone}",
+      "img": "assets/post_27.webp",
+      "alt": "Children in a photo booth with Happy New Year signs"
+    },
+    {
+      "id": "post-28",
+      "title": "Ho, ho, ho...",
+      "by": "Magic Marta",
+      "date": "2016-12-24",
+      "body": "Well it's been the most exciting and most adventures year so far for me...\nI want to wish you all the most magical and warm Christmas ever and say a big thank you to my customers big and small who i had the pleasure of performing to in the last year 💖\nSee you all in the New Year & don't forget to go to bed early boys & girls cause Santa is on the way\nBest Magic Marta x",
+      "img": "assets/post_28.webp",
+      "alt": "People dressed as Santa and Mrs Claus"
+    },
+    {
+      "id": "post-29",
+      "title": "First Holy Communion Entertainment",
+      "by": "Magic Marta",
+      "date": "2016-03-21",
+      "body": "Do you need Communion entertainment that will provide long lasting memories for your little ones First Holy Communion?\nMy award winning Magic show is filled with the coolest magic tricks, tastiest sweets, colourful balloon animals, mini disco but my show doesn’t stop there, it also includes a free magic gift!\nMy fee is tailored just for you so Call or Text today {contact.phone}\n& I will get you the best deal around!\nHave a great day, looking forward to your call\nMagic Marta",
+      "img": "assets/post_29.webp",
+      "alt": "A girl in a white communion dress inside a decorative frame"
+    },
+    {
+      "id": "post-30",
+      "title": "Super Sundays!",
+      "by": "Magic Marta",
+      "date": "2016-02-12",
+      "body": "Have your Kids party on a Sunday and save money! Offer valid untill 1st April only, call or text now {contact.phone} and let the Magic begin xxx"
+    },
+    {
+      "id": "post-31",
+      "title": "8 Fun Ideas for Kids at Weddings",
+      "by": "Magic Marta",
+      "date": "2015-09-17",
+      "body": "The discussion of whether to invite children to a wedding always becomes a passionate one. In one corner, you have people who think kids add a certain magic to the atmosphere. In the other corner, you have those who feel as though that \"magic\" is more the dark variety - the screaming, the messing, the ruining. But including kids in your festivities doesn't have to be a horror movie in the making. Follow these guidelines to ensure that your wedding is fun for all ages...\n1. Kids Only Space\nGive them their own space so that they feel all grown up. These cute signs will make them feel important and you’ll know exactly where to find them.\n2. Cute Place Names\nHave some fun with the table setting and use letter shaped cookies to spell out the littlest members of the wedding party’s names. Other cute alternatives are tags tied to lollipops or little Lego men figurines next to their name card!\n3. A Special Toast\nLet little folk be a part of the toast with their own special kid-friendly drink. Old time favourites like milk and cookies or milk topped with mini doughnuts will go down a treat as will milkshakes, smoothies, mini bottles of lemonade or hot chocolates for chillier winter wedding celebrations.\n4. Craft Corner\nSwap your fancy table cloth for a sheet of Kraft paper or some blackboard place mats and leave a bunch of colouring pencils, chalk or crayons in the middle so they can doodle as they dine. Bonus – you don’t have to worry about spillages, stains and dry cleaning bills.\n5. Party Bags\nGive them their own little stash of goodies to keep them amused. Fill party bags with bits and bobs from sweets and games to colouring pencils, jigsaws, Lego, bubbles and stickers to pass the hours.\n6. Fun & Games\nGames are a great way to keep kids occupied. If you’re having a summer wedding, set up some outdoor games to let them burn some energy. Or if you’re worried about the weather, some board games will work a treat indoors. There are also some great printables available online that you can download for free (Martha Stewart have an I Spy game). We also love the idea of having a big bowl of Lego as a centrepiece so they can dig and get creative after dinner.\n7. Movie Night\nOne of the handiest ways to keep them happy is with a favourite movie! Check with your venue whether there’s a room close by that you can use for a bit of a movie night or if you’ve no one to keep an eye on them, create a movie corner close to where you’re sitting. Pop on a Disney fave and let them wile away the hours with some popcorn and a few sweets.\n8. The Professionals\nAn easy, stress free way to entertain the kids is by hiring a professional!  If you’re after an activity to keep them busy, there are a wealth of amazing magicians you can hire for a few hours to kill some time and keep them laughing like Marta’s Magic Show.\nwww.weddingsonline.ie",
+      "img": "assets/post_31.webp",
+      "alt": "Wooden Kids Only signs and a table of sweets"
+    },
+    {
+      "id": "post-32",
+      "title": "One thing every wedding needs!",
+      "by": "Magic Marta",
+      "date": "2015-06-25",
+      "body": "A fantastic addition to every wedding!\nRecently i had a pleasure of working with The Wedding Comedian at a wedding in Trim Castle and i can safely say he's the funniest man in the World! The whole room was bursting with laughter and happines it was something i never saw at any wedding, so I decided I have to share this with you here!\nHere's few quotes from his website that explains what The Wedding Comedian is all about:\n\"So, you're gonna get yourself married?\nOk, you've got a lot of work to do, and of course, never enough time to do it all!\nWith over 20 years of experience, countless awards and hi-profile achievements Dave Young knows how to make them laugh and keep them smiling long after the day is over!\nTailor made to your specific requirements, Dave will create a live show  that will have both sides of the family laughing together as one and lets face it, isn't that what it's all about?\nEach story, fantastic set pieces and audience interaction will be highly entertaining and always original with your own personal stories and anecdotes of family members interwoven into a truly special event!\"\nCheck out his website here: www.theweddingcomedian.ie",
+      "img": "assets/post_32.webp",
+      "alt": "A toy car with a Just Married sign"
+    },
+    {
+      "id": "post-33",
+      "title": "#ThrowbackThursday",
+      "by": "Magic Marta",
+      "date": "2015-05-28",
+      "body": "I just came across a post on the website tickledpinkmusic and they wrote a while back about Magic Marta, it's explaining a little bit more about wedding entertainment that I provide:\nToday in Tickled Pink’s blog we continue talking about entertaining children at weddings by introducing a professional kid’s entertainer: Marta’s Magic Kids Show. We have seen Marta perform in various occasions and we were very impressed by her well prepared, dynamic and fun performance.\nWe invited Marta to Tickled Pink’s blog to learn a bit more about her work and how she can help couples give the little ones a fab day at their wedding.\n\"Hi, my name is Marta and I’m a professional full time magician who specializes in cool and entertaining magic shows for family audiences. I have been performing now for many years up and down the country, with my special brand of magic.\nMy magic show is hugely popular for birthdays, communions, christenings, corporate events, Christmas parties, festivals and of course weddings!\nThe secret is in my special blend of Magic, Comedy, Face Painting, Balloon modelling and audience participation that involves and entertains children, as well as making them laugh! And the sound of children’s laughter filling a room is magical.\nWeddings are a big part of my working week.\nWhen you have kids coming to your wedding, usually they are of various ages, so keeping them entertained can be tricky. I help to take the strain off the parents with my magic and let all the guests enjoy the wedding day. You know it’s a fantastic way to keep all the kids happy and in one place throughout your special day.\nI usually entertain the little ones during the speeches (a time when it’s very hard for a kid to concentrate and behave). As soon as I arrive I quietly set up and start what I do best – show all the kids a great time, let the grown-ups enjoy themselves, make sure everyone is happy and give the Bride & Groom a wedding to remember….now that’s magic!\"\nThanks Tickledpinkmusic :)",
+      "img": "assets/post_33.webp",
+      "alt": "Children with face paint and balloon models"
+    },
+    {
+      "id": "post-34",
+      "title": "Mrs2be Bride's Choice Awards",
+      "by": "Magic Marta",
+      "date": "2015-03-02",
+      "body": "Great news guys I've just been nominated for the second year running for the Mrs2be.ie Bride's Choice Awards.\nA Massive thank you to all of my brides and grooms for having me entertain all the little ones & guests at their weddings.\nI'll be in touch shortly for your reviews.\nThanks again Magic Marta xxx",
+      "img": "assets/post_34.webp",
+      "alt": "Mrs2be Bride’s Choice Awards 2015 nominated badge"
+    },
+    {
+      "id": "post-35",
+      "title": "Wedding Entertainment",
+      "by": "Magic Marta",
+      "date": "2015-02-16",
+      "body": "It's not just the fantastic show I give the little ones, its the professionalism, my great time keeping, and my own enthusiasm and love for what I do it's the real Magic!\nWeddings are really aimed at adults and the little ones can become quite bored and forgotten, but when I arrive they light up and are transported to my wonderful world of Magic where they are fully entertained with everything from my coolest Magic tricks, tastiest sweets, my colourful balloon animals, amazing face painting, mini disco but my show doesn't stop there it includes genuine love for what I do, and that's the real Magic!",
+      "img": "assets/post_35.webp",
+      "alt": "A bride in a white dress next to a woman"
+    },
+    {
+      "id": "post-36",
+      "title": "Happy Christmas",
+      "by": "Magic Marta",
+      "date": "2014-12-23",
+      "body": "Mrs Claus :) reading the wish lists of all the boys and girls of Valleymount National School, a magical time for all xxx",
+      "img": "assets/post_36.webp",
+      "alt": "A girl in a Santa hat writing cards at a Christmas table"
+    }
+  ],
+  "seo": {
+    "index": {
+      "title": "Kids Magician | Marta's Magic Kids Show | Dublin",
+      "description": "Magic Marta | Children's Party Entertainer | Children's Magician | Face Painting | Balloon Modelling | Magic Show | Magician Dublin | Ireland"
+    },
+    "about": {
+      "title": "About Marta | Marta's Magic Kids Show",
+      "description": "Meet Magic Marta: a full-time professional children's entertainer and award-winning magician based in Co. Dublin."
+    },
+    "gallery": {
+      "title": "Gallery | Marta's Magic Kids Show",
+      "description": "Photos and videos of Magic Marta's magic shows, face painting and balloon modelling."
+    },
+    "testimonials": {
+      "title": "Testimonials | Marta's Magic Kids Show",
+      "description": "What parents, schools, shops and companies say about Magic Marta."
+    },
+    "blog": {
+      "title": "What's Up? | Marta's Magic Kids Show",
+      "description": "News, ideas and party tips from Magic Marta."
+    },
+    "contact": {
+      "title": "Contact Magic Marta | Marta's Magic Kids Show",
+      "description": "Call or text Magic Marta, or send an enquiry about your child's party or event."
+    }
+  },
+  "site": {},
+  "pages": {},
+  "dims": {
+    "assets/about_marta.webp": [
+      900,
+      945
+    ],
+    "assets/about_marta_480.webp": [
+      480,
+      504
+    ],
+    "assets/g_balloon_hat_boy.webp": [
+      900,
+      599
+    ],
+    "assets/g_balloon_hat_boy_480.webp": [
+      480,
+      319
+    ],
+    "assets/g_black_white_face.webp": [
+      900,
+      900
+    ],
+    "assets/g_black_white_face_480.webp": [
+      480,
+      480
+    ],
+    "assets/g_blue_face.webp": [
+      893,
+      1217
+    ],
+    "assets/g_blue_face_480.webp": [
+      480,
+      654
+    ],
+    "assets/g_face_paint_cheer.webp": [
+      640,
+      960
+    ],
+    "assets/g_face_paint_cheer_480.webp": [
+      480,
+      720
+    ],
+    "assets/g_face_paint_drink.webp": [
+      900,
+      600
+    ],
+    "assets/g_face_paint_drink_480.webp": [
+      480,
+      320
+    ],
+    "assets/g_face_paint_girl.webp": [
+      900,
+      675
+    ],
+    "assets/g_face_paint_girl_480.webp": [
+      480,
+      360
+    ],
+    "assets/g_face_paint_group.webp": [
+      900,
+      600
+    ],
+    "assets/g_face_paint_group_480.webp": [
+      480,
+      320
+    ],
+    "assets/g_frog_hat.webp": [
+      900,
+      599
+    ],
+    "assets/g_frog_hat_480.webp": [
+      480,
+      319
+    ],
+    "assets/g_magic_show.webp": [
+      900,
+      600
+    ],
+    "assets/g_magic_show_480.webp": [
+      480,
+      320
+    ],
+    "assets/g_marta_balloons.webp": [
+      900,
+      624
+    ],
+    "assets/g_marta_balloons_480.webp": [
+      480,
+      333
+    ],
+    "assets/g_marta_kids_pool.webp": [
+      768,
+      960
+    ],
+    "assets/g_marta_kids_pool_480.webp": [
+      480,
+      600
+    ],
+    "assets/g_marta_peppa.webp": [
+      900,
+      900
+    ],
+    "assets/g_marta_peppa_480.webp": [
+      480,
+      480
+    ],
+    "assets/g_marta_red_jacket.webp": [
+      900,
+      1200
+    ],
+    "assets/g_marta_red_jacket_480.webp": [
+      480,
+      640
+    ],
+    "assets/g_marta_shop.webp": [
+      900,
+      900
+    ],
+    "assets/g_marta_shop_480.webp": [
+      480,
+      480
+    ],
+    "assets/g_party_kids.webp": [
+      900,
+      600
+    ],
+    "assets/g_party_kids_480.webp": [
+      480,
+      320
+    ],
+    "assets/g_toddler_balloons.webp": [
+      640,
+      640
+    ],
+    "assets/g_toddler_balloons_480.webp": [
+      480,
+      480
+    ],
+    "assets/g_wedding_guests.webp": [
+      640,
+      640
+    ],
+    "assets/g_wedding_guests_480.webp": [
+      480,
+      480
+    ],
+    "assets/g_witch_hat.webp": [
+      900,
+      599
+    ],
+    "assets/g_witch_hat_480.webp": [
+      480,
+      319
+    ],
+    "assets/hero_marta.webp": [
+      800,
+      800
+    ],
+    "assets/hero_marta_480.webp": [
+      480,
+      480
+    ],
+    "assets/logo_bank_of_ireland.webp": [
+      120,
+      120
+    ],
+    "assets/logo_bmw.webp": [
+      120,
+      120
+    ],
+    "assets/logo_citibank.webp": [
+      120,
+      120
+    ],
+    "assets/logo_coca_cola.webp": [
+      196,
+      120
+    ],
+    "assets/logo_cystic_fibrosis_ireland.webp": [
+      120,
+      120
+    ],
+    "assets/logo_fitbit.webp": [
+      225,
+      120
+    ],
+    "assets/logo_flying_tiger.webp": [
+      142,
+      120
+    ],
+    "assets/logo_harvey_norman.webp": [
+      120,
+      120
+    ],
+    "assets/logo_ikea.webp": [
+      213,
+      120
+    ],
+    "assets/logo_jp_morgan.webp": [
+      120,
+      120
+    ],
+    "assets/logo_lidl.webp": [
+      120,
+      120
+    ],
+    "assets/logo_matheson.webp": [
+      195,
+      120
+    ],
+    "assets/logo_salesforce.webp": [
+      213,
+      120
+    ],
+    "assets/logo_supervalu.webp": [
+      240,
+      108
+    ],
+    "assets/logo_tesco.webp": [
+      199,
+      120
+    ],
+    "assets/logo_vodafone.webp": [
+      120,
+      120
+    ],
+    "assets/logo_web_summit.webp": [
+      200,
+      120
+    ],
+    "assets/og.jpg": [
+      1200,
+      630
+    ],
+    "assets/post_01.webp": [
+      700,
+      700
+    ],
+    "assets/post_01_420.webp": [
+      420,
+      420
+    ],
+    "assets/post_02.webp": [
+      700,
+      587
+    ],
+    "assets/post_02_420.webp": [
+      420,
+      352
+    ],
+    "assets/post_04.webp": [
+      700,
+      700
+    ],
+    "assets/post_04_420.webp": [
+      420,
+      420
+    ],
+    "assets/post_05.webp": [
+      700,
+      396
+    ],
+    "assets/post_05_420.webp": [
+      420,
+      237
+    ],
+    "assets/post_06.webp": [
+      700,
+      949
+    ],
+    "assets/post_06_420.webp": [
+      420,
+      569
+    ],
+    "assets/post_07.webp": [
+      700,
+      1140
+    ],
+    "assets/post_07_420.webp": [
+      420,
+      684
+    ],
+    "assets/post_08.webp": [
+      700,
+      276
+    ],
+    "assets/post_08_420.webp": [
+      420,
+      166
+    ],
+    "assets/post_10.webp": [
+      700,
+      323
+    ],
+    "assets/post_10_420.webp": [
+      420,
+      194
+    ],
+    "assets/post_11.webp": [
+      435,
+      444
+    ],
+    "assets/post_11_420.webp": [
+      420,
+      429
+    ],
+    "assets/post_12.webp": [
+      700,
+      525
+    ],
+    "assets/post_12_420.webp": [
+      420,
+      315
+    ],
+    "assets/post_13.webp": [
+      500,
+      281
+    ],
+    "assets/post_13_420.webp": [
+      420,
+      236
+    ],
+    "assets/post_14.webp": [
+      583,
+      874
+    ],
+    "assets/post_14_420.webp": [
+      420,
+      630
+    ],
+    "assets/post_15.webp": [
+      700,
+      380
+    ],
+    "assets/post_15_420.webp": [
+      420,
+      228
+    ],
+    "assets/post_17.webp": [
+      700,
+      342
+    ],
+    "assets/post_17_420.webp": [
+      420,
+      205
+    ],
+    "assets/post_18.webp": [
+      688,
+      317
+    ],
+    "assets/post_18_420.webp": [
+      420,
+      194
+    ],
+    "assets/post_19.webp": [
+      700,
+      700
+    ],
+    "assets/post_19_420.webp": [
+      420,
+      420
+    ],
+    "assets/post_20.webp": [
+      700,
+      438
+    ],
+    "assets/post_20_420.webp": [
+      420,
+      262
+    ],
+    "assets/post_21.webp": [
+      700,
+      438
+    ],
+    "assets/post_21_420.webp": [
+      420,
+      262
+    ],
+    "assets/post_23.webp": [
+      586,
+      440
+    ],
+    "assets/post_23_420.webp": [
+      420,
+      315
+    ],
+    "assets/post_24.webp": [
+      700,
+      700
+    ],
+    "assets/post_24_420.webp": [
+      420,
+      420
+    ],
+    "assets/post_25.webp": [
+      700,
+      700
+    ],
+    "assets/post_25_420.webp": [
+      420,
+      420
+    ],
+    "assets/post_27.webp": [
+      700,
+      467
+    ],
+    "assets/post_27_420.webp": [
+      420,
+      280
+    ],
+    "assets/post_28.webp": [
+      700,
+      528
+    ],
+    "assets/post_28_420.webp": [
+      420,
+      317
+    ],
+    "assets/post_29.webp": [
+      297,
+      297
+    ],
+    "assets/post_29_420.webp": [
+      297,
+      297
+    ],
+    "assets/post_31.webp": [
+      620,
+      413
+    ],
+    "assets/post_31_420.webp": [
+      420,
+      280
+    ],
+    "assets/post_32.webp": [
+      700,
+      687
+    ],
+    "assets/post_32_420.webp": [
+      420,
+      412
+    ],
+    "assets/post_33.webp": [
+      700,
+      467
+    ],
+    "assets/post_33_420.webp": [
+      420,
+      280
+    ],
+    "assets/post_34.webp": [
+      360,
+      360
+    ],
+    "assets/post_34_420.webp": [
+      360,
+      360
+    ],
+    "assets/post_35.webp": [
+      640,
+      640
+    ],
+    "assets/post_35_420.webp": [
+      420,
+      420
+    ],
+    "assets/post_36.webp": [
+      700,
+      933
+    ],
+    "assets/post_36_420.webp": [
+      420,
+      560
+    ]
   }
- },
- "site": {},
- "pages": {},
- "dims": {}
 }

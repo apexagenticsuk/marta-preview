@@ -32,7 +32,7 @@ ok(M+': ...and it shows on the Testimonials page (once)',(await txt()).split('SH
 // 4 contact email changes the footer/contact on every page
 await p.evaluate(()=>DYE.openShared('contact'));await p.waitForSelector('#sharedm:not([hidden])');
 const em=p.locator('#sharedm .shbody label.shf:has(span:text-is("Email")) input').first();await em.fill('hello@example.ie');await em.dispatchEvent('change');await ready();
-for(const pg of ['index','videos','testimonials','faqs','blog','contact']){await hide();await go(pg);
+for(const pg of ['index','about','testimonials','gallery','blog','contact']){await hide();await go(pg);
  ok(M+': new email appears on '+pg,await F().evaluate(()=>[...document.querySelectorAll('a[href^=mailto]')].some(a=>/hello@example\.ie/.test(a.href))&&![...document.querySelectorAll('a[href^=mailto]')].some(a=>/theweddingcomedian\.ie/.test(a.href))));}
 // 5 add and delete a video
 await p.evaluate(()=>DYE.openShared('clips'));await p.waitForSelector('#sharedm:not([hidden])');const n0=await p.locator('#sharedm details.shrow').count();
