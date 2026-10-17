@@ -828,6 +828,10 @@
       480,
       319
     ],
+    "assets/g_balloon_hat_boy_640.webp": [
+      640,
+      426
+    ],
     "assets/g_black_white_face.webp": [
       900,
       900
@@ -836,6 +840,10 @@
       480,
       480
     ],
+    "assets/g_black_white_face_640.webp": [
+      640,
+      640
+    ],
     "assets/g_blue_face.webp": [
       893,
       1217
@@ -843,6 +851,10 @@
     "assets/g_blue_face_480.webp": [
       480,
       654
+    ],
+    "assets/g_blue_face_640.webp": [
+      640,
+      872
     ],
     "assets/g_face_paint_cheer.webp": [
       640,
@@ -860,6 +872,10 @@
       480,
       320
     ],
+    "assets/g_face_paint_drink_640.webp": [
+      640,
+      427
+    ],
     "assets/g_face_paint_girl.webp": [
       900,
       675
@@ -867,6 +883,10 @@
     "assets/g_face_paint_girl_480.webp": [
       480,
       360
+    ],
+    "assets/g_face_paint_girl_640.webp": [
+      640,
+      480
     ],
     "assets/g_face_paint_group.webp": [
       900,
@@ -876,6 +896,10 @@
       480,
       320
     ],
+    "assets/g_face_paint_group_640.webp": [
+      640,
+      427
+    ],
     "assets/g_frog_hat.webp": [
       900,
       599
@@ -883,6 +907,10 @@
     "assets/g_frog_hat_480.webp": [
       480,
       319
+    ],
+    "assets/g_frog_hat_640.webp": [
+      640,
+      426
     ],
     "assets/g_magic_show.webp": [
       900,
@@ -892,6 +920,10 @@
       480,
       320
     ],
+    "assets/g_magic_show_640.webp": [
+      640,
+      427
+    ],
     "assets/g_marta_balloons.webp": [
       900,
       624
@@ -899,6 +931,10 @@
     "assets/g_marta_balloons_480.webp": [
       480,
       333
+    ],
+    "assets/g_marta_balloons_640.webp": [
+      640,
+      444
     ],
     "assets/g_marta_kids_pool.webp": [
       768,
@@ -916,6 +952,10 @@
       480,
       480
     ],
+    "assets/g_marta_peppa_640.webp": [
+      640,
+      640
+    ],
     "assets/g_marta_red_jacket.webp": [
       900,
       1200
@@ -923,6 +963,10 @@
     "assets/g_marta_red_jacket_480.webp": [
       480,
       640
+    ],
+    "assets/g_marta_red_jacket_640.webp": [
+      640,
+      853
     ],
     "assets/g_marta_shop.webp": [
       900,
@@ -932,6 +976,10 @@
       480,
       480
     ],
+    "assets/g_marta_shop_640.webp": [
+      640,
+      640
+    ],
     "assets/g_party_kids.webp": [
       900,
       600
@@ -939,6 +987,10 @@
     "assets/g_party_kids_480.webp": [
       480,
       320
+    ],
+    "assets/g_party_kids_640.webp": [
+      640,
+      427
     ],
     "assets/g_toddler_balloons.webp": [
       640,
@@ -963,6 +1015,10 @@
     "assets/g_witch_hat_480.webp": [
       480,
       319
+    ],
+    "assets/g_witch_hat_640.webp": [
+      640,
+      426
     ],
     "assets/hero_marta.webp": [
       800,

@@ -28,7 +28,7 @@ for p in glob.glob('*.html'):
     if n!=s: open(p,'w').write(n)
 import itertools
 for s0 in list(srcs):
-    for sf in ('_480','_420'):
+    for sf in ('_480','_420','_640'):
         s1=re.sub(r'\.webp$',sf+'.webp',s0)
         if s1!=s0 and os.path.exists(s1): srcs.add(s1)
 dims={s:dim(s) for s in sorted(srcs) if dim(s) and not s.startswith('assets/yt_')}
