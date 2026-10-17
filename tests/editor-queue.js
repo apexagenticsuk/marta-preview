@@ -7,6 +7,7 @@ await p.goto(base+'/admin/');await p.waitForSelector('#demo');
 const lg=await p.evaluate(()=>{const d=document.querySelector('#demo').getBoundingClientRect(),t=document.querySelector('#tok').getBoundingClientRect(),c=document.querySelector('#login .card').innerText;return {demoTop:d.top,tokTop:t.top,text:c,order:!!(document.querySelector('#demo').compareDocumentPosition(document.querySelector('#tok'))&4)}});
 ok('sign-in: demo button comes before the key box',lg.order&&lg.demoTop<lg.tokTop,JSON.stringify([lg.demoTop,lg.tokTop]));
 ok('sign-in: softer wording ("look around", nothing goes on the real website)',/look around/i.test(lg.text)&&/Nothing you do here goes on the real website/i.test(lg.text)&&!/dave/i.test(lg.text));
+ok('sign-in: key placeholder is plain wording (no github_pat_)',(await p.getAttribute('#tok','placeholder'))==='Paste your key here');
 ok('sign-in: the key box is headed "Ready to change the real website?"',/Ready to change the real website\?/.test(lg.text));
 await p.click('#demo');await p.waitForFunction(()=>window.DYE&&window.DYE.state().content&&document.querySelector('#frame').contentWindow.DYI,null,{timeout:20000});
 const F=()=>p.frame({url:/edit=1/});await p.waitForTimeout(800);
