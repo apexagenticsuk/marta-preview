@@ -1,8 +1,12 @@
-@font-face{font-family:'Fredoka';font-style:normal;font-weight:500;font-display:swap;src:url(assets/font_fredoka_500.woff2) format('woff2')}
-@font-face{font-family:'Fredoka';font-style:normal;font-weight:700;font-display:swap;src:url(assets/font_fredoka_700.woff2) format('woff2')}
-@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:swap;src:url(assets/font_nunito_400.woff2) format('woff2')}
-@font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(assets/font_nunito_700.woff2) format('woff2')}
-:root{--rose:#c2185b;--rose2:#9c1049;--rose3:#5b1a6e;--rose4:#e0457f;--sun:#ffd23f;--sun2:#fff1c2;--aqua:#2ec4b6;--mint:#e2f7f3;--lav:#f1e8ff;--cream:#fff7ec;--paper:#fff;--ink:#2b2140;--mut:#5d5273;--line:#eadcf7;--plum:#2e1047;--r:28px;--sh:0 14px 34px -18px rgba(91,26,110,.45);--head:Fredoka,'Arial Rounded MT Bold','Trebuchet MS',system-ui,sans-serif;--body:Nunito,'Segoe UI',system-ui,sans-serif}
+@font-face{font-family:'Nunito Fallback';font-weight:400;src:local('Arial'),local('Arimo'),local('Liberation Sans');size-adjust:102%;ascent-override:99.1%;descent-override:34.6%;line-gap-override:0%}
+@font-face{font-family:'Nunito Fallback';font-weight:700;src:local('Arial'),local('Arimo'),local('Liberation Sans');size-adjust:98.4%;ascent-override:102.7%;descent-override:35.9%;line-gap-override:0%}
+@font-face{font-family:'Fredoka Fallback';font-weight:500;src:local('Arial'),local('Arimo'),local('Liberation Sans');size-adjust:90.2%;ascent-override:108%;descent-override:26.2%;line-gap-override:0%}
+@font-face{font-family:'Fredoka Fallback';font-weight:700;src:local('Arial'),local('Arimo'),local('Liberation Sans');size-adjust:93.2%;ascent-override:104.5%;descent-override:25.3%;line-gap-override:0%}
+@font-face{font-family:'Fredoka';font-style:normal;font-weight:500;font-display:optional;src:url(assets/font_fredoka_500.woff2) format('woff2')}
+@font-face{font-family:'Fredoka';font-style:normal;font-weight:700;font-display:optional;src:url(assets/font_fredoka_700.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:optional;src:url(assets/font_nunito_400.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:optional;src:url(assets/font_nunito_700.woff2) format('woff2')}
+:root{--rose:#c2185b;--rose2:#9c1049;--rose3:#5b1a6e;--rose4:#e0457f;--sun:#ffd23f;--sun2:#fff1c2;--aqua:#2ec4b6;--mint:#e2f7f3;--lav:#f1e8ff;--cream:#fff7ec;--paper:#fff;--ink:#2b2140;--mut:#5d5273;--line:#eadcf7;--plum:#2e1047;--r:28px;--sh:0 14px 34px -18px rgba(91,26,110,.45);--head:Fredoka,'Fredoka Fallback','Arial Rounded MT Bold','Trebuchet MS',system-ui,sans-serif;--body:Nunito,'Nunito Fallback','Segoe UI',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-padding-top:84px;scroll-padding-bottom:104px;-webkit-text-size-adjust:100%}
 html:not(:has(.dy-editing)){scroll-behavior:smooth}
@@ -163,7 +167,7 @@ hr{border:0;border-top:3px dotted var(--line);margin:24px 0}.blk-divider.space{h
 .qa-a a,.prose a,.big a,.lead a,.post a,.fine a,.pull a{display:inline-block;padding:12px 2px;margin:-12px 0}
 .post a,.post p{overflow-wrap:anywhere}
 /* reveal: enhancement only, nothing stays hidden */
-.js-rv .rv:not(.in),.js-rv section:not(.in):not(.hero):not(.phead){opacity:0;transform:translateY(16px)}
+.js-rv .rv:not(.in),.js-rv section:not(.in):not(.hero):not(.phead):not(.gal){opacity:0;transform:translateY(16px)}
 .js-rv .rv,.js-rv section{transition:opacity .6s ease,transform .6s ease;transition-delay:var(--d,0ms)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js-rv .rv,.js-rv section{opacity:1!important;transform:none!important}.btn:hover,.socials a:hover{transform:none}.ggrid figure{transform:none!important}}
 @media (min-width:600px){.svcgrid{grid-template-columns:repeat(4,minmax(0,1fr))}.rvgrid{grid-template-columns:1fr 1fr}.logos-row{grid-template-columns:repeat(4,minmax(0,1fr))}.ggrid{columns:2}.vgrid{grid-template-columns:1fr 1fr}.tgrid,.blk-cards.c3,.blk-cards.c2,.cards3{grid-template-columns:1fr 1fr}.awgrid{grid-template-columns:1fr 1fr}}
