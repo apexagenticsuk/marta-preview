@@ -126,3 +126,5 @@ button{font-family:inherit;cursor:pointer}button.btn{border:0}.btn.ghost{border:
 @media(max-width:760px){#demobadge{font-size:10px;padding:3px 5px}.tb select{max-width:80px}#publish{padding:7px 11px!important}.tb .ib{padding:6px 6px;font-size:12px}}
 
 .frameerr{position:absolute;inset:0;z-index:20;background:#17171a;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}.frameerr[hidden]{display:none}.frameerr h2{margin:0 0 10px;font:800 22px Inter,sans-serif}.frameerr p{max-width:420px;margin:0 auto 18px;color:#cfcfd4;line-height:1.5}
+
+.login hr.or{border:0;border-top:1px solid var(--line);margin:22px 0}.login .h2s{font-size:18px;margin:0 0 10px}

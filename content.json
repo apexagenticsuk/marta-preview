@@ -16,6 +16,11 @@
     "website": "kidsshow.ie",
     "sayhello": "Can't wait to have Magic Marta at my party!"
   },
+  "cta": {
+    "enquireLabel": "Enquire online",
+    "enquireShort": "Enquire",
+    "enquireHref": "contact.html#enquire"
+  },
   "nav": [
     {
       "key": "index",

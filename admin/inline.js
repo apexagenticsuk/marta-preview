@@ -213,6 +213,25 @@ function navPanel(a){finishEdit(true);clearSel();var k=navKey(a.getAttribute('hr
   p.innerHTML='<p>“'+esc(lab)+'” is a link in the menu. Menu names, order and which pages appear are set in <b>Pages</b>.</p><div class="prow2 col">'+(k?'<button type="button" class="pbtn red" data-open>Open this page in the editor</button>':'')+'<button type="button" class="pbtn" data-pages>Rename or reorder in Pages</button>'+(k?'<button type="button" class="pbtn" data-set>Page settings</button>':'')+'</div>';
   var o=p.querySelector('[data-open]');if(o)o.onclick=function(){DYE.closePanel();DYE.goPage(k);};p.querySelector('[data-pages]').onclick=function(){DYE.closePanel();DYE.openPages();};
   var s=p.querySelector('[data-set]');if(s)s.onclick=function(){DYE.closePanel();if(k===PAGE)DYE.pageSettings();else DYE.goPage(k);};}
+function enquirePanel(a){finishEdit(true);clearSel();select(a);var C0=C(),cta=C0.cta||{},href=a.getAttribute('href')||'contact.html#enquire',k=kindOf(href);if(href==='contact.html#enquire')k='page';
+  var full=!!a.closest('[data-view=full]'),words=cta[full?'enquireLabel':'enquireShort']||a.textContent.trim();
+  var p=openPanel('Button');p.innerHTML=field('Words on the button','<input class="pin" data-words value="'+esc(words)+'">')+
+    field('When someone clicks it, go to',seg('kind',[['page','One of my pages'],['web','A web address'],['email','Send an email']],k==='phone'?'page':k))+
+    '<div data-for="page">'+field('Page','<select class="pin" data-page>'+pagesList().map(function(q){return '<option value="'+esc(q.key)+'.html">'+esc(q.label)+'</option>';}).join('')+'<option value="contact.html#enquire">Contact page: the enquiry form</option></select>')+'</div>'+
+    '<div data-for="web">'+field('Web address','<input class="pin" data-web placeholder="https://www.example.com" value="'+(k==='web'?esc(href):'')+'">')+'</div>'+
+    '<div data-for="email">'+field('Email address','<input class="pin" data-email type="email" placeholder="name@example.com" value="'+(k==='email'?esc(href.replace(/^mailto:/i,'')):'')+'">')+'</div><p class="perr" data-err></p>'+
+    '<p class="hint">This button is on every page, so changing it here changes it everywhere.</p><div class="prow2"><button type="button" class="pbtn red" data-save>Save</button><button type="button" class="pbtn" data-done>Close</button></div>';
+  var kind=k==='phone'?'page':k;function show(){p.querySelectorAll('[data-for]').forEach(function(d){d.hidden=d.dataset.for!==kind;});}show();
+  var ps=p.querySelector('[data-page]');ps.value=/\.html/.test(href)&&kind==='page'?href:'contact.html#enquire';if(ps.value!==href&&kind==='page')ps.value='contact.html#enquire';
+  wireSeg(p,function(key,v){if(key==='kind'){kind=v;show();var f=p.querySelector('[data-for="'+v+'"] input');if(f)f.focus();}});
+  function hrefNow(){var err=p.querySelector('[data-err]');err.textContent='';if(kind==='page')return ps.value;
+    if(kind==='web'){var v=p.querySelector('[data-web]').value.trim();if(/^\s*(javascript|data):/i.test(v)){err.textContent='That address is not allowed.';return null;}if(!v){err.textContent='Please type a web address.';return null;}if(!/^https?:\/\//i.test(v))v='https://'+v.replace(/^\/+/,'');return v;}
+    var m=p.querySelector('[data-email]').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){err.textContent='Please type an email address like name@example.com.';return null;}return 'mailto:'+m;}
+  function save(){var w=p.querySelector('[data-words]').value.trim(),h=hrefNow();if(h==null)return false;if(!w){p.querySelector('[data-err]').textContent='The button needs some words.';return false;}
+    DYE.change(function(x){x.cta=x.cta||{};x.cta[full?'enquireLabel':'enquireShort']=w;if(full&&!x.cta.enquireShort)x.cta.enquireShort=w;x.cta.enquireHref=h;},{reload:true});return true;}
+  p.querySelector('[data-save]').onclick=function(){if(save())DYE.toast('Saved. This button changes on every page.');};
+  p.querySelector('[data-done]').onclick=function(){var w=p.querySelector('[data-words]').value.trim();if(w!==words||hrefNow()!==href)save();DYE.closePanel();};
+  setTimeout(function(){var f=p.querySelector('[data-words]');f.focus();f.select();},50);}
 function fixedPanel(a){clearSel();select(a);var p=openPanel('Button');p.innerHTML='<p>This button rings your phone number. To change the number everywhere, open <b>Style</b> and edit <b>Phone number</b>.</p><div class="prow2"><button type="button" class="pbtn red" data-st>Open Style</button></div>';p.querySelector('[data-st]').onclick=function(){DYE.closePanel();DYE.openSocials();};}
 
 /* ---------- images ---------- */
@@ -302,6 +321,8 @@ D.addEventListener('click',function(e){var t=e.target;if(Date.now()-(window.__dy
   if(editing&&editing.contains(t))return;
   var nv=t.closest('[data-dy-nav]');if(nv){navPanel(nv);return;}
   var row=t.closest('[data-cms=shows] .show');if(row){showPanel(row,[].slice.call(row.parentNode.querySelectorAll('.show')).indexOf(row));return;}
+  var eb=t.closest('[data-cms=actions] a[data-enq]');if(eb){enquirePanel(eb);return;}
+  var cb=t.closest('[data-cms=actions] a.btn');if(cb){fixedPanel(cb);return;}
   var cm=t.closest('[data-dy-cms]');if(cm){finishEdit();clearSel();DYE.toast('Opening Shared content: '+(CMSLAB[cm.getAttribute('data-cms')]||'this list')+' appear on more than one page, so you edit them once, here.');DYE.openShared(cm.getAttribute('data-dy-cms'));return;}
   if(t.closest('[data-dy-soc]')){finishEdit();var sb=blockOf(t);if(sb)select(sb);DYE.openSocials();return;}
   var vb=t.closest('.blk-video');if(vb){finishEdit();select(vb);optsPanel(vb.dataset.bid);return;}

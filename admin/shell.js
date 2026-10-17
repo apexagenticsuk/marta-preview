@@ -145,7 +145,7 @@ function slugify(s){return String(s||'').toLowerCase().normalize('NFKD').replace
 function pagesModal(){var box=$('#plist');box.innerHTML='';var nav=navOf();
   nav.forEach(function(n,i){var cu=(c.custom||{})[n.key],ext=!!n.href,d=document.createElement('div');d.className='prow';
     d.innerHTML='<div class="mv"><span class="ph" title="Drag to change the menu order">⠿</span><button data-a="up" title="Move up in the menu">▲</button><button data-a="down" title="Move down in the menu">▼</button></div>'+
-      '<div><input data-f="label" value="'+esc(n.label)+'" aria-label="Menu name"><small>'+(ext?'Link to '+esc(n.href):(cu?'Your page · '+esc(n.key)+'.html':'Built-in page · '+esc(n.key)+'.html'))+'</small></div>'+
+      '<div><input data-f="label" value="'+esc(n.label)+'" aria-label="Menu name"><small>'+(ext?'Link to '+esc(n.href):(cu?'Your page':'Built-in page'))+'</small></div>'+
       '<select data-f="show"><option value="menu">Menu</option><option value="footer">Footer only</option><option value="none">Hidden</option></select>'+
       '<div class="acts">'+(ext?'':'<button data-a="open">Open</button><button data-a="seo">Settings</button><button data-a="dup">Copy</button>')+(cu?'<button data-a="title">Rename</button><button data-a="del" class="del">Delete</button>':'')+'</div>';
     d.querySelector('select').value=n.show||'menu';
@@ -156,7 +156,7 @@ function pagesModal(){var box=$('#plist');box.innerHTML='';var nav=navOf();
       if(a==='seo')pageSettings(n.key);
       if(a==='dup')newPage(n.key);
       if(a==='title')renamePage(n.key).then(function(){if(!$('#pagesm').hidden)pagesModal();});
-      if(a==='del')dialog({title:'Delete this page?',text:'“'+n.label+'” ('+n.key+'.html) will disappear from the website and the menu when you publish. You can undo this until then.',ok:'Delete page',danger:true}).then(function(r){if(!r.ok)return;
+      if(a==='del')dialog({title:'Delete this page?',text:'“'+n.label+'” will disappear from the website and the menu when you publish. You can undo this until then.',ok:'Delete page',danger:true}).then(function(r){if(!r.ok)return;
         DYE.change(function(x){delete x.custom[n.key];x.nav=ensureNav(x).filter(function(z){return z.key!==n.key;});delete x.pages[n.key];if(x.seo)delete x.seo[n.key];});if(page===n.key)setPage('index');else reload();pagesModal();toast('Page deleted.');});};
     d.querySelector('.mv').onclick=function(e){var a=e.target.dataset.a;if(!a)return;var j=i+(a==='up'?-1:1);if(j<0||j>=nav.length)return;DYE.change(function(x){var L=ensureNav(x);L.splice(j,0,L.splice(i,1)[0]);},{reload:true});pagesModal();};
     d.querySelector('.ph').addEventListener('pointerdown',function(e){if(e.button>0)return;e.preventDefault();DYDrag.begin({e:e,doc:document,ghostFrom:d,pick:function(lx,ly){return DYDrag.halves([].slice.call(box.children),lx,ly);},
@@ -194,12 +194,12 @@ function newPage(copyOf){var sel=$('#np-tpl');sel.innerHTML='<optgroup label="Re
         ['order','hidden'].forEach(function(k){if(pg[k])pg[k]=pg[k].map(function(id){return map[id]||id;});});Object.keys(pg.ins||{}).forEach(function(a){pg.ins[a].forEach(function(b){b.id=LIB.uid('b');});});}
       else{x.custom[slug]={title:title,base:null};pg={secs:{},order:[]};LIB.PAGE_TEMPLATES[v[1]].secs.forEach(function(k){var id=LIB.uid('n'),s=LIB.makeSection(k);pg.secs[id]=s;pg.order.push(id);});
         var first=pg.secs[pg.order[0]].blocks[0];if(first.type==='hero')first.title=esc(title);else if(first.type==='heading')first.text=esc(title);}
-      x.pages[slug]=pg;x.seo[slug]={title:title+' | Magic Marta',description:''};var at=x.nav.length;x.nav.forEach(function(n,i){if(n.key==='contact'&&v[0]!=='copy')at=i;if(v[0]==='copy'&&n.key===v[1])at=i+1;});x.nav.splice(at,0,{key:slug,label:label,show:'menu'});});
+      x.pages[slug]=pg;x.seo[slug]={title:title+' | Magic Marta',description:''};x.nav.push({key:slug,label:label,show:'menu'});});
     $('#newpm').hidden=true;$('#pagesm').hidden=true;setPage(slug);toast('Page created. Click anything on it to change it.');};
   $('#newpm').hidden=false;$('#np-title').focus();}
 
 /* ---- preview & publish ---- */
-function preview(){try{localStorage.setItem('dy-preview',JSON.stringify({content:c,uploads:used()}));}catch(e){toast('Not enough space on this device to preview these pictures.');return;}window.open(pagePath(page,'preview=1'),'_blank');}
+function preview(){try{localStorage.setItem('dy-preview',JSON.stringify({content:c,uploads:used()}));}catch(e){toast('Not enough space on this device to preview these pictures.');return;}dialog({title:'Open a preview?',text:'The preview opens in a new browser tab, so you may need to come back to this tab to keep editing. Nothing is published.',ok:'Open preview',cancel:'Not now'}).then(function(r){if(r&&r.ok)window.open(pagePath(page,'preview=1'),'_blank');});}
 function problems(){var o=[];(c.posts||[]).forEach(function(p,n){var w='Blog post '+(n+1)+(p.title?' ('+p.title+')':'');if(!p.date)o.push(w+' has no date.');if(!p.title)o.push(w+' has no title.');});(c.clips||[]).forEach(function(k,n){if(!k.vid)o.push('Video '+(n+1)+' has no video ID.');});if(!(c.contact||{}).email)o.push('The contact email is empty.');  c.socials.concat(c.contactSocials).forEach(function(s){if(s.url&&!/^https?:\/\//.test(s.url))o.push('Social link "'+s.url+'" should start with https://');});
   Object.keys(c.custom||{}).forEach(function(k){if(!/^[a-z0-9][a-z0-9-]*$/.test(k)||RESERVED.indexOf(k)>-1)o.push('The page address "'+k+'" is not allowed.');});return o;}
 function escT(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
