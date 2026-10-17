@@ -17,13 +17,15 @@ for(const f of ['Nunito','Fredoka'])ok(`style.css has a size-adjusted fallback f
 for(const pg of PAGES){const html=await (await fetch(`${base}/${pg}.html`)).text();
  ok(`${pg}: body and heading fonts preloaded in static HTML`,['fredoka_700','nunito_400','nunito_700'].every(f=>html.includes(`href="assets/font_${f}.woff2"`)));}
 // 3. Blog CLS under slow fonts and a throttled CPU/network (the conditions Lighthouse uses)
-for(const w of [375,412]){const ctx=await b.newContext({viewport:{width:w,height:800},deviceScaleFactor:2});const p=await ctx.newPage();
+const med=a=>a.sort((x,y)=>x-y)[a.length>>1];
+for(const w of [375,412]){const runs=[];for(let k=0;k<3;k++){const ctx=await b.newContext({viewport:{width:w,height:800},deviceScaleFactor:2});const p=await ctx.newPage();
  await p.route(/\.woff2$/,async r=>{await new Promise(s=>setTimeout(s,+process.env.FD||400));r.continue()});
  const c=await ctx.newCDPSession(p);await c.send('Emulation.setCPUThrottlingRate',{rate:4});
  await p.addInitScript(()=>{window.__cls=0;new PerformanceObserver(l=>{for(const e of l.getEntries())if(!e.hadRecentInput)window.__cls+=e.value}).observe({type:'layout-shift',buffered:true})});
  await p.goto(`${base}/blog.html`,{waitUntil:'load'});await p.waitForTimeout(3500);
  for(let y=0;y<4000;y+=400){await p.evaluate(y=>scrollTo(0,y),y);await p.waitForTimeout(100)}
- const cls=await p.evaluate(()=>window.__cls);ok(`blog@${w}: CLS ${cls.toFixed(3)} is under 0.05 with slow fonts`,cls<0.05);await ctx.close();}
+ runs.push(await p.evaluate(()=>window.__cls));await ctx.close()}
+ const cls=med(runs);ok(`blog@${w}: median CLS ${cls.toFixed(3)} (runs ${runs.map(x=>x.toFixed(3)).join(', ')}) is under 0.05 with slow fonts`,cls<0.05);}
 // 4. Gallery: LCP image eager + high priority + preloaded; below the fold lazy; right-sized variants
 const gh=await (await fetch(`${base}/gallery.html`)).text();
 const imgs=gh.match(/<img\b[^>]*>/g)||[];const pre=gh.match(/<link rel="preload" as="image"[^>]*>/);

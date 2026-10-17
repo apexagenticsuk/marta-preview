@@ -95,6 +95,7 @@ function galleryHTML(g,i){var im=String(g.img||'');var top=i<2;return '<figure><
 function clipHTML(k,view){var th=esc(RES(k.thumb||'')),lite='<div class="lite" data-yt="'+esc(k.vid)+'" data-title="'+esc(k.title)+'" style="--bg:url(\''+th+'\')"><button type="button" class="litebtn" aria-label="Play video: '+esc(k.title)+'"><span class="play" aria-hidden="true"></span></button></div>';
   if(view==='cards')return '<article class="vid">'+lite+'<h2 class="vt">'+clean(k.title)+'</h2>'+(k.cap?'<p>'+clean(k.cap)+'</p>':'')+'</article>';return lite;}
 function fmtDate(iso){var d=new Date(iso+'T12:00:00Z');return isNaN(d)?'':d.getUTCDate()+' '+MON[d.getUTCMonth()]+' '+d.getUTCFullYear();}
+function postsFolded(L,c){var N=12,a=L.slice(0,N).map(function(p){return postHTML(p,c);}).join('');if(L.length<=N)return a;return a+'<details class="older"'+(EDITING?' open':'')+'><summary>Show older posts ('+(L.length-N)+')</summary>'+L.slice(N).map(function(p){return postHTML(p,c);}).join('')+'</details>';}
 function postHTML(p,c){return '<article class="post" id="'+esc(p.id)+'"><header><h2>'+clean(p.title)+'</h2><p class="meta"><time datetime="'+esc(p.date)+'">'+fmtDate(p.date)+'</time> · '+esc(p.by)+'</p></header>'+(p.img?'<img src="'+esc(RES(p.img))+'"'+RSET(p.img,'(min-width:900px) 700px, 90vw')+' alt="'+esc(p.alt||'')+'" loading="lazy">':'')+'<div class="pbody">'+paras(p.body,c)+'</div>'+((function(){var k=p.clip&&(c.clips||[]).filter(function(x){return x.id===p.clip;})[0];return k?'<div class="pvid">'+clipHTML(k,'lite')+'</div>':'';})())+'</article>';}
 function actionsHTML(c,view){var ct=(c||{}).contact||{},tel=telOf(ct.phone);if(view==='full')return '<a class="btn rose" href="tel:'+esc(tel)+'">Call '+esc(ct.phone||'')+'</a><a class="btn gold" href="sms:'+esc(tel)+'">Text Marta</a><a class="btn ghost" href="contact.html#enquire">Enquire online</a>';return '<a class="btn rose" href="tel:'+esc(tel)+'">Call</a><a class="btn gold" href="sms:'+esc(tel)+'">Text</a><a class="btn ghost" href="contact.html#enquire">Enquire</a>';}
 function contactHTML(c,view){var ct=c.contact||{},tel='tel:'+telOf(ct.phone),mail='mailto:'+ct.email;
@@ -115,7 +116,7 @@ function shared(c,root){root=root||document;window.DY_C=c;
     else if(k==='testimonials'){var pl=ATTR(el,'place','');h=(c.testimonials||[]).filter(function(t){return pl==='all'||t.place===pl;}).map(function(t){return reviewHTML(t,c);}).join('');}
     else if(k==='gallery')h=(c.gallery||[]).map(galleryHTML).join('');
     else if(k==='clips'){var pc=ATTR(el,'place','gallery');h=(c.clips||[]).filter(function(x){return x.place===pc||x.place==='both';}).map(function(x){return clipHTML(x,v);}).join('');}
-    else if(k==='posts')h=v==='index'?'<ol>'+(c.posts||[]).map(function(p){return '<li><a href="#'+esc(p.id)+'">'+clean(p.title)+'</a> <time datetime="'+esc(p.date)+'">'+fmtDate(p.date)+'</time></li>';}).join('')+'</ol>':(c.posts||[]).map(function(p){return postHTML(p,c);}).join('');
+    else if(k==='posts')h=v==='index'?'<ol>'+(c.posts||[]).map(function(p){return '<li><a href="#'+esc(p.id)+'">'+clean(p.title)+'</a> <time datetime="'+esc(p.date)+'">'+fmtDate(p.date)+'</time></li>';}).join('')+'</ol>':postsFolded(c.posts||[],c);
     else if(k==='actions')h=actionsHTML(c,v);
     else if(k==='contact')h=contactHTML(c,v);
     else if(k==='enquiry')h=enquiryHTML(c);

@@ -18,4 +18,14 @@ function tag(){t=0;d.querySelectorAll('main>section,.rev,.pr,.vid,.post,.qa,.car
 tag();new MutationObserver(function(){if(!t)t=requestAnimationFrame(tag);}).observe(d.body,{childList:true,subtree:true});
 addEventListener('resize',function(){setTimeout(showSeen,50);});addEventListener('load',function(){setTimeout(showSeen,300);});addEventListener('beforeprint',showAll);
 setTimeout(showSeen,1500);setTimeout(showAll,9000);
+
+})();
+
+/* dock: reserve its height at the page bottom; hide it while a form field has focus */
+(function(){var d=document,r=d.documentElement;function dh(){var k=d.querySelector('.sticky.dock');r.style.setProperty('--dock',(k&&k.offsetHeight?k.offsetHeight:0)+'px');}
+dh();addEventListener('resize',dh);addEventListener('load',dh);new MutationObserver(dh).observe(d.body,{childList:true,subtree:true});
+var F='input,textarea,select';d.addEventListener('focusin',function(e){if(e.target.matches&&e.target.matches(F))r.classList.add('typing');});
+d.addEventListener('focusout',function(e){if(e.target.matches&&e.target.matches(F))setTimeout(function(){if(!(d.activeElement&&d.activeElement.matches&&d.activeElement.matches(F)))r.classList.remove('typing');},50);});
+/* blog: index links open the folded older posts */
+d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.pindex a[href^="#"]');if(!a)return;var t=d.getElementById(a.getAttribute('href').slice(1)),o=t&&t.closest('details');if(o)o.open=true;});
 })();
