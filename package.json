@@ -4,7 +4,7 @@
   "description": "Static preview site for Magic Marta (Marta's Magic Kids Show). Tests run against a local static server.",
   "scripts": {
     "serve": "python3 -m http.server 8765",
-    "test": "for t in marta perf tap queue faces focus dupes links layout site4 round4 editor-e2e editor2 shared pill follow picker snap drag fix; do node tests/$t.js ${BASE:-http://localhost:8765} || exit 1; done"
+    "test": "for t in marta perf tap queue faces focus dupes links layout site4 round4 editor-e2e editor-queue editor2 shared pill follow picker snap drag fix; do node tests/$t.js ${BASE:-http://localhost:8765} || exit 1; done"
   },
   "devDependencies": {
     "playwright": "^1.48.0"

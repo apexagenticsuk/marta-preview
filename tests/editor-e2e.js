@@ -27,7 +27,7 @@ await p.evaluate(()=>DYE.openShared('clips'));await p.waitForSelector('#sharedm:
 const vr=p.locator('#sharedm details.shrow').first();await vr.evaluate(d=>d.open=true);const vi=vr.locator('label.shf:has(span:text-is("Video ID (the code in the link)")) input').first();await vi.fill('AAAAAAAAAAA');await vi.dispatchEvent('change');await p.waitForTimeout(700);
 ok('changing a video is saved and shown',(await state()).clips[0].vid==='AAAAAAAAAAA'&&await F().evaluate(()=>!!document.querySelector('.lite[data-yt="AAAAAAAAAAA"]')));await p.evaluate(()=>document.querySelector('#sharedm').hidden=true);
 // 6 preview
-const [pv]=await Promise.all([ctx.waitForEvent('page',{timeout:8000}).catch(()=>null),p.click('#preview')]);
+const [pv]=await Promise.all([ctx.waitForEvent('page',{timeout:8000}).catch(()=>null),p.click('#preview').then(async()=>{await p.waitForSelector('#dlg:not([hidden])');await p.click('#dlg-ok');})]);
 if(pv){await pv.waitForLoadState('load');await pv.waitForTimeout(800);ok('Preview shows the unpublished changes with a banner',await pv.evaluate(()=>/PREVIEW of unpublished/i.test(document.body.innerText)&&/E2E review text|Hello!/.test(document.body.innerText)));await pv.close();}else ok('Preview opens',false);
 // 7 publish in demo mode: explains, writes nothing
 await p.click('#publish');await p.waitForTimeout(600);const dlg=await p.evaluate(()=>{const d=document.querySelector('#dlg');return !d.hidden&&/demo/i.test(d.innerText);});ok('Publish in demo mode explains it is a practice copy',dlg);
