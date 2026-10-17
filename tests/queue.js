@@ -14,8 +14,8 @@ for(const w of [360,375,390,430]){const ctx=await b.newContext({viewport:{width:
   const g=await p.evaluate(sel=>{const row=document.querySelector(sel),R=row.getBoundingClientRect();const bs=[...row.children].map(e=>e.getBoundingClientRect());return {R:[R.left,R.right],bs:bs.map(r=>[r.left,r.right,r.top,r.bottom])}},sel);
   const [a,t,e]=g.bs;const L=Math.min(...g.bs.map(x=>x[0])),Rr=Math.max(...g.bs.map(x=>x[1]));
   ok(`${pg}@${w}: hero buttons span the row evenly (left/right margins equal)`,Math.abs((L-g.R[0])-(g.R[1]-Rr))<1.5,JSON.stringify(g));
-  ok(`${pg}@${w}: Text and Enquire are equal width, side by side, 8px+ apart`,Math.abs((t[1]-t[0])-(e[1]-e[0]))<1.5&&Math.abs(t[2]-e[2])<1.5&&e[0]-t[1]>=8,JSON.stringify(g));
-  ok(`${pg}@${w}: Call button is full width above them`,Math.abs((a[1]-a[0])-(Rr-L))<1.5&&t[2]-a[3]>=8,JSON.stringify(g));}
+  ok(`${pg}@${w}: Text and Enquire are equal width, side by side, 10px+ apart`,Math.abs((t[1]-t[0])-(e[1]-e[0]))<1.5&&Math.abs(t[2]-e[2])<1.5&&e[0]-t[1]>=10,JSON.stringify(g));
+  ok(`${pg}@${w}: Call button is full width above them`,Math.abs((a[1]-a[0])-(Rr-L))<1.5&&t[2]-a[3]>=10,JSON.stringify(g));}
  // dock clearance + hides while typing
  await p.goto(`${base}/contact.html`);await p.waitForTimeout(500);await p.evaluate(()=>scrollTo(0,document.body.scrollHeight));await p.waitForTimeout(300);
  const d=await p.evaluate(()=>{const k=document.querySelector('.sticky.dock').getBoundingClientRect();const f=document.querySelector('footer');const fr=f.getBoundingClientRect();return {dockTop:k.top,dockH:k.height,footBottom:fr.bottom,pad:parseFloat(getComputedStyle(document.body).paddingBottom),inner:innerHeight}});

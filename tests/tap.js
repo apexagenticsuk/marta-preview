@@ -13,8 +13,8 @@ for(const w of [360,375,430,768,1280]){const ctx=await b.newContext({viewport:{w
     const gx=Math.max(c.r.left-a.r.right,a.r.left-c.r.right),gy=Math.max(c.r.top-a.r.bottom,a.r.top-c.r.bottom);
     const ox=Math.min(a.r.right,c.r.right)-Math.max(a.r.left,c.r.left),oy=Math.min(a.r.bottom,c.r.bottom)-Math.max(a.r.top,c.r.top);
     // only compare things on the same row (vertical overlap) or same column (horizontal overlap)
-    if(oy>2&&gx>=0&&gx<7.5)out.push('gap '+gx.toFixed(1)+'px '+nm(a.e)+' | '+nm(c.e));
-    else if(ox>2&&gy>=0&&gy<7.5&&!(a.e.closest('.post,.pindex,.prose,p')&&c.e.closest('.post,.pindex,.prose,p')))out.push('gap '+gy.toFixed(1)+'px(v) '+nm(a.e)+' | '+nm(c.e))}
+    if(oy>2&&gx>=0&&gx<9.5)out.push('gap '+gx.toFixed(1)+'px '+nm(a.e)+' | '+nm(c.e));
+    else if(ox>2&&gy>=0&&gy<9.5&&!(a.e.closest('.post,.pindex,.prose,p')&&c.e.closest('.post,.pindex,.prose,p')))out.push('gap '+gy.toFixed(1)+'px(v) '+nm(a.e)+' | '+nm(c.e))}
    return [...new Set(out)]});
   n++;if(r.length){bad++;console.log(`FAIL ${pg}@${w}: ${r.length} tap problems`);r.slice(0,process.env.ALL?99:6).forEach(x=>console.log('   '+x))}}
  await ctx.close()}
