@@ -39,8 +39,8 @@ await mdrag(p,ctr(h),{x:last.x+last.width/2,y:last.y+last.height-2});await ready
 ok('mouse: reorder list items on a built page',c.pages.index&&c.pages.index.lists&&JSON.stringify(Object.values(c.pages.index.lists)).match(/\"1\",\"(0|2)\"/),JSON.stringify(c.pages.index&&c.pages.index.lists));
 await undo(p);
 // 4 picker drag: open picker via + Add block on a section, drag "Text" tile onto the page
-await F(p).click('.fun h2');await p.waitForTimeout(200);await p.click('#selbar button:has-text("Add below")');await p.waitForSelector('#pickm:not([hidden])');
-let tile=await (await p.$('#pickg .tile[data-k="text"]')).boundingBox();let dest=await box(p,'.gal h2');
+await F(p).click('.occ h2');await p.waitForTimeout(200);await p.click('#selbar button:has-text("Add below")');await p.waitForSelector('#pickm:not([hidden])');
+let tile=await (await p.$('#pickg .tile[data-k="text"]')).boundingBox();let dest=await box(p,'.reviews h2');
 await mdrag(p,ctr(tile),{x:dest.x+50,y:dest.y+dest.height+200},20);await ready(p);c=await st(p);
 const ins=c.pages.index&&c.pages.index.ins||{};const nIns=Object.values(ins).flat().length;ok('mouse: drag a new block from the picker onto the page',nIns===1&&Object.values(ins).flat()[0].type==='text',JSON.stringify(Object.keys(ins)));
 await undo(p);c=await st(p);ok('undo picker drop',!Object.values((c.pages.index||{}).ins||{}).flat().length);
@@ -84,12 +84,12 @@ ok('desktop editor: no JS errors',!p.errs.length,JSON.stringify(p.errs));await p
 /* ===== phone, touch ===== */
 p=await open(true);
 const mo0=(await F(p).evaluate(()=>[...(document.querySelector('body>main')||document.body).children].filter(e=>e.classList.contains('dy-sec')).map(e=>e.getAttribute('data-dy').split(' ')[0])));
-await F(p).evaluate(()=>document.querySelectorAll('.dy-sec > .dy-dh.sec')[2].scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(200);
-h=await (await F(p).$$('.dy-sec >.dy-dh.sec'))[2].boundingBox();await tdrag(p,ctr(h),{x:200,y:ctr(h).y-260},0,12);await ready(p);
+await F(p).evaluate(()=>document.querySelectorAll('.dy-sec > .dy-dh.sec')[3].scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(200);
+h=await (await F(p).$$('.dy-sec >.dy-dh.sec'))[3].boundingBox();await tdrag(p,ctr(h),{x:200,y:ctr(h).y-260},0,12);await ready(p);
 c=await st(p);ok('touch: drag section with handle (no scroll fight)',c.pages.index&&c.pages.index.order&&c.pages.index.order.join()!==mo0.join());
 await undo(p);
 // touch: block + items need content
-await p.evaluate(()=>{const L=window.DY_LIB;window.DYE.change(c=>{const P=c.pages.index=c.pages.index||{};P.secs={nA:L.makeSection('gallery')};P.secs.nA.blocks.push(L.makeBlock('text'));const o=[...(document.querySelector('#frame').contentDocument.querySelector('body>main')||document.querySelector('#frame').contentDocument.body).children].filter(e=>e.classList.contains('dy-sec')).map(e=>e.getAttribute('data-dy').split(' ')[0]);o.splice(2,0,'nA');P.order=o;},{reload:true});});await ready(p);
+await p.evaluate(()=>{const L=window.DY_LIB;window.DYE.change(c=>{const P=c.pages.index=c.pages.index||{};P.secs={nA:L.makeSection('gallery')};P.secs.nA.blocks.push(L.makeBlock('text'));const o=[...(document.querySelector('#frame').contentDocument.querySelector('body>main')||document.querySelector('#frame').contentDocument.body).children].filter(e=>e.classList.contains('dy-sec')).map(e=>e.getAttribute('data-dy').split(' ')[0]);o.splice(1,0,'nA');P.order=o;},{reload:true});});await ready(p);
 const nbm=async(sel,i=0)=>(await F(p).$$(sel))[i].boundingBox();
 await F(p).evaluate(()=>document.querySelectorAll('[data-nsec="nA"] [data-bid]')[2].scrollIntoView({block:'end',behavior:'instant'}));await p.waitForTimeout(200);
 h=await nbm('[data-nsec="nA"] [data-bid] > .dy-dh.blk',2);first=await nbm('[data-nsec="nA"] [data-bid]',1);
@@ -101,7 +101,7 @@ ok('touch: tapping a section shows its item handles',await F(p).evaluate(()=>get
 await F(p).evaluate(()=>{window.DYD_DEBUG=1});p.on('console',m=>{if(/END|commit/.test(m.text()))console.log('PC',m.text())});console.log('ORDER-BEFORE',JSON.stringify((await st(p)).pages.index.order));const gb=JSON.stringify((await st(p)).pages.index.secs.nA.blocks.find(x=>x.type==='gallery').images);
 await F(p).evaluate(()=>document.querySelector('.blk-gallery').scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(200);
 await F(p).evaluate(()=>{window._lg=[];['pointerdown','pointercancel','pointerup'].forEach(t=>document.addEventListener(t,e=>_lg.push(t+':'+e.target.className),true));});
-await F(p).evaluate(()=>document.querySelectorAll('.blk-gallery > figure')[1].scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(200);h=await nbm('.blk-gallery > figure > .dy-dh.itm',0);let l2=await nbm('.blk-gallery > figure',2);await p.waitForTimeout(300);h=await nbm('.blk-gallery > figure > .dy-dh.itm',0);l2=await nbm('.blk-gallery > figure',2);await tdrag(p,ctr(h),{x:l2.x+l2.width-5,y:l2.y+l2.height/2},0,15,0,async()=>console.log('MID',await F(p).evaluate(()=>{const i=document.querySelector('.dyd-ind');return [!!i,i&&i.hidden,i&&i.style.left,i&&i.style.top,scrollY,!!document.querySelector('.dyd-ghost')]})));await ready(p);
+await F(p).evaluate(()=>document.querySelectorAll('.blk-gallery > figure')[1].scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(200);h=await nbm('.blk-gallery > figure > .dy-dh.itm',1);let l2=await nbm('.blk-gallery > figure',2);await p.waitForTimeout(300);h=await nbm('.blk-gallery > figure > .dy-dh.itm',1);l2=await nbm('.blk-gallery > figure',2);await tdrag(p,ctr(h),{x:l2.x+l2.width-5,y:l2.y+l2.height/2},0,15,0,async()=>console.log('MID',await F(p).evaluate(()=>{const i=document.querySelector('.dyd-ind');return [!!i,i&&i.hidden,i&&i.style.left,i&&i.style.top,scrollY,!!document.querySelector('.dyd-ghost')]})));await ready(p);
 {const ga=JSON.stringify((await st(p)).pages.index.secs.nA.blocks.find(x=>x.type==='gallery').images);ok('touch: reorder gallery pictures',ga!==gb,JSON.stringify((await st(p)).pages.index.order)+JSON.stringify(p.errs)+await p.evaluate(()=>document.querySelector('#toast').textContent)+JSON.stringify([h,l2])+ga+await F(p).evaluate(()=>JSON.stringify(window._lg)).catch(e=>'nolog'));}
 // touch: long-press a picker tile and drop on page
 await F(p).evaluate(()=>document.querySelector('[data-nsec="nA"] .blk-text p').scrollIntoView({block:'center',behavior:'instant'}));await p.waitForTimeout(150);await F(p).tap('[data-nsec="nA"] .blk-text p');await p.waitForTimeout(200);await p.tap('#selbar button:has-text("Add below")');await p.waitForSelector('#pickm:not([hidden])');

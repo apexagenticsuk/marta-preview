@@ -49,7 +49,7 @@ if(await de.count()){await de.fill('4 Oct 2017');await de.dispatchEvent('change'
 await p.evaluate(()=>document.querySelector('#sharedm').hidden=true);
 for(let i=0;i<30&&await p.evaluate(()=>!document.querySelector('#undo').disabled);i++){await p.click('#undo');await p.waitForTimeout(250);}await ready();
 const c=await p.evaluate(()=>JSON.parse(JSON.stringify(DYE.state().content)));
-ok(M+': undo restores the original shared content',await p.evaluate(()=>{const c=DYE.state().content;return c.contact.email==='info@theweddingcomedian.ie'&&!c.deposit&&!c.testimonials.some(t=>/SHARED EDIT/.test(t.text));}));
+ok(M+': undo restores the original shared content',await p.evaluate(()=>{const c=DYE.state().content;return c.contact.email==='info@martasmagic.com'&&!c.deposit&&!c.testimonials.some(t=>/SHARED EDIT/.test(t.text));}));
 ok(M+': no JS errors',errs.length===0,JSON.stringify(errs));
 await ctx.close();}
 await b.close();console.log('SUMMARY',res.filter(r=>r[1]).length+'/'+res.length);process.exit(res.every(r=>r[1])?0:1);})().catch(e=>{console.error('CRASH',e.message);process.exit(1);});

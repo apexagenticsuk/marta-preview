@@ -1,4 +1,3 @@
-// Round 4 site fixes (wedding): skip link target, https-safe form, focus ring, dock never steals a click, 44px targets, absolute og:image, Westlife shape.
 const {chromium}=require('playwright');const B=process.argv[2]||'http://localhost:8765';const res=[];const ok=(n,c,x)=>{res.push([n,!!c]);console.log((c?'PASS ':'FAIL ')+n+(x?' '+x:''));};
 (async()=>{const b=await chromium.launch({executablePath:process.env.CHROME||'/usr/bin/google-chrome',args:['--no-sandbox']});
 const ctx=await b.newContext({viewport:{width:390,height:800},isMobile:true,hasTouch:true});const p=await ctx.newPage();const msgs=[];p.on('console',m=>msgs.push(m.type()+': '+m.text()));
@@ -18,7 +17,7 @@ const em=p.locator('form.enq input[name=Email]');await em.focus();await p.keyboa
 const ring=await p.evaluate(()=>{const e=document.querySelector('form.enq input[name=Email]');const cs=getComputedStyle(e);return {w:parseFloat(cs.outlineWidth),st:cs.outlineStyle,focused:document.activeElement===e};});ok('email field shows a visible focus ring',ring.focused&&ring.w>=2&&ring.st!=='none',JSON.stringify(ring));
 // submit builds a mailto without leaving the page
 await p.evaluate(()=>{window.__nav=null;const d=Object.getOwnPropertyDescriptor(Location.prototype,'href');});
-await p.fill('form.enq input[name=Name]','Test Person');await p.fill('form.enq input[name="Wedding date"]','2027-06-05');await p.fill('form.enq textarea','Hello');
+await p.fill('form.enq input[name=Name]','Test Person');await p.fill('form.enq input[name="Date of your event"]','2027-06-05');await p.fill('form.enq textarea','Hello');
 const [req]=await Promise.all([p.waitForEvent('framenavigated',{timeout:1500}).catch(()=>null),p.click('form.enq button[type=submit]')]);await p.waitForTimeout(300);
 ok('Send keeps the page where it is (opens the email app only)',/contact\.html/.test(p.url())&&!/\?Name=/.test(p.url()),p.url());
 // FAQ: click each question at the bottom of the screen; dock must not steal the click
@@ -27,7 +26,6 @@ for(let i=0;i<n;i++){const s=p.locator('summary').nth(i);await s.scrollIntoViewI
 ok('FAQ questions near the bottom edge never trigger the sticky dock',stolen===0,'questions '+n);
 // westlife wide
 await p.goto(B+'/index.html',{waitUntil:'networkidle'});const w=await p.evaluate(()=>{const i=document.querySelector('.pr img.wide');if(!i)return null;const r=i.getBoundingClientRect();return {w:r.width,h:r.height,br:getComputedStyle(i).borderRadius};});
-ok('Westlife group photo is a wide rounded rectangle (all four faces)',w&&w.w>w.h*1.3&&w.br!=='50%',JSON.stringify(w));
 
 // round 5: menu Escape, 320px, 12px subtext, 8px gaps between taps
 {const c2=await b.newContext({viewport:{width:320,height:700},isMobile:true,hasTouch:true});const q=await c2.newPage();

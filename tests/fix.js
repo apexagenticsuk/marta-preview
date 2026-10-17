@@ -24,9 +24,9 @@ const line=p=>async()=>{const v=await F(p).evaluate(()=>{const i=document.queryS
 const nb=async(p,sel,i=0)=>(await F(p).$$(sel))[i].boundingBox();
 const center=(p,sel,i=0)=>F(p).evaluate(([s,i])=>document.querySelectorAll(s)[i].scrollIntoView({block:'center',behavior:'instant'}),[sel,i]).then(()=>p.waitForTimeout(150));
 async function setup(p){await p.evaluate(()=>{const L=window.DY_LIB;window.DYE.change(c=>{const P=c.pages.index=c.pages.index||{};P.secs={};
-  P.secs.nA={blocks:[L.makeBlock(['heading','Section A']),L.makeBlock('text')]};const G=L.makeBlock('gallery');G.images=[1,2,3,4].map(n=>({src:'assets/gallery_'+n+'.webp',alt:'g'+n,caption:''}));P.secs.nG={blocks:[G]};
+  P.secs.nA={blocks:[L.makeBlock(['heading','Section A']),L.makeBlock('text')]};const G=L.makeBlock('gallery');G.images=[1,2,3,4].map(n=>({src:'assets/'+['g_party_kids','g_frog_hat','g_face_paint_girl','g_witch_hat'][n-1]+'.webp',alt:'g'+n,caption:''}));P.secs.nG={blocks:[G]};
   const Q=L.makeBlock('faq');P.secs.nF={blocks:[Q]};
-  const o=[...(document.querySelector('#frame').contentDocument.querySelector('body>main')||document.querySelector('#frame').contentDocument.body).children].filter(e=>e.classList.contains('dy-sec')).map(e=>e.getAttribute('data-dy').split(' ')[0]);o.splice(2,0,'nA','nG','nF');P.order=o;},{reload:true});});await ready(p);}
+  const o=[...(document.querySelector('#frame').contentDocument.querySelector('body>main')||document.querySelector('#frame').contentDocument.body).children].filter(e=>e.classList.contains('dy-sec')).map(e=>e.getAttribute('data-dy').split(' ')[0]);o.splice(1,0,'nA','nG','nF');P.order=o;},{reload:true});});await ready(p);}
 const srcs=c=>c.pages.index.secs.nG.blocks[0].images.map(x=>x.alt).join();
 
 for(const mobile of (process.env.ONLY==='phone'?[true]:process.env.ONLY==='desktop'?[false]:[false,true])){const M=mobile?'touch':'mouse';
@@ -48,15 +48,15 @@ await center(p,'[data-nsec="nA"]');
 // drag A's text up to the hero with auto-scroll, hold over the hero
 if(!mobile){let r=await nb(p,'[data-nsec="nA"] [data-bid]',1);await p.mouse.move(r.x+30,r.y+10);}
 h=await nb(p,'[data-nsec="nA"] [data-bid] > .dy-dh.blk',1);let fb=await (await p.$('#frame')).boundingBox();let before=JSON.stringify((await st(p)).pages.index);
-let tipSeen=false;await drag(ctr(h),{x:fb.x+fb.width/2,y:fb.y+90},{hold:2500,mid:async()=>{if(mobile){const c=p._cdp;const mv=y=>c.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:fb.x+fb.width/2,y}]});await mv(fb.y+6);await p.waitForTimeout(2500);const hr=await nb(p,'.hero');await mv(Math.max(fb.y+40,hr.y+hr.height/2));await p.waitForTimeout(600);}tipSeen=await p.evaluate(()=>{const fd=document.querySelector('#frame').contentDocument,t=fd.querySelector('.dyd-tip'),i=fd.querySelector('.dyd-ind.no');return !!(t&&!t.hidden&&i);});}});await ready(p);
+let tipSeen=false;await drag(ctr(h),{x:fb.x+fb.width/2,y:fb.y+90},{hold:2500,mid:async()=>{if(mobile){const c=p._cdp;const mv=y=>c.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:fb.x+fb.width/2,y}]});await mv(fb.y+6);await p.waitForTimeout(7000);const hr=await nb(p,'.hero');await mv(Math.min(fb.y+fb.height*0.55,Math.max(fb.y+40,hr.y+hr.height/2)));await p.waitForTimeout(600);}tipSeen=await p.evaluate(()=>{const fd=document.querySelector('#frame').contentDocument,t=fd.querySelector('.dyd-tip'),i=fd.querySelector('.dyd-ind.no');return !!(t&&!t.hidden&&i);});}});await ready(p);
 console.log('DBG',tipSeen,JSON.stringify((await st(p)).pages.index)===before,await p.evaluate(()=>document.querySelector('#toast').textContent));ok(M+' 2: photo banner refuses with a red line + message',tipSeen&&JSON.stringify((await st(p)).pages.index)===before&&/banner/i.test(await p.evaluate(()=>document.querySelector('#toast').textContent)));
 await center(p,'[data-nsec="nA"]');if(!mobile){let r=await nb(p,'[data-nsec="nA"] [data-bid]',1);await p.mouse.move(r.x+30,r.y+10);}
 h=await nb(p,'[data-nsec="nA"] [data-bid] > .dy-dh.blk',1);
-const party=await F(p).evaluate(()=>{const s=document.querySelector('section.intro');return [...(document.querySelector('body>main')||document.body).children].filter(e=>e.classList.contains('dy-sec')).indexOf(s);});
+const party=await F(p).evaluate(()=>{const s=document.querySelector('section.joy');return [...(document.querySelector('body>main')||document.body).children].filter(e=>e.classList.contains('dy-sec')).indexOf(s);});
 // put the party section right under A so both are on screen
 await p.evaluate(i=>{window.DYE.change(c=>{const P=c.pages.index;const o=P.order.filter(x=>x!=='nA');const pid=o[i>2?i-1:i];o.splice(o.indexOf(pid),0,'nA');P.order=o;},{reload:true});},party);await ready(p);
 await center(p,'[data-nsec="nA"]');if(!mobile){let r=await nb(p,'[data-nsec="nA"] [data-bid]',1);await p.mouse.move(r.x+30,r.y+10);}
-h=await nb(p,'[data-nsec="nA"] [data-bid] > .dy-dh.blk',1);let pr=await nb(p,'section.intro img');
+h=await nb(p,'[data-nsec="nA"] [data-bid] > .dy-dh.blk',1);let pr=await nb(p,'.joy img');
 await drag(ctr(h),{x:pr.x+pr.width/2,y:Math.min(pr.y+pr.height/2,fb.y+fb.height-90)},{mid:line(p)});await ready(p);c=await st(p);
 ok(M+' 2: block dropped on the image (Home intro) section lands in it',Object.values(c.pages.index.ins||{}).flat().length===1&&c.pages.index.secs.nA.blocks.length===1);await undo(p);
 // 3 FAQ handle sits on the right, away from the open/close arrow; FAQ reorder works
