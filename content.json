@@ -14,12 +14,16 @@
     "base": "Co. Dublin",
     "tagline": "Fun, interactive shows for children's parties and family events",
     "website": "kidsshow.ie",
-    "sayhello": "Can't wait to have Magic Marta at my party!"
+    "sayhello": "Can't wait to have Magic Marta at my party!",
+    "emailAlt": "info@kidsshow.ie",
+    "emailGmail": "magickidsshow@gmail.com"
   },
   "cta": {
     "enquireLabel": "Enquire online",
     "enquireShort": "Enquire",
-    "enquireHref": "contact.html#enquire"
+    "enquireHref": "contact.html#enquire",
+    "bookLabel": "Book now",
+    "bookHref": "mailto:INFO@KIDSSHOW.IE?subject=Online%20Show"
   },
   "nav": [
     {
@@ -110,7 +114,7 @@
       "id": "communion",
       "icon": "star",
       "title": "Communions",
-      "text": ""
+      "text": "Now Booking for 2026 Communion Celebrations!"
     },
     {
       "id": "christening",
@@ -122,7 +126,7 @@
       "id": "wedding",
       "icon": "gift",
       "title": "Weddings",
-      "text": ""
+      "text": "Thinking of new and interesting ways to entertain your younger guests?"
     },
     {
       "id": "corporate",
@@ -548,7 +552,7 @@
       "title": "Add a little magic...",
       "by": "Magic Marta",
       "date": "2019-10-16",
-      "body": "... to your special occasion with Marta's Magic Kidsshow.ie ⭐⭐⭐⭐⭐\nNow booking for all occassions {contact.phone}",
+      "body": "... to your special occasion with Marta's Magic Kidsshow.ie ⭐⭐⭐⭐⭐\nNow booking for all occassions 0851666125",
       "clip": "c-magic"
     },
     {
@@ -610,7 +614,7 @@
       "title": "Happy Halloween",
       "by": "Magic Marta",
       "date": "2017-10-10",
-      "body": "I just love Halloween\nBook your little ones party today\n{contact.phone} 🤣🤣🤣"
+      "body": "I just love Halloween\nBook your little ones party today\n0851-666-125 🤣🤣🤣"
     },
     {
       "id": "post-17",
@@ -791,7 +795,7 @@
   "seo": {
     "index": {
       "title": "Kids Magician | Marta's Magic Kids Show | Dublin",
-      "description": "Magic Marta | Children's Party Entertainer | Children's Magician | Face Painting | Balloon Modelling | Magic Show | Magician Dublin | Ireland"
+      "description": "Magic Marta | 0851666125 | Children's Party Entertainer | Children's Magician | Face Painting | Balloon Modelling | Magic Show | Magician Dublin | Ireland | Marta's Magic Kids Show | Kids Magician | Family Entertainment | Birthday Party Magician"
     },
     "about": {
       "title": "About Marta | Marta's Magic Kids Show",

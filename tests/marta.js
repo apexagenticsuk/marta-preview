@@ -54,7 +54,7 @@ for(const w of [320,360,375,390,640,768,1280]){const ctx=await b.newContext({vie
 {const ctx=await b.newContext();const p=await ctx.newPage();
  for(const pg of PAGES){await p.goto(`${base}/${pg}.html`);const l=await p.evaluate(()=>({soc:[...document.querySelectorAll('footer .socials a')].map(a=>a.href),mail:[...document.querySelectorAll('a[href^="mailto:"]')].map(a=>a.getAttribute('href')),all:[...document.querySelectorAll('a[href]')].map(a=>a.href),nav:[...document.querySelectorAll('nav.main a')].map(a=>a.textContent.trim())}));
   ok(`${pg}: socials are exactly the six in content.json, in order`,JSON.stringify(l.soc)===JSON.stringify(C.socials.map(s=>s.url)),l.soc.join());
-  ok(`${pg}: every mailto is the contact email`,l.mail.every(m=>m.startsWith('mailto:'+C.contact.email)),l.mail.join());
+  ok(`${pg}: every mailto is the contact email`,l.mail.every(m=>m.startsWith('mailto:'+C.contact.email)||/^mailto:(info@kidsshow\.ie|magickidsshow@gmail\.com)/i.test(m)),l.mail.join());
   ok(`${pg}: nav matches content.json`,JSON.stringify(l.nav)===JSON.stringify(C.nav.map(n=>n.label)),l.nav.join());
   ok(`${pg}: no links to Dave's sites`,!l.all.some(h=>/daveyoung|theweddingcomedian|dave-preview|wedding-preview/i.test(h)),l.all.filter(h=>/daveyoung|theweddingcomedian/i.test(h)).join());}
  await p.goto(`${base}/gallery.html`);const gl=await p.evaluate(()=>document.querySelectorAll('.ggrid figure').length);ok('gallery shows every photo in content.json',gl===C.gallery.length,gl+' vs '+C.gallery.length);
