@@ -532,6 +532,36 @@
       "img": "assets/g_marta_peppa.webp",
       "alt": "Marta next to someone dressed as Peppa Pig",
       "cap": ""
+    },
+    {
+      "img": "assets/live/g-live-01.webp",
+      "alt": "Children and a magician on a stage at a party, in pink light",
+      "cap": ""
+    },
+    {
+      "img": "assets/live/g-live-02.webp",
+      "alt": "Black and white photo of delighted children watching the show",
+      "cap": ""
+    },
+    {
+      "img": "assets/live/g-live-03.webp",
+      "alt": "Marta in her red jacket with a child with a painted face and a witch hat",
+      "cap": ""
+    },
+    {
+      "img": "assets/live/g-live-04.webp",
+      "alt": "A girl in a red dress with face paint smiling",
+      "cap": ""
+    },
+    {
+      "img": "assets/live/g-live-05.webp",
+      "alt": "A little girl with face paint and a blue balloon hat holding a balloon animal",
+      "cap": ""
+    },
+    {
+      "img": "assets/live/g-live-06.webp",
+      "alt": "Black and white photo of children laughing at a magic show",
+      "cap": ""
     }
   ],
   "clips": [
@@ -1844,6 +1874,94 @@
     "assets/post_36_420.webp": [
       420,
       560
+    ],
+    "assets/live/party-banner.webp": [
+      1600,
+      600
+    ],
+    "assets/live/party-banner-800.webp": [
+      800,
+      300
+    ],
+    "assets/live/meet-marta.webp": [
+      1000,
+      667
+    ],
+    "assets/live/meet-marta-500.webp": [
+      500,
+      333
+    ],
+    "assets/live/handle-banner.webp": [
+      1000,
+      416
+    ],
+    "assets/live/handle-banner-500.webp": [
+      500,
+      208
+    ],
+    "assets/live/marta-red-jacket.webp": [
+      640,
+      800
+    ],
+    "assets/live/marta-red-jacket-320.webp": [
+      320,
+      400
+    ],
+    "assets/live/ig-11.webp": [
+      640,
+      640
+    ],
+    "assets/live/ig-11-360.webp": [
+      360,
+      360
+    ],
+    "assets/live/g-live-01.webp": [
+      900,
+      1350
+    ],
+    "assets/live/g-live-01-480.webp": [
+      480,
+      720
+    ],
+    "assets/live/g-live-02.webp": [
+      900,
+      600
+    ],
+    "assets/live/g-live-02-480.webp": [
+      480,
+      320
+    ],
+    "assets/live/g-live-03.webp": [
+      900,
+      675
+    ],
+    "assets/live/g-live-03-480.webp": [
+      480,
+      360
+    ],
+    "assets/live/g-live-04.webp": [
+      900,
+      600
+    ],
+    "assets/live/g-live-04-480.webp": [
+      480,
+      320
+    ],
+    "assets/live/g-live-05.webp": [
+      900,
+      1350
+    ],
+    "assets/live/g-live-05-480.webp": [
+      480,
+      720
+    ],
+    "assets/live/g-live-06.webp": [
+      900,
+      600
+    ],
+    "assets/live/g-live-06-480.webp": [
+      480,
+      320
     ]
   }
 }
