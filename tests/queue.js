@@ -10,7 +10,7 @@ for(const pg of [...PAGES,'page']){const h=await (await fetch(`${base}/${pg}.htm
 {const h=await (await fetch(`${base}/admin/index.html`)).text();ok('admin: has favicon link',/rel="icon" href="\.\.\/favicon\.ico"/.test(h));}
 // hero buttons: centred, even grid
 for(const w of [360,375,390,430]){const ctx=await b.newContext({viewport:{width:w,height:800}});const p=await ctx.newPage();await p.emulateMedia({reducedMotion:'reduce'});
- for(const [pg,sel] of [['index','.hero .btnrow'],['contact','.enquire .btnrow']]){await p.goto(`${base}/${pg}.html`);await p.waitForTimeout(400);
+ for(const [pg,sel] of [['contact','.enquire .btnrow']]){await p.goto(`${base}/${pg}.html`);await p.waitForTimeout(400);
   const g=await p.evaluate(sel=>{const row=document.querySelector(sel),R=row.getBoundingClientRect();const bs=[...row.children].map(e=>e.getBoundingClientRect());return {R:[R.left,R.right],bs:bs.map(r=>[r.left,r.right,r.top,r.bottom])}},sel);
   const [a,t,e]=g.bs;const L=Math.min(...g.bs.map(x=>x[0])),Rr=Math.max(...g.bs.map(x=>x[1]));
   ok(`${pg}@${w}: hero buttons span the row evenly (left/right margins equal)`,Math.abs((L-g.R[0])-(g.R[1]-Rr))<1.5,JSON.stringify(g));

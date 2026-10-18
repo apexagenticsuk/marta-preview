@@ -1,6 +1,8 @@
 {
  "replaced": {
-  "Now Booking for 2026 Communion Celebrations!": "Now Booking for 2027 Communion Celebrations!"
+  "Now Booking for 2026 Communion Celebrations!": "Now Booking for 2027 Communion Celebrations!",
+  "Birthday parties": "Birthday Parties",
+  "Shopping centres": "Shopping Centres"
  },
  "removed": {
   "What they": "Heading of the George/Judy reviews block, now empty. Kane (18 Oct 2026): the live kidsshow.ie Home shows only Claire's quote; George and Judy are not on the live Home, so they are off Home. They are kept on the Testimonials page.",
@@ -11,7 +13,9 @@
   "“Xmas Party was fabulous, Marta you are simply magic! Thank You from all at Axis.”": "Kane (18 Oct 2026): the live kidsshow.ie Home shows only Claire's quote; George and Judy are not on the live Home, so they are off Home. They are kept on the Testimonials page.",
   "Judy": "Kane (18 Oct 2026): the live kidsshow.ie Home shows only Claire's quote; George and Judy are not on the live Home, so they are off Home. They are kept on the Testimonials page.",
   "Axis Insurance": "Kane (18 Oct 2026): the live kidsshow.ie Home shows only Claire's quote; George and Judy are not on the live Home, so they are off Home. They are kept on the Testimonials page.",
-  "Birthday parties": "Kane (18 Oct 2026): the live kidsshow.ie has no wording for this tile, so it was removed. The occasion is still named in the real 'Every occasion' paragraph.",
-  "Shopping centres": "Kane (18 Oct 2026): the live kidsshow.ie has no wording for this tile, so it was removed. The occasion is still named in the real 'Every occasion' paragraph."
+  "More testimonials": "Daniel (18 Oct 2026): empty-looking 'More testimonials' button at the bottom of Home removed; the Testimonials page stays in the menu and George and Judy stay there."
+ },
+ "removedLinks": {
+  "testimonials.html": "Only came from the removed 'More testimonials' button; Testimonials is still in the menu (Daniel, 18 Oct 2026)."
  }
 }

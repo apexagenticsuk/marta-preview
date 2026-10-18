@@ -13,7 +13,7 @@ await p.click('#demo');await p.waitForFunction(()=>window.DYE&&window.DYE.state(
 const F=()=>p.frame({url:/edit=1/});await p.waitForTimeout(800);
 // Enquire button edits directly
 await F().evaluate(()=>scrollTo(0,0));
-await F().locator('.hero [data-cms=actions] a[data-enq]').first().click();await p.waitForTimeout(400);
+await F().locator('main [data-cms=actions] a[data-enq]').first().scrollIntoViewIfNeeded();await F().locator('main [data-cms=actions] a[data-enq]').first().click();await p.waitForTimeout(400);
 const pn=await p.evaluate(()=>{const pp=document.querySelector('#panel')||document.querySelector('.sidep')||document.body;return {words:!!document.querySelector('[data-words]'),title:(document.querySelector('#sharedm')||{}).hidden,txt:document.body.innerText.slice(0,0)}});
 ok('Enquire button: click opens the button editor (words + link), not the Shared panel',pn.words&&(pn.title!==false),JSON.stringify(pn));
 await p.fill('[data-words]','Ask about a party');
@@ -27,7 +27,7 @@ ok('Enquire button: ...as one undoable step',await p.evaluate(()=>!document.quer
 await p.evaluate(()=>{const e=document.querySelector('#undo');e.click()});await p.waitForTimeout(900);
 ok('Enquire button: Undo puts the original words back',await F().evaluate(()=>[...document.querySelectorAll('[data-cms=actions] a[data-enq]')].every(a=>/contact\.html#enquire/.test(a.getAttribute('href')))));
 // Call button: explains instead of garbling
-await F().locator('.hero [data-cms=actions] a.btn.rose').first().click();await p.waitForTimeout(300);
+await F().locator('main [data-cms=actions] a.btn.rose').first().click();await p.waitForTimeout(300);
 ok('Call button: shows its own note, not Shared content',await p.evaluate(()=>/rings your phone number/.test(document.body.innerText))&&await p.evaluate(()=>(!document.querySelector('#sharedm')||document.querySelector('#sharedm').hidden)));
 await p.evaluate(()=>DYE.closePanel());
 // Pages list

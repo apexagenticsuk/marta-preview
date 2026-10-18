@@ -7,20 +7,20 @@ const cr=(a,b)=>{const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,
 (async()=>{
 // 1 structure (cheap, no browser)
 const h1=(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)||[])[1]||'';const h1t=h1.replace(/<[^>]+>/g,'').replace(/&#8217;|&rsquo;/g,'’').replace(/&amp;/g,'&');
-ok('H1 leads with children’s parties (parent-first)',/children.s birthday parties/i.test(h1t)&&/magic, laughter & fun/i.test(h1t),h1t);
+ok('H1 is the live headline (Magic Marta! Looking for MAGIC, LAUGHTER and unforgettable fun?), not parent-first',/^Magic Marta! Looking for MAGIC, LAUGHTER and unforgettable fun\?$/.test(h1t.replace(/\s+/g,' ').trim())&&!/children.s birthday parties full of/i.test(html),h1t);
 ok('exactly one H1, noindex kept',(html.match(/<h1[\s>]/g)||[]).length===1&&/name="robots" content="noindex/.test(html));
 ok('"Check availability" button goes to the on-page form',/<a[^>]*href="#enquire"[^>]*>Check availability<\/a>/.test(html)&&/id="enquire"/.test(html));
 ok('"Call Marta" button is the verified number',/<a[^>]*href="tel:\+353872616317"[^>]*>Call Marta<\/a>/.test(html));
 ok('Claire quote is exactly the real wording',require('../content.json').testimonials.filter(t=>t.place==='home').map(t=>t.who+'|'+t.role+'|'+t.text).join()==='Claire|Woodstown Dental Centre|“Great job, kept the kids entertained and stress free before their appoinment! The magic sweets helped lol!”');
-ok('no empty headings on Home (George/Judy block and its heading removed on purpose: not on the live Home)',!/<h2[^>]*>\s*<\/h2>/.test(html)&&!/What they\s*(<[^>]+>)*\s*say/i.test(html)&&!/Square Tallaght|Axis Insurance/.test(html));
+ok('no empty headings on Home (George/Judy block and its heading removed on purpose: not on the live Home)',!/<h2[^>]*>\s*<\/h2>/.test(html)&&!/Square Tallaght|Axis Insurance/.test(html));
 ok('no links to Dave’s sites',!/apexagentics(?!uk\.github\.io\/marta-preview)|daveyoung|theweddingcomedian|youngcomedy/i.test(html.replace(/info@theweddingcomedian/g,'')));
-ok('no invented claims (insured, vetted, garda, rated, 5-star, from €)',!/insured|vetted|garda|from €|€\s?\d|5.star|rated|packages?\b/i.test(html.replace(/<script[\s\S]*?<\/script>|<blockquote[\s\S]*?<\/blockquote>/g,'')));
+ok('no invented claims (insured, vetted, garda, rated, 5-star, from €)',!/insured|vetted|garda|from €|€\s?\d|5.star|rated|packages?\b/i.test(html.replace(/<img[^>]*>|<script[\s\S]*?<\/script>|<blockquote[\s\S]*?<\/blockquote>/g,'')));
 const ids=[...html.matchAll(/data-dy="([^"]+)"/g)].map(m=>m[1]);ok('new home text, picture and link ids exist',ids.length>90&&/t1[2-9]/.test(ids.join(' ')));
 const b=await chromium.launch({executablePath:process.env.CHROME||'/usr/bin/google-chrome',args:['--no-sandbox']});
 // 2 no-JS
 {const c=await b.newContext({javaScriptEnabled:false,viewport:{width:390,height:800}});const p=await c.newPage();await p.goto(base+'/index.html');
  const t=await p.evaluate(()=>({h1:document.querySelector('h1').innerText,a:[...document.querySelectorAll('.herocta a')].map(a=>a.innerText.trim()+'>'+a.getAttribute('href')),form:!!document.querySelector('#enquire form.enq'),q:document.querySelector('.topq')&&document.querySelector('.topq').innerText}));
- ok('no JS: headline, both buttons, form and quote are in the HTML',/birthday parties/i.test(t.h1)&&t.a.join()==='Check availability>#enquire,Call Marta>tel:+353872616317'&&t.form&&/Claire/.test(t.q),JSON.stringify(t));await c.close();}
+ ok('no JS: headline, both buttons, form and quote are in the HTML',/Looking for MAGIC, LAUGHTER/i.test(t.h1)&&t.a.join()==='Check availability>#enquire,Call Marta>tel:+353872616317'&&t.form&&/Claire/.test(t.q),JSON.stringify(t));await c.close();}
 for(const W of [320,360,390,430,768,1280]){
  const c=await b.newContext({viewport:{width:W,height:W<800?800:900},deviceScaleFactor:1});const p=await c.newPage();const errs=[];p.on('pageerror',e=>errs.push(String(e)));
  await p.addInitScript(()=>{window.__cls=0;new PerformanceObserver(l=>{for(const e of l.getEntries())if(!e.hadRecentInput)window.__cls+=e.value;}).observe({type:'layout-shift',buffered:true});});

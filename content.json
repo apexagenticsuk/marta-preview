@@ -14,16 +14,14 @@
     "base": "Co. Dublin",
     "tagline": "Fun, interactive shows for children's parties and family events",
     "website": "kidsshow.ie",
-    "sayhello": "Can't wait to have Magic Marta at my party!",
-    "emailAlt": "info@kidsshow.ie",
-    "emailGmail": "magickidsshow@gmail.com"
+    "sayhello": "Can't wait to have Magic Marta at my party!"
   },
   "cta": {
     "enquireLabel": "Enquire online",
     "enquireShort": "Enquire",
     "enquireHref": "contact.html#enquire",
     "bookLabel": "Book now",
-    "bookHref": "mailto:INFO@KIDSSHOW.IE?subject=Online%20Show"
+    "bookHref": "mailto:info@martasmagic.com?subject=Online%20Show"
   },
   "nav": [
     {
@@ -586,7 +584,9 @@
       "title": "Good news!",
       "by": "Magic Marta",
       "date": "2021-05-03",
-      "body": "Covid restrictions are easing,  soon we can meet outdoors to socialise, including in private gardens. Limit does not include children so it's a great time to catch up on missed birthdays and celebrations.\nHere's  to a great summer, give your little ones a great time!"
+      "body": "Covid restrictions are easing,  soon we can meet outdoors to socialise, including in private gardens. Limit does not include children so it's a great time to catch up on missed birthdays and celebrations.\nHere's  to a great summer, give your little ones a great time!",
+      "img": "assets/post_03.webp",
+      "alt": "Banner image for the post “Good news!”"
     },
     {
       "id": "post-04",
@@ -638,7 +638,7 @@
       "title": "Add a little magic...",
       "by": "Magic Marta",
       "date": "2019-10-16",
-      "body": "... to your special occasion with Marta's Magic Kidsshow.ie ⭐⭐⭐⭐⭐\nNow booking for all occassions 0851666125",
+      "body": "... to your special occasion with Marta's Magic Kidsshow.ie ⭐⭐⭐⭐⭐\nNow booking for all occassions {contact.phone}",
       "clip": "c-magic"
     },
     {
@@ -700,7 +700,9 @@
       "title": "Happy Halloween",
       "by": "Magic Marta",
       "date": "2017-10-10",
-      "body": "I just love Halloween\nBook your little ones party today\n0851-666-125 🤣🤣🤣"
+      "body": "I just love Halloween\nBook your little ones party today\n{contact.phone} 🤣🤣🤣",
+      "img": "assets/post_16.webp",
+      "alt": "Banner image for the post “Happy Halloween”"
     },
     {
       "id": "post-17",
@@ -752,7 +754,9 @@
       "title": "Super Sundays is back!",
       "by": "Magic Marta",
       "date": "2017-03-01",
-      "body": "Due to popular demand Super Sundays is back!\nHave your little ones party on a Sunday in March and save money.\nCall or text now, quote \"Super Sundays\" and receive 25% discount -\nNow... that's magic...\n{contact.phone}"
+      "body": "Due to popular demand Super Sundays is back!\nHave your little ones party on a Sunday in March and save money.\nCall or text now, quote \"Super Sundays\" and receive 25% discount -\nNow... that's magic...\n{contact.phone}",
+      "img": "assets/post_22.webp",
+      "alt": "Banner image for the post “Super Sundays is back!”"
     },
     {
       "id": "post-23",
@@ -821,7 +825,9 @@
       "title": "Super Sundays!",
       "by": "Magic Marta",
       "date": "2016-02-12",
-      "body": "Have your Kids party on a Sunday and save money! Offer valid untill 1st April only, call or text now {contact.phone} and let the Magic begin xxx"
+      "body": "Have your Kids party on a Sunday and save money! Offer valid untill 1st April only, call or text now {contact.phone} and let the Magic begin xxx",
+      "img": "assets/post_30.webp",
+      "alt": "Banner image for the post “Super Sundays!”"
     },
     {
       "id": "post-31",
@@ -881,7 +887,7 @@
   "seo": {
     "index": {
       "title": "Kids Magician | Marta's Magic Kids Show | Dublin",
-      "description": "Magic Marta | 0851666125 | Children's Party Entertainer | Children's Magician | Face Painting | Balloon Modelling | Magic Show | Magician Dublin | Ireland | Marta's Magic Kids Show | Kids Magician | Family Entertainment | Birthday Party Magician"
+      "description": "Magic Marta | 087-2616-317 | Children's Party Entertainer | Children's Magician | Face Painting | Balloon Modelling | Magic Show | Magician Dublin | Ireland | Marta's Magic Kids Show | Kids Magician | Family Entertainment | Birthday Party Magician"
     },
     "about": {
       "title": "About Marta | Marta's Magic Kids Show",
@@ -1123,6 +1129,370 @@
       480,
       480
     ],
+    "assets/live/about-banner-800.webp": [
+      800,
+      340
+    ],
+    "assets/live/about-banner.webp": [
+      1600,
+      680
+    ],
+    "assets/live/bg-balloons-640.webp": [
+      640,
+      426
+    ],
+    "assets/live/bg-balloons.webp": [
+      1244,
+      829
+    ],
+    "assets/live/bg-brushes-640.webp": [
+      640,
+      482
+    ],
+    "assets/live/bg-brushes.webp": [
+      1227,
+      925
+    ],
+    "assets/live/bg-cakepops-640.webp": [
+      640,
+      421
+    ],
+    "assets/live/bg-cakepops.webp": [
+      1280,
+      842
+    ],
+    "assets/live/bg-galaxy-640.webp": [
+      640,
+      400
+    ],
+    "assets/live/bg-galaxy.webp": [
+      1280,
+      800
+    ],
+    "assets/live/bg-glitter-640.webp": [
+      640,
+      546
+    ],
+    "assets/live/bg-glitter.webp": [
+      1280,
+      1093
+    ],
+    "assets/live/bg-peach-640.webp": [
+      640,
+      360
+    ],
+    "assets/live/bg-peach.webp": [
+      1280,
+      720
+    ],
+    "assets/live/bg-roses-640.webp": [
+      640,
+      427
+    ],
+    "assets/live/bg-roses.webp": [
+      1280,
+      853
+    ],
+    "assets/live/bg-sparkle-red-640.webp": [
+      640,
+      360
+    ],
+    "assets/live/bg-sparkle-red.webp": [
+      1280,
+      720
+    ],
+    "assets/live/bg-stars-640.webp": [
+      640,
+      360
+    ],
+    "assets/live/bg-stars.webp": [
+      1280,
+      720
+    ],
+    "assets/live/c-an-garda-s-och-na.webp": [
+      240,
+      126
+    ],
+    "assets/live/c-ardmore.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-b-q.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-boc.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-cocoon.webp": [
+      180,
+      135
+    ],
+    "assets/live/c-corvil.webp": [
+      240,
+      101
+    ],
+    "assets/live/c-credit-union.webp": [
+      221,
+      150
+    ],
+    "assets/live/c-crowne-plaza.webp": [
+      240,
+      115
+    ],
+    "assets/live/c-ellucian.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-equipet.webp": [
+      240,
+      150
+    ],
+    "assets/live/c-fine-gael.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-giraffe.webp": [
+      180,
+      150
+    ],
+    "assets/live/c-kbc.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-kepak.webp": [
+      167,
+      150
+    ],
+    "assets/live/c-liffey-valley.webp": [
+      146,
+      146
+    ],
+    "assets/live/c-mao.webp": [
+      139,
+      150
+    ],
+    "assets/live/c-musgrave-market-place.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-o2.webp": [
+      200,
+      150
+    ],
+    "assets/live/c-paul.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-peugeot.webp": [
+      240,
+      130
+    ],
+    "assets/live/c-sq.webp": [
+      111,
+      110
+    ],
+    "assets/live/c-st-michael-s-house.webp": [
+      222,
+      101
+    ],
+    "assets/live/c-windsor.webp": [
+      150,
+      150
+    ],
+    "assets/live/c-zalando.webp": [
+      240,
+      126
+    ],
+    "assets/live/communion-graphic.webp": [
+      300,
+      268
+    ],
+    "assets/live/five-stars.webp": [
+      640,
+      285
+    ],
+    "assets/live/get-in-touch-350.webp": [
+      350,
+      292
+    ],
+    "assets/live/get-in-touch.webp": [
+      700,
+      583
+    ],
+    "assets/live/header-art-800.webp": [
+      800,
+      158
+    ],
+    "assets/live/header-art.webp": [
+      1600,
+      316
+    ],
+    "assets/live/hero-kids-480.webp": [
+      480,
+      592
+    ],
+    "assets/live/hero-kids.webp": [
+      830,
+      1024
+    ],
+    "assets/live/icon-birthday.webp": [
+      120,
+      88
+    ],
+    "assets/live/icon-christmas.webp": [
+      120,
+      88
+    ],
+    "assets/live/icon-communion.webp": [
+      120,
+      88
+    ],
+    "assets/live/icon-corporate.webp": [
+      120,
+      88
+    ],
+    "assets/live/icon-festivals.webp": [
+      120,
+      88
+    ],
+    "assets/live/icon-weddings.webp": [
+      120,
+      88
+    ],
+    "assets/live/ig-01-360.webp": [
+      360,
+      270
+    ],
+    "assets/live/ig-01.webp": [
+      640,
+      480
+    ],
+    "assets/live/ig-02-360.webp": [
+      360,
+      360
+    ],
+    "assets/live/ig-02.webp": [
+      640,
+      640
+    ],
+    "assets/live/ig-03-360.webp": [
+      360,
+      360
+    ],
+    "assets/live/ig-03.webp": [
+      640,
+      640
+    ],
+    "assets/live/ig-04-360.webp": [
+      360,
+      480
+    ],
+    "assets/live/ig-04.webp": [
+      640,
+      853
+    ],
+    "assets/live/ig-05-360.webp": [
+      360,
+      480
+    ],
+    "assets/live/ig-05.webp": [
+      640,
+      853
+    ],
+    "assets/live/ig-06-360.webp": [
+      360,
+      478
+    ],
+    "assets/live/ig-06.webp": [
+      640,
+      849
+    ],
+    "assets/live/ig-07-360.webp": [
+      360,
+      360
+    ],
+    "assets/live/ig-07.webp": [
+      640,
+      640
+    ],
+    "assets/live/ig-08-360.webp": [
+      360,
+      360
+    ],
+    "assets/live/ig-08.webp": [
+      640,
+      640
+    ],
+    "assets/live/ig-09-360.webp": [
+      360,
+      360
+    ],
+    "assets/live/ig-09.webp": [
+      640,
+      640
+    ],
+    "assets/live/instagram-banner-700.webp": [
+      700,
+      291
+    ],
+    "assets/live/instagram-banner.webp": [
+      1400,
+      583
+    ],
+    "assets/live/online-tv-700.webp": [
+      700,
+      258
+    ],
+    "assets/live/online-tv.webp": [
+      1400,
+      517
+    ],
+    "assets/live/strip-red-640.webp": [
+      640,
+      240
+    ],
+    "assets/live/strip-red.webp": [
+      1280,
+      480
+    ],
+    "assets/live/t-axis-insurance.webp": [
+      240,
+      39
+    ],
+    "assets/live/t-bumblebee-montessori-childcare.webp": [
+      240,
+      82
+    ],
+    "assets/live/t-christ-church-cathedral.webp": [
+      240,
+      46
+    ],
+    "assets/live/t-newlands-golf-club.webp": [
+      109,
+      150
+    ],
+    "assets/live/t-steam-museum.webp": [
+      152,
+      150
+    ],
+    "assets/live/t-the-national-yacht-club.webp": [
+      240,
+      144
+    ],
+    "assets/live/t-tinahely-festival.webp": [
+      240,
+      55
+    ],
+    "assets/live/t-woodstown-dental-centre.webp": [
+      240,
+      99
+    ],
+    "assets/live/wedding-kids.webp": [
+      800,
+      532
+    ],
     "assets/logo_bank_of_ireland.webp": [
       120,
       120
@@ -1210,6 +1580,14 @@
     "assets/post_02_420.webp": [
       420,
       352
+    ],
+    "assets/post_03.webp": [
+      749,
+      392
+    ],
+    "assets/post_03_420.webp": [
+      420,
+      220
     ],
     "assets/post_04.webp": [
       700,
@@ -1299,6 +1677,14 @@
       420,
       228
     ],
+    "assets/post_16.webp": [
+      622,
+      608
+    ],
+    "assets/post_16_420.webp": [
+      420,
+      411
+    ],
     "assets/post_17.webp": [
       700,
       342
@@ -1338,6 +1724,14 @@
     "assets/post_21_420.webp": [
       420,
       262
+    ],
+    "assets/post_22.webp": [
+      637,
+      279
+    ],
+    "assets/post_22_420.webp": [
+      420,
+      184
     ],
     "assets/post_23.webp": [
       586,
@@ -1386,6 +1780,14 @@
     "assets/post_29_420.webp": [
       297,
       297
+    ],
+    "assets/post_30.webp": [
+      1000,
+      438
+    ],
+    "assets/post_30_420.webp": [
+      420,
+      184
     ],
     "assets/post_31.webp": [
       620,

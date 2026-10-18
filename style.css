@@ -204,7 +204,7 @@ details.older>summary .s-hide,details.older[open]>summary .s-show{display:none}d
 .enq .enq-fallback{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
 .enq-addr{font-weight:700;user-select:all;overflow-wrap:anywhere}
 .enq .enq-copy.btn{min-height:44px}
-.enq-msg{margin:0;padding:12px 14px;border-radius:14px;font-weight:600;color:var(--rose3);border:2px solid var(--rose)}
+.enq-msg{margin:10px 0 0;padding:0;font-weight:400;font-size:15px;color:#3a1b5c}
 .enq-msg:focus{outline:3px solid var(--rose3);outline-offset:2px}
 .ph{background:#fff1b8;color:#4a3a00;padding:0 3px;border-radius:3px}
 .legalp{max-width:70ch}.legalp p{font-size:17px;line-height:1.6}
@@ -329,3 +329,38 @@ html.mclassic .mnav{position:absolute;top:100%;height:auto;overflow:visible;back
 .gitfig{margin:18px 0 0}.gitfig img{width:100%;max-width:340px;height:auto;aspect-ratio:700/583}
 .band.darkbg:before{content:"";position:absolute;inset:0;background:rgba(40,8,70,.62);z-index:0}
 .band.darkbg .bgimg{opacity:.8}
+.aboutban,.igban,.mhead{padding:0}.mhead{padding-bottom:14px}
+.joy .bgimg,.onlineshow .bgimg,.band .bgimg{max-width:none;border:0;border-radius:0;margin:0;box-shadow:none}
+.cl-home .logos-row,.clients .logos-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.logos-row li{width:100px;flex:none}
+@media(min-width:600px){.cl-home .logos-row,.clients .logos-row{display:flex}.logos-row li{width:116px}}
+.igfeed{background:#0b0420;padding:14px 0 22px}
+.igtiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.igtiles a{display:block;background:#150537;border-radius:10px;overflow:hidden;min-height:44px}
+.igtiles img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;display:block}
+@media(min-width:600px){.igtiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:900px){.igtiles{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.joy figure{display:grid;gap:12px;justify-items:center}
+.onlineshow.darkbg:before{background:rgba(8,3,28,.74)}
+.cl-home h2{color:#b0145f}
+.bgimg{z-index:-1}
+@media(max-width:699px){.mhead{padding-bottom:6px}.mtag{margin-top:4px;font-size:14px}.sixrow{margin-top:8px;gap:0 2px}.sixrow a{min-height:88px;gap:4px;padding:4px 2px;font-size:11px}.sixrow img{width:56px}.hero3 .herocta{margin:2px 0 14px}.hero3 h1{margin-bottom:12px}}
+.sixrow{gap:8px!important}.sixrow a{min-height:84px}
+@media(min-width:700px){.sixrow a{min-height:104px}}
+.sixrow{gap:10px 10px!important}@media(max-width:699px){.sixrow{padding:0 8px}}
+.igtiles{gap:12px}@media(max-width:699px){.hero3 .wrap{padding-top:0}.hero3 .eyebrow{margin-bottom:6px;padding:4px 12px}.hero3 h1{font-size:clamp(29px,8vw,40px);line-height:1.06;margin:0 0 10px}.sixrow a{min-height:80px}}
+.sixband{background:#07031a;padding:6px 0 16px}.sixband .sixrow{margin-top:0}
+.mhead{padding-bottom:12px}
+.hero3:before{display:block!important;content:"";position:absolute;inset:0;z-index:0;background:rgba(10,3,34,.6);width:auto;height:auto;border-radius:0;animation:none}
+@media(min-width:900px){.hero3 h1{font-size:clamp(34px,4vw,50px);margin-bottom:12px}.hero2.hero3{padding-top:16px}.hero3 .rightplace{font-size:26px}.mtag{margin-top:2px}}
+.hero.mhead{padding:0 0 12px;background:#07031a;border-radius:0;overflow:visible}.hero.mhead:before,.hero.mhead:after{display:none}@media(max-width:699px){.hero.mhead{padding-bottom:6px}}
+.pgrid img[src*="g_party_kids"],.gs6 img[src*="g_face_paint_cheer"]{object-fit:contain;background:#2a0f4a}
+.blogban{background:#16062e url(assets/live/blog-bg.webp) center/cover no-repeat;position:relative;color:#fff;overflow:hidden;min-height:155px;display:flex;align-items:center}
+.blogban:before{content:"";position:absolute;inset:0;background:rgba(15,4,40,.4)}
+.blogban:after{content:"";position:absolute;top:8px;bottom:8px;left:10px;width:128px;background:url(assets/live/blog-frame.webp) center/contain no-repeat}
+.blogban .wrap{position:relative;z-index:1;text-align:left;padding-left:150px;width:100%}
+.blogban .eyebrow{color:#fff;background:none;text-shadow:0 2px 6px rgba(0,0,0,.7);margin:0 0 2px;padding:0}
+.blogban h1{color:#fff;font-size:clamp(26px,6.4vw,40px);margin:0;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.blogban h1 .r{color:#ffd23f}
+@media(min-width:700px){.blogban{min-height:181px}.blogban:after{width:270px;left:max(12px,calc(50% - 560px))}.blogban .wrap{padding-left:max(24px,calc(50% - 560px + 300px))}}
+@media(min-width:1000px){.blogban{min-height:184px}}

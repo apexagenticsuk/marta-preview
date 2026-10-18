@@ -40,7 +40,7 @@ ok('mouse: reorder list items on a built page',c.pages.index&&c.pages.index.list
 await undo(p);
 // 4 picker drag: open picker via + Add block on a section, drag "Text" tile onto the page
 await F(p).click('.occ h2');await p.waitForTimeout(200);await p.click('#selbar button:has-text("Add below")');await p.waitForSelector('#pickm:not([hidden])');
-let tile=await (await p.$('#pickg .tile[data-k="text"]')).boundingBox();let dest=await box(p,'.reviews h2');
+let tile=await (await p.$('#pickg .tile[data-k="text"]')).boundingBox();let dest=await box(p,'.topq h2');
 await mdrag(p,ctr(tile),{x:dest.x+50,y:dest.y+dest.height+200},20);await ready(p);c=await st(p);
 const ins=c.pages.index&&c.pages.index.ins||{};const nIns=Object.values(ins).flat().length;ok('mouse: drag a new block from the picker onto the page',nIns===1&&Object.values(ins).flat()[0].type==='text',JSON.stringify(Object.keys(ins)));
 await undo(p);c=await st(p);ok('undo picker drop',!Object.values((c.pages.index||{}).ins||{}).flat().length);

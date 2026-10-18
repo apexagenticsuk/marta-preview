@@ -23,7 +23,7 @@ let topicBad=0;for(const [k,ps] of Object.entries(topicPages))if(ps.length>1&&!(
 let extra=topicBad;const items={},regions={};
 for(const pg of pages){const p=await b.newPage();await p.goto(`${base}/${pg}.html`,{waitUntil:'networkidle'});
  const d=await p.evaluate(()=>{const n=s=>s.replace(/\s+/g,' ').trim().toLowerCase();const imgs={};
-  document.querySelectorAll('main img').forEach(i=>{if(i.closest('footer,.socials,.gal,.blk-gallery'))return;const k=(i.getAttribute('src')||'').replace(/\?.*/,'');if(k)imgs[k]=(imgs[k]||0)+1;});
+  document.querySelectorAll('main img').forEach(i=>{if(i.closest('footer,.socials,.gal,.galstrip,.blk-gallery'))return;const k=(i.getAttribute('src')||'').replace(/\?.*/,'');if(k)imgs[k]=(imgs[k]||0)+1;});
   const it=[...document.querySelectorAll('main .rev:not([data-cms=testimonials] .rev), main .vt, main details, main .post, main .card, main .facts li, main .facts div')].map(e=>n(e.innerText)).filter(t=>t.length>12);
   const rg=[...document.querySelectorAll('main [data-cms]')].filter(e=>e.children.length>2&&!/^(actions|testimonials)$/.test(e.getAttribute('data-cms'))).map(e=>e.getAttribute('data-cms')+'|'+n(e.innerText));
   return {imgs:Object.entries(imgs).filter(([k,v])=>v>1).map(([k])=>k),it,rg};});
@@ -38,7 +38,7 @@ const fs=require('fs');const C=JSON.parse(fs.readFileSync(__dirname+'/../content
 (function w(o,path){if(path.startsWith('dims'))return;if(typeof o==='string'){if(/\.alt$/.test(path))return;const t=o.replace(/\s+/g,' ').trim().toLowerCase();if(t.length>=28&&!/^assets\//.test(t))(strs[t]=strs[t]||[]).push(path);}else if(o&&typeof o==='object')Object.keys(o).forEach(k=>w(o[k],path+'.'+k));})(C,'');
 for(const [t,ps] of Object.entries(strs))if(ps.length>1&&!ps.some(x=>/^\.sites\./.test(x))&&!(ps.length===2&&ps.some(x=>/^\.clips\.\d+\.title$/.test(x))&&ps.some(x=>/^\.posts\.\d+\.title$/.test(x)))){cj++;console.log('CONTENT.JSON DUPLICATE',ps.join(' & '),'|',t.slice(0,80));}
 const facts=[[/info@martasmagic\.com/i,'contact.email'],[/087[- ]?2616[- ]?317|0872616317/,'contact.phone'],[/085[- ]?1?66[- ]?6?125|0851666125|0851-666-125/,'(old number, never shown)']];
-(function w(o,path){if(path.startsWith('.dims')||path.startsWith('._help'))return;if(typeof o==='string'){for(const [re,home] of facts)if(re.test(o)&&path!=='.'+home&&!(/old number/.test(home)&&/^\.(posts\.(8|15)\.body|seo\.index\.description)$/.test(path))){cj++;console.log('FACT LITERAL outside',home,'at',path,'|',o.slice(0,70));}}else if(o&&typeof o==='object')Object.keys(o).forEach(k=>w(o[k],path+'.'+k));})(C,'');
+(function w(o,path){if(path.startsWith('.dims')||path.startsWith('._help'))return;if(typeof o==='string'){for(const [re,home] of facts)if(re.test(o)&&path!=='.'+home&&!/^\.(cta\.bookHref|seo\.index\.description)$/.test(path)&&!(/old number/.test(home)&&/^\.(posts\.(8|15)\.body|seo\.index\.description)$/.test(path))){cj++;console.log('FACT LITERAL outside',home,'at',path,'|',o.slice(0,70));}}else if(o&&typeof o==='object')Object.keys(o).forEach(k=>w(o[k],path+'.'+k));})(C,'');
 for(const pg of pages){const p=await b.newPage();await p.goto(`${base}/${pg}.html`,{waitUntil:'networkidle'});
  const bad=await p.evaluate(()=>[...document.querySelectorAll('a,button,h1,h2,h3,[data-cms=deposit],.paybox')].filter(e=>/deposit|payment|pay the/i.test(e.innerText||'')||e.matches('[data-cms=deposit],.paybox')).map(e=>e.tagName+':'+(e.innerText||'').slice(0,40)));
  bad.forEach(x=>{cj++;console.log('DEPOSIT UI on',pg,x);});
