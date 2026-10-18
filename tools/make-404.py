@@ -16,7 +16,7 @@ main='''<main id="main" tabindex="-1">
 <section class="phead"><div class="wrap"><p class="eyebrow">404</p><h1>Page <span class="r">not found</span></h1></div></section>
 <section class="enquire"><div class="wrap legalp">
 <p>Sorry, that page does not exist. It may have moved, or the link may have a typo.</p>
-<p><a class="btn rose" href="index.html">Back to the home page</a> <a class="btn ghost" href="contact.html">Contact Marta</a></p>
+<p class="btnrow"><a class="btn rose" href="index.html">Back to the home page</a> <a class="btn ghost" href="contact.html">Contact Marta</a></p>
 </div></section>
 '''
 h=h[:a]+main+h[b:]
