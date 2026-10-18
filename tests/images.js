@@ -24,7 +24,7 @@ cat('communion graphic',src('assets/live/communion-graphic.webp'),1);
 cat('home gallery strip',(raw.match(/<div class="gs6">[\s\S]*?<\/div>/)[0].match(/<img/g)||[]).length,6);
 cat('five-star image',src('assets/live/five-stars.webp'),1);
 cat('get-in-touch cartoon',(raw.match(/assets\/live\/get-in-touch-350\.webp"/g)||[]).length,1);
-cat('instagram tile images',(raw.match(/assets\/live\/ig-\d\d-360\.webp"/g)||[]).length,9);
+cat('instagram tile images',(raw.match(/assets\/live\/ig-\d\d-360\.webp"/g)||[]).length,10);
 const bgs=['bg-brushes','bg-balloons','bg-roses','bg-peach','bg-glitter','bg-cakepops','bg-galaxy','bg-stars','bg-sparkle-red','strip-red'];
 cat('section background photos',bgs.filter(x=>raw.includes('assets/live/'+x+'.webp')).length,10);
 // clients: exactly the live set, alt = company name
