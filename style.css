@@ -406,3 +406,12 @@ html.mclassic .mnav{position:absolute;top:100%;height:auto;overflow:visible;back
 .what .wrap,.joy .wrap{padding-top:0;padding-bottom:0}
 .trust{padding:10px 0}.trustlist{gap:6px}
 }
+/* occasion icons: no dark square tiles; bigger, clearer neon icons on the dark band */
+.occ{background:#150537;color:#fff;padding:34px 0 30px}
+.occ h2{color:#fff}.occ h2 .r{color:#ffd23f}.occ .big{color:#fff}
+.occgrid{gap:12px 12px}
+.occgrid a{background:transparent;border:0;border-radius:18px;min-height:0;padding:8px 4px;gap:8px;font-size:15px;letter-spacing:.04em}
+.occgrid a:hover,.occgrid a:focus-visible{background:rgba(255,255,255,.08);outline:2px solid #ffd23f;outline-offset:2px}
+.occgrid img{width:128px;height:128px;border-radius:0}
+@media(min-width:900px){.occgrid li{flex-basis:calc(25% - 9px)}.occgrid img{width:150px;height:150px}.occgrid a{font-size:16px}}
+@media(max-width:699px){.occgrid{gap:12px 10px}.occgrid li{flex-basis:calc(33.333% - 7px)}.occgrid a{min-height:0;padding:6px 2px;font-size:11px}.occgrid img{width:96px;height:96px}.occ{padding:22px 0 18px}}

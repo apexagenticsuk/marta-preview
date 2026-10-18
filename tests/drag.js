@@ -22,7 +22,7 @@ async function hover(p,sel,i=0){const r=await box(p,sel,i);await p.mouse.move(r.
 let p=await open(false);
 const order0=(await F(p).evaluate(()=>[...(document.querySelector('body>main')||document.body).children].filter(e=>e.classList.contains('dy-sec')).map(e=>e.getAttribute('data-dy').split(' ')[0])));
 // 1 section drag: 2nd section below the 4th
-const PI=await F(p).evaluate(()=>{const S=[...document.querySelectorAll('.dy-sec')];for(let i=1;i<S.length-1;i++){const a=S[i].getBoundingClientRect(),b=S[i+1].getBoundingClientRect();if(b.bottom-a.top<640)return i;}return 1;});
+const PI=await F(p).evaluate(()=>{const S=[...document.querySelectorAll('.dy-sec')];for(let i=1;i<S.length-1;i++){const a=S[i].getBoundingClientRect(),b=S[i+1].getBoundingClientRect();if(b.bottom-a.top<780)return i;}return 1;});
 await F(p).evaluate(i=>{const s=document.querySelectorAll('.dy-sec')[i];scrollTo({top:s.getBoundingClientRect().top+scrollY-30,behavior:'instant'});},PI);await p.waitForTimeout(200);
 let h=await (await F(p).$$('.dy-sec >.dy-dh.sec'))[PI+1].boundingBox();let tgt=await (await F(p).$$('.dy-sec'))[PI].boundingBox();await p.mouse.move(h.x+5,h.y+5);await p.waitForTimeout(150);
 await mdrag(p,ctr(h),{x:700,y:tgt.y+5});await ready(p);
