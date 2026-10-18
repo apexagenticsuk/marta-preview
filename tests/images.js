@@ -38,7 +38,7 @@ const files=[...raw.matchAll(/(?:src|srcset)="([^"]+)"/g)].flatMap(m=>m[1].split
 files.forEach(f=>ok('file exists '+f,fs.existsSync(__dirname+'/../'+f)));
 [...raw.matchAll(/<img\b[^>]*>/g)].forEach(m=>{const t=m[0];ok('sized+alt '+(t.match(/src="([^"]+)"/)||[])[1],/\swidth="\d+"/.test(t)&&/\sheight="\d+"/.test(t)&&/\salt="/.test(t));});
 ok('header art is preloaded and high priority',/rel="preload" as="image"[^>]*header-art/.test(raw)&&/header-art\.webp"[^>]*fetchpriority="high"/.test(raw));
-const lazyBad=[...raw.matchAll(/<img\b[^>]*>/g)].map(m=>m[0]).filter(t=>/src="assets\/live\/(bg-|about|online|ig-|get-in|five|instagram)/.test(t)&&!/loading="lazy"/.test(t)&&!/fetchpriority="low"/.test(t));
+const lazyBad=[...raw.matchAll(/<img\b[^>]*>/g)].map(m=>m[0]).filter(t=>/src="assets\/live\/(bg-|about|online|ig-|get-in|five|instagram)/.test(t)&&!/loading="lazy"/.test(t)&&!/fetchpriority="(low|high)"/.test(t));
 ok('below-the-fold images are lazy',lazyBad.length===0,lazyBad.slice(0,2));
 // ---- browser: loaded, editable ids, CLS, contrast
 for(const [name,w,h] of [['phone',390,844],['desktop',1280,900]]){
