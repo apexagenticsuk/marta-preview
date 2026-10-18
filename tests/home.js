@@ -12,7 +12,7 @@ ok('exactly one H1, noindex kept',(html.match(/<h1[\s>]/g)||[]).length===1&&/nam
 ok('"Check availability" button goes to the on-page form',/<a[^>]*href="#enquire"[^>]*>Check availability<\/a>/.test(html)&&/id="enquire"/.test(html));
 ok('"Call Marta" button is the verified number',/<a[^>]*href="tel:\+353872616317"[^>]*>Call Marta<\/a>/.test(html));
 ok('Claire quote is exactly the real wording',require('../content.json').testimonials.filter(t=>t.place==='home').map(t=>t.who+'|'+t.role+'|'+t.text).join()==='Claire|Woodstown Dental Centre|“Great job, kept the kids entertained and stress free before their appoinment! The magic sweets helped lol!”');
-ok('every heading on Home has content under it ("What they say" kept, with George and Judy)',/What they\s*(<[^>]+>)*\s*say/i.test(html)&&/George/.test(html)&&/Judy/.test(html)&&!/<h2[^>]*>\s*<\/h2>/.test(html));
+ok('no empty headings on Home (George/Judy block and its heading removed on purpose: not on the live Home)',!/<h2[^>]*>\s*<\/h2>/.test(html)&&!/What they\s*(<[^>]+>)*\s*say/i.test(html)&&!/Square Tallaght|Axis Insurance/.test(html));
 ok('no links to Dave’s sites',!/apexagentics(?!uk\.github\.io\/marta-preview)|daveyoung|theweddingcomedian|youngcomedy/i.test(html.replace(/info@theweddingcomedian/g,'')));
 ok('no invented claims (insured, vetted, garda, rated, 5-star, from €)',!/insured|vetted|garda|from €|€\s?\d|5.star|rated|packages?\b/i.test(html.replace(/<script[\s\S]*?<\/script>|<blockquote[\s\S]*?<\/blockquote>/g,'')));
 const ids=[...html.matchAll(/data-dy="([^"]+)"/g)].map(m=>m[1]);ok('new home text, picture and link ids exist',ids.length>90&&/t1[2-9]/.test(ids.join(' ')));
@@ -27,6 +27,9 @@ for(const W of [320,360,390,430,768,1280]){
  await p.goto(base+'/index.html');await p.waitForTimeout(1200);
  const m=await p.evaluate(()=>{const r=s=>{const e=document.querySelector(s);if(!e)return null;const b=e.getBoundingClientRect();return {t:b.top+scrollY,b:b.bottom+scrollY,l:b.left,r:b.right,w:b.width,h:b.height};};
   return {sw:document.documentElement.scrollWidth,vh:innerHeight,cta:[...document.querySelectorAll('.herocta a')].map(a=>{const b=a.getBoundingClientRect();return {t:b.top,b:b.bottom,l:b.left,r:b.right,h:b.height}}),h1:r('.hero2 h1'),form:r('#enquire'),trust:r('.trust'),q:r('.topq')};});
+ {const t=await p.evaluate(()=>[...document.querySelectorAll('.svcgrid .svc')].map(e=>{const b=e.getBoundingClientRect();return {l:b.left,r:b.right,t:b.top,w:b.width}}));const g=await p.evaluate(()=>{const b=document.querySelector('.svcgrid').getBoundingClientRect();return {l:b.left,r:b.right}});
+  const L=Math.min(...t.map(x=>x.l)),R=Math.max(...t.map(x=>x.r));
+  ok(W+': the two service tiles fit, and the tile block is centred (balanced)',t.length===2&&L>=0&&R<=W&&Math.abs(L-(W-R))<=3,JSON.stringify([t,W]));}
  ok(W+': no sideways scroll',m.sw<=W,m.sw);
  ok(W+': both hero buttons are visible in the first screen, ≥44px tall, gap ≥8px',m.cta.length===2&&m.cta.every(x=>x.b<=m.vh&&x.h>=44)&&(m.cta[0].r+8<=m.cta[1].l||m.cta[0].b+8<=m.cta[1].t||m.cta[1].r+8<=m.cta[0].l||m.cta[1].b+8<=m.cta[0].t),JSON.stringify(m.cta));
  ok(W+': contact form is in the top part of the page (above Watch/occasions)',await p.evaluate(()=>{const f=document.querySelector('#enquire').getBoundingClientRect().top+scrollY,w=document.querySelector('#watch').getBoundingClientRect().top+scrollY,o=document.querySelector('.occ').getBoundingClientRect().top+scrollY;return f<w&&w<o;}));

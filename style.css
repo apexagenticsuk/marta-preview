@@ -260,3 +260,5 @@ html.mclassic .mnav{position:absolute;top:100%;height:auto;overflow:visible;back
 .mgap{display:block;height:10px}
 /* no JavaScript: the menu links are simply shown under the header */
 @media (scripting:none){.mnav{display:grid!important;position:static!important;height:auto!important;padding:10px 14px!important}.ham,.mclose{display:none!important}.mnav a{min-height:48px}}
+/* two real service tiles (Communions, Weddings): keep the grid balanced at every width */
+.svcgrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),340px));justify-content:center}

@@ -105,52 +105,16 @@
   ],
   "services": [
     {
-      "id": "birthday",
-      "icon": "cake",
-      "title": "Birthday parties",
-      "text": ""
-    },
-    {
       "id": "communion",
       "icon": "star",
       "title": "Communions",
-      "text": "Now Booking for 2026 Communion Celebrations!"
-    },
-    {
-      "id": "christening",
-      "icon": "heart",
-      "title": "Christenings",
-      "text": ""
+      "text": "Now Booking for 2027 Communion Celebrations!"
     },
     {
       "id": "wedding",
       "icon": "gift",
       "title": "Weddings",
       "text": "Thinking of new and interesting ways to entertain your younger guests?"
-    },
-    {
-      "id": "corporate",
-      "icon": "building",
-      "title": "Corporate events",
-      "text": ""
-    },
-    {
-      "id": "christmas",
-      "icon": "tree",
-      "title": "Christmas parties",
-      "text": ""
-    },
-    {
-      "id": "festival",
-      "icon": "tent",
-      "title": "Festivals",
-      "text": ""
-    },
-    {
-      "id": "shopping",
-      "icon": "bag",
-      "title": "Shopping centres",
-      "text": ""
     }
   ],
   "testimonials": [
@@ -163,14 +127,14 @@
     },
     {
       "id": "t02",
-      "place": "more",
+      "place": "page",
       "who": "George",
       "role": "The Square Tallaght",
       "text": "“5 stars for Marta's Magic! She so deserves it. She was very prompt from the start and gave a great magic show at our event. All of the little ones enjoyed themselves and she had us all laughing the whole time. In addition, her balloon twisting skills is very impressive!”"
     },
     {
       "id": "t03",
-      "place": "more",
+      "place": "page",
       "who": "Judy",
       "role": "Axis Insurance",
       "text": "“Xmas Party was fabulous, Marta you are simply magic! Thank You from all at Axis.”"

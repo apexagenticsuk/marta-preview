@@ -12,7 +12,7 @@ const blocks=await p.evaluate(()=>{const out=[];document.querySelectorAll('main 
 for(const t of new Set(blocks.map(norm)))(seen[t]=seen[t]||[]).push(pg);await p.close();}
 const shared={};
 // (4) a topic (Christmas parties, 30 years, the bio blurb) is told in ONE place: body text outside pointer cards/buttons may mention it on one page only
-const TOPICS={'the occasions blurb':/from birthday parties, communions/i,'the happy children line':/happy children\. huge smiles/i,'the communion booking notice':/now booking for 2026 communion/i,'the welcome line':/welcome to my magical world/i};
+const TOPICS={'the occasions blurb':/from birthday parties, communions/i,'the happy children line':/happy children\. huge smiles/i,'the communion booking notice':/now booking for 2027 communion/i,'the welcome line':/welcome to my magical world/i};
 const topicPages={};
 for(const pg of pages){const p=await b.newPage();await p.goto(`${base}/${pg}.html`,{waitUntil:'networkidle'});
  const txt=await p.evaluate(()=>[...document.querySelectorAll('main p, main h1, main h2, main h3, main .lead')].filter(e=>!e.closest('.btn,.hact,.enq,.rev,.paybox,.cbox,details,.sticky,.dock,.fine')&&!e.querySelector('.btn')).map(e=>e.innerText.replace(/\s+/g,' ')));
