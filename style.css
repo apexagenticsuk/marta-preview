@@ -198,3 +198,42 @@ details.older>summary:hover{background:var(--rose);color:#fff}details.older>summ
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
 details.older>summary .s-hide,details.older[open]>summary .s-show{display:none}details.older[open]>summary .s-hide{display:inline}
+
+/* enquiry form (mailto): note, fallback line, status; privacy page */
+.enq .enq-note,.enq .enq-fallback{margin:0}
+.enq .enq-fallback{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.enq-addr{font-weight:700;user-select:all;overflow-wrap:anywhere}
+.enq .enq-copy.btn{min-height:44px}
+.enq-msg{margin:0;padding:12px 14px;border-radius:14px;font-weight:600;color:var(--rose3);border:2px solid var(--rose)}
+.enq-msg:focus{outline:3px solid var(--rose3);outline-offset:2px}
+.ph{background:#fff1b8;color:#4a3a00;padding:0 3px;border-radius:3px}
+.legalp{max-width:70ch}.legalp p{font-size:17px;line-height:1.6}
+/* home upgrade: parent-first hero, trust strip, top quote, form near the top */
+.btn.white{background:#fff;color:var(--rose3);box-shadow:0 8px 0 -3px rgba(0,0,0,.22)}.btn.white:hover{background:#fff1c2;color:var(--rose3)}
+.btn.big{font-size:19px;min-height:56px;padding:14px 30px}
+.hero2{background:linear-gradient(150deg,var(--rose3) 0%,#8a1a7a 48%,var(--rose) 100%);color:#fff;padding:30px 0 64px}
+.hero2:before{background:rgba(46,196,182,.35)}.hero2:after{background:rgba(255,210,63,.22)}
+.hero2 h1{color:#fff;font-size:clamp(38px,9.4vw,80px);line-height:1.04;margin:4px 0 20px}.hero2 h1 .r{color:var(--sun)}
+.hero2 .lead{color:#fff;font-size:clamp(18px,3.8vw,23px);max-width:34ch;margin:22px 0 0}
+.hero2 .eyebrow{background:var(--sun);color:var(--rose3)}
+.hero2 .herocta{margin-top:6px}
+.hero2 .heropic{order:0}.hero2 .heropic img{max-width:min(100%,440px);border-color:#fff}
+.trust{background:var(--sun);color:var(--plum);padding:16px 0}
+.trustlist{list-style:none;margin:0;padding:0;display:grid;gap:10px;grid-template-columns:minmax(0,1fr)}
+.trustlist li{display:flex;align-items:center;gap:12px;font:700 17px/1.25 var(--head);min-width:0}
+.trustlist .ti{flex:none;width:36px;height:36px;border-radius:50%;background:var(--rose3);display:grid;place-items:center}.trustlist .ti svg{width:20px;height:20px;fill:#fff}
+.topq{background:var(--cream);padding:44px 0 8px}.tq{margin:0;background:var(--paper);border-radius:var(--r);padding:28px 26px;border-top:12px solid var(--rose);box-shadow:var(--sh)}
+.tq blockquote{font:700 clamp(21px,4.4vw,28px)/1.35 var(--head);color:var(--rose3);margin:0}.tq figcaption{margin-top:16px;display:grid;gap:2px}.tq figcaption b{font:700 19px var(--head);color:var(--rose)}.tq figcaption small{font-size:16px;font-weight:700;color:var(--mut)}
+.enq-top{background:var(--lav);scroll-margin-top:84px;padding-top:clamp(36px,6vw,64px)}.enq-top .phoneline{margin-top:20px}
+.enq-top .enqtxt h2{margin-bottom:10px}
+@media (min-width:700px){.trustlist{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.trust{padding:20px 0}}
+@media (min-width:900px){.hero2{padding:56px 0 100px}.hero2 .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.hero2 .heropic img{max-width:520px}}
+.hero2 h1{font-size:clamp(38px,9.4vw,68px)}
+.hero2:before{background:rgba(46,196,182,.22)}
+@media (max-width:600px){.hero2 .herocta{grid-template-columns:minmax(0,1fr)}.hero2 .herocta>.btn{grid-column:auto!important}}
+/* home top quote uses the shared testimonials region (editable in the editor) */
+.topq .tqgrid{display:block}.topq .rev{border:0!important;border-top:12px solid var(--rose)!important;padding:28px 26px;box-shadow:var(--sh)}
+.topq .rev blockquote{font:700 clamp(21px,4.4vw,28px)/1.35 var(--head);color:var(--rose3);margin:0}
+.topq .rev figcaption b{color:var(--rose)}.topq .rev small{font-size:16px}
+.enq .enq-note{margin:0 0 10px}
+.hero2 .funs{margin-top:20px}
