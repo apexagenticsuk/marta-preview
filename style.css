@@ -364,3 +364,5 @@ html.mclassic .mnav{position:absolute;top:100%;height:auto;overflow:visible;back
 .blogban h1 .r{color:#ffd23f}
 @media(min-width:700px){.blogban{min-height:181px}.blogban:after{width:270px;left:max(12px,calc(50% - 560px))}.blogban .wrap{padding-left:max(24px,calc(50% - 560px + 300px))}}
 @media(min-width:1000px){.blogban{min-height:184px}}
+/* blog index: fixed two-column rows so a late font cannot move the time onto a new line */
+.pindex li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center}
