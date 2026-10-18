@@ -123,7 +123,9 @@
       "place": "home",
       "who": "Claire",
       "role": "Woodstown Dental Centre",
-      "text": "“Great job, kept the kids entertained and stress free before their appoinment! The magic sweets helped lol!”"
+      "text": "“Great job, kept the kids entertained and stress free before their appoinment! The magic sweets helped lol!”",
+      "img": "assets/live/t-woodstown-dental-centre.webp",
+      "fit": "logo"
     },
     {
       "id": "t02",
@@ -137,70 +139,90 @@
       "place": "page",
       "who": "Judy",
       "role": "Axis Insurance",
-      "text": "“Xmas Party was fabulous, Marta you are simply magic! Thank You from all at Axis.”"
+      "text": "“Xmas Party was fabulous, Marta you are simply magic! Thank You from all at Axis.”",
+      "img": "assets/live/t-axis-insurance.webp",
+      "fit": "logo"
     },
     {
       "id": "t04",
       "place": "page",
       "who": "Bernie",
       "role": "Christ Church Cathedral",
-      "text": "“It was great to have such a lovely girl magician work with us, thank you again Marta the festival wouldn't be the same without you! And hope you weren't affraid to work in the crypt!”"
+      "text": "“It was great to have such a lovely girl magician work with us, thank you again Marta the festival wouldn't be the same without you! And hope you weren't affraid to work in the crypt!”",
+      "img": "assets/live/t-christ-church-cathedral.webp",
+      "fit": "logo"
     },
     {
       "id": "t05",
       "place": "page",
       "who": "Michelle",
       "role": "Tinahely Festival",
-      "text": "“When she arrived, she was really friendly, she told us what she was going to do, she kept us informed of everything which I loved! Cool performance.”"
+      "text": "“When she arrived, she was really friendly, she told us what she was going to do, she kept us informed of everything which I loved! Cool performance.”",
+      "img": "assets/live/t-tinahely-festival.webp",
+      "fit": "logo"
     },
     {
       "id": "t06",
       "place": "page",
       "who": "Mia",
       "role": "Steam Museum",
-      "text": "“Marta our fun day entertainer was simply excellent. She was extremely professional, friendly, easy to work with, and more to the point, very entertaining. It was a great day and a stress free experience.”"
+      "text": "“Marta our fun day entertainer was simply excellent. She was extremely professional, friendly, easy to work with, and more to the point, very entertaining. It was a great day and a stress free experience.”",
+      "img": "assets/live/t-steam-museum.webp",
+      "fit": "logo"
     },
     {
       "id": "t07",
       "place": "page",
       "who": "Ann",
       "role": "Bumblebee Montessori & Childcare",
-      "text": "“I just want to thank you again for coming to our event last Friday. Every child and parent loved you so much”"
+      "text": "“I just want to thank you again for coming to our event last Friday. Every child and parent loved you so much”",
+      "img": "assets/live/t-bumblebee-montessori-childcare.webp",
+      "fit": "logo"
     },
     {
       "id": "t08",
       "place": "page",
       "who": "Dennis",
       "role": "Newlands Golf Club",
-      "text": "“It was certainly wonderful having you at the Children's Christmas Party on the 9th Dec! We will definately keep you in mind for future events!”"
+      "text": "“It was certainly wonderful having you at the Children's Christmas Party on the 9th Dec! We will definately keep you in mind for future events!”",
+      "img": "assets/live/t-newlands-golf-club.webp",
+      "fit": "logo"
     },
     {
       "id": "t09",
       "place": "page",
       "who": "Tim",
       "role": "The National Yacht Club",
-      "text": "“The party was excellent and the children's faces were a joy to watch as they had a great time. The magician arrived nice and early and really knew her stuff and booking her couldn't have been easier.”"
+      "text": "“The party was excellent and the children's faces were a joy to watch as they had a great time. The magician arrived nice and early and really knew her stuff and booking her couldn't have been easier.”",
+      "img": "assets/live/t-the-national-yacht-club.webp",
+      "fit": "logo"
     },
     {
       "id": "t10",
       "place": "page",
       "who": "Caroline",
       "role": "St. Michaels House",
-      "text": "“Fantastic show for kids and adults. Marta the magician keeps you entertained the whole time and her magic is great, absolutely recommended for all parties, great fun!”"
+      "text": "“Fantastic show for kids and adults. Marta the magician keeps you entertained the whole time and her magic is great, absolutely recommended for all parties, great fun!”",
+      "img": "assets/live/c-st-michael-s-house.webp",
+      "fit": "logo"
     },
     {
       "id": "t11",
       "place": "page",
       "who": "Cecilie",
       "role": "Cocoon Childcare",
-      "text": "“She arrived with a sweet set-up beyond our expectations. And in addition to completely keeping the kids occupied with wonder and smiles for an hour +, she did a wonderful job of showing magic and created a wonderful show.”"
+      "text": "“She arrived with a sweet set-up beyond our expectations. And in addition to completely keeping the kids occupied with wonder and smiles for an hour +, she did a wonderful job of showing magic and created a wonderful show.”",
+      "img": "assets/live/c-cocoon.webp",
+      "fit": "logo"
     },
     {
       "id": "t12",
       "place": "page",
       "who": "Phillip",
       "role": "SuperValu",
-      "text": "“A huge thanks to Marta for making our store opening so special. We were impressed immediately, she got the children into the party spirit instantly. Magic, face painting, balloons and above all fun in our busy store!”"
+      "text": "“A huge thanks to Marta for making our store opening so special. We were impressed immediately, she got the children into the party spirit instantly. Magic, face painting, balloons and above all fun in our busy store!”",
+      "img": "assets/logo_supervalu.webp",
+      "fit": "logo"
     },
     {
       "id": "t13",
@@ -228,14 +250,18 @@
       "place": "page",
       "who": "Lynn",
       "role": "Liffey Valley",
-      "text": "“Marta was the most popular addition to our Alice In Wonderland Theme. We had over 500+ visitors that day and she did a great job entertaining the children (and adults too) with her magic show and balloon twisting!”"
+      "text": "“Marta was the most popular addition to our Alice In Wonderland Theme. We had over 500+ visitors that day and she did a great job entertaining the children (and adults too) with her magic show and balloon twisting!”",
+      "img": "assets/live/c-liffey-valley.webp",
+      "fit": "logo"
     },
     {
       "id": "t17",
       "place": "page",
       "who": "Marlene",
       "role": "Vodafone",
-      "text": "“Just wanted to send a quick email to thank you for your services last weekend. You did more than we expected and we really appreciate it! The children had a wonderful time and they are very fond of you - children fall in love with you instantly!”"
+      "text": "“Just wanted to send a quick email to thank you for your services last weekend. You did more than we expected and we really appreciate it! The children had a wonderful time and they are very fond of you - children fall in love with you instantly!”",
+      "img": "assets/logo_vodafone.webp",
+      "fit": "logo"
     }
   ],
   "clients": [
@@ -306,6 +332,102 @@
     {
       "name": "Vodafone",
       "img": "assets/logo_vodafone.webp"
+    },
+    {
+      "name": "Liffey Valley",
+      "img": "assets/live/c-liffey-valley.webp"
+    },
+    {
+      "name": "Sq.",
+      "img": "assets/live/c-sq.webp"
+    },
+    {
+      "name": "Credit Union",
+      "img": "assets/live/c-credit-union.webp"
+    },
+    {
+      "name": "BOC",
+      "img": "assets/live/c-boc.webp"
+    },
+    {
+      "name": "Ellucian",
+      "img": "assets/live/c-ellucian.webp"
+    },
+    {
+      "name": "Giraffe",
+      "img": "assets/live/c-giraffe.webp"
+    },
+    {
+      "name": "O2",
+      "img": "assets/live/c-o2.webp"
+    },
+    {
+      "name": "Zalando",
+      "img": "assets/live/c-zalando.webp"
+    },
+    {
+      "name": "KBC",
+      "img": "assets/live/c-kbc.webp"
+    },
+    {
+      "name": "B&Q",
+      "img": "assets/live/c-b-q.webp"
+    },
+    {
+      "name": "Fine Gael",
+      "img": "assets/live/c-fine-gael.webp"
+    },
+    {
+      "name": "Musgrave Market Place",
+      "img": "assets/live/c-musgrave-market-place.webp"
+    },
+    {
+      "name": "An Garda Síochána",
+      "img": "assets/live/c-an-garda-s-och-na.webp"
+    },
+    {
+      "name": "St Michael's House",
+      "img": "assets/live/c-st-michael-s-house.webp"
+    },
+    {
+      "name": "Ardmore",
+      "img": "assets/live/c-ardmore.webp"
+    },
+    {
+      "name": "Crowne Plaza",
+      "img": "assets/live/c-crowne-plaza.webp"
+    },
+    {
+      "name": "Windsor",
+      "img": "assets/live/c-windsor.webp"
+    },
+    {
+      "name": "Kepak",
+      "img": "assets/live/c-kepak.webp"
+    },
+    {
+      "name": "Equipet",
+      "img": "assets/live/c-equipet.webp"
+    },
+    {
+      "name": "Peugeot",
+      "img": "assets/live/c-peugeot.webp"
+    },
+    {
+      "name": "Paul",
+      "img": "assets/live/c-paul.webp"
+    },
+    {
+      "name": "MAO",
+      "img": "assets/live/c-mao.webp"
+    },
+    {
+      "name": "Cocoon",
+      "img": "assets/live/c-cocoon.webp"
+    },
+    {
+      "name": "Corvil",
+      "img": "assets/live/c-corvil.webp"
     }
   ],
   "awards": [
