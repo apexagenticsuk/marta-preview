@@ -534,32 +534,32 @@
       "cap": ""
     },
     {
-      "img": "assets/live/g-live-01.webp",
+      "img": "assets/live/g_live_01.webp",
       "alt": "Children and a magician on a stage at a party, in pink light",
       "cap": ""
     },
     {
-      "img": "assets/live/g-live-02.webp",
+      "img": "assets/live/g_live_02.webp",
       "alt": "Black and white photo of delighted children watching the show",
       "cap": ""
     },
     {
-      "img": "assets/live/g-live-03.webp",
+      "img": "assets/live/g_live_03.webp",
       "alt": "Marta in her red jacket with a child with a painted face and a witch hat",
       "cap": ""
     },
     {
-      "img": "assets/live/g-live-04.webp",
+      "img": "assets/live/g_live_04.webp",
       "alt": "A girl in a red dress with face paint smiling",
       "cap": ""
     },
     {
-      "img": "assets/live/g-live-05.webp",
+      "img": "assets/live/g_live_05.webp",
       "alt": "A little girl with face paint and a blue balloon hat holding a balloon animal",
       "cap": ""
     },
     {
-      "img": "assets/live/g-live-06.webp",
+      "img": "assets/live/g_live_06.webp",
       "alt": "Black and white photo of children laughing at a magic show",
       "cap": ""
     }
@@ -1900,12 +1900,12 @@
       208
     ],
     "assets/live/marta-red-jacket.webp": [
-      640,
-      800
+      560,
+      746
     ],
     "assets/live/marta-red-jacket-320.webp": [
-      320,
-      400
+      280,
+      373
     ],
     "assets/live/ig-11.webp": [
       640,
@@ -1915,51 +1915,79 @@
       360,
       360
     ],
-    "assets/live/g-live-01.webp": [
-      900,
-      1350
+    "assets/live/occ-birthday.webp": [
+      200,
+      200
     ],
-    "assets/live/g-live-01-480.webp": [
+    "assets/live/occ-communion.webp": [
+      200,
+      200
+    ],
+    "assets/live/occ-weddings.webp": [
+      200,
+      200
+    ],
+    "assets/live/occ-corporate.webp": [
+      200,
+      200
+    ],
+    "assets/live/occ-christmas.webp": [
+      200,
+      200
+    ],
+    "assets/live/occ-festivals.webp": [
+      200,
+      200
+    ],
+    "assets/live/occ-online.webp": [
+      200,
+      200
+    ],
+    "assets/live/g_live_01.webp": [
+      640,
+      960
+    ],
+    "assets/live/g_live_01_480.webp": [
       480,
       720
     ],
-    "assets/live/g-live-02.webp": [
+    "assets/live/g_live_02.webp": [
       900,
       600
     ],
-    "assets/live/g-live-02-480.webp": [
+    "assets/live/g_live_02_480.webp": [
       480,
       320
     ],
-    "assets/live/g-live-03.webp": [
+    "assets/live/g_live_03.webp": [
       900,
       675
     ],
-    "assets/live/g-live-03-480.webp": [
+    "assets/live/g_live_03_480.webp": [
       480,
       360
     ],
-    "assets/live/g-live-04.webp": [
+    "assets/live/g_live_04.webp": [
       900,
       600
     ],
-    "assets/live/g-live-04-480.webp": [
+    "assets/live/g_live_04_480.webp": [
       480,
       320
     ],
-    "assets/live/g-live-05.webp": [
-      900,
-      1350
+    "assets/live/g_live_05.webp": [
+      468,
+      702
     ],
-    "assets/live/g-live-05-480.webp": [
-      480,
-      720
+    "assets/live/g_live_05_480.webp": [
+      468,
+      702
     ],
-    "assets/live/g-live-06.webp": [
+    "assets/live/g_live_06.webp": [
       900,
       600
     ],
-    "assets/live/g-live-06-480.webp": [
+    "assets/live/g_live_06_480.webp": [
       480,
       320
     ]

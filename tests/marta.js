@@ -60,7 +60,7 @@ for(const w of [320,360,375,390,640,768,1280]){const ctx=await b.newContext({vie
  await p.goto(`${base}/gallery.html`);const gl=await p.evaluate(()=>document.querySelectorAll('.ggrid figure').length);ok('gallery shows every photo in content.json',gl===C.gallery.length,gl+' vs '+C.gallery.length);
  await p.goto(`${base}/testimonials.html`);const tl=await p.evaluate(()=>document.querySelectorAll('.rev').length);ok('testimonials page shows all reviews',tl===C.testimonials.length,tl+' vs '+C.testimonials.length);
  await p.goto(`${base}/blog.html`);const pl=await p.evaluate(()=>document.querySelectorAll('article.post').length);ok('blog shows every post',pl===C.posts.length,pl+' vs '+C.posts.length);
- await p.goto(`${base}/index.html`);const sl=await p.evaluate(()=>document.querySelectorAll('.svc').length);ok('home shows every service',sl===C.services.length&&C.services.length===2,sl+' vs '+C.services.length);
+ await p.goto(`${base}/index.html`);const sl=await p.evaluate(()=>document.querySelectorAll('.occgrid li').length);ok('home shows the seven occasion tiles (services text lives in What I do)',sl===7&&C.services.length===2,sl);
  ok('sites[] lists the three sites',Array.isArray(C.sites)&&C.sites.length===3&&C.sites.every(s=>/^https:\/\//.test(s.live)&&/^https:\/\/apexagenticsuk\.github\.io\/[\w-]+\/$/.test(s.preview)));
  ok('siteUrl is the marta-preview address',C.siteUrl==='https://apexagenticsuk.github.io/marta-preview/');
  await ctx.close();}

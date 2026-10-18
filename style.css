@@ -370,3 +370,39 @@ html.mclassic .mnav{position:absolute;top:100%;height:auto;overflow:visible;back
 .igtiles a.igvid{position:relative;background:#05030a;border:1px solid #3a2570;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
 .igtiles .igvid img{aspect-ratio:1/1;object-fit:cover;object-position:center}
 .igtiles .igcap{position:absolute;left:0;right:0;bottom:0;padding:26px 8px 8px;background:linear-gradient(to top,rgba(5,3,10,.96) 55%,rgba(5,3,10,0));color:#fff;font-size:12px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden}
+
+/* occasions: seven equal tiles with Marta's own artwork */
+.occ{padding:34px 0 30px}
+.occgrid{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.occgrid li{flex:0 0 calc(50% - 6px);min-width:0}
+.occgrid a{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;height:100%;min-height:150px;padding:14px 8px 12px;border-radius:18px;background:#150537;border:2px solid #3a2570;color:#fff;text-decoration:none;font:700 14px/1.2 var(--body);text-transform:uppercase;letter-spacing:.03em;text-align:center}
+.occgrid a:hover,.occgrid a:focus-visible{border-color:#ffd23f;background:#1f0a4d}
+.occgrid img{width:96px;height:96px;object-fit:contain;display:block;border-radius:10px}
+@media(min-width:600px){.occgrid li{flex-basis:calc(33.333% - 8px)}}
+@media(min-width:900px){.occgrid li{flex-basis:calc(25% - 9px)}.occgrid img{width:110px;height:110px}.occgrid a{font-size:15px}}
+/* about */
+.aboutrow{display:flex;gap:16px;align-items:center;padding:18px 16px;line-height:1.4;color:#fff}
+.aboutpic{flex:0 0 34%;max-width:240px;width:34%;height:auto;object-fit:contain}
+.abouttxt{flex:1;min-width:0}.abouthappy{font:700 clamp(21px,4.6vw,30px)/1.2 var(--head);color:#ffd23f;margin:0 0 8px}
+.meetpic{display:block;width:100%;max-width:420px;height:auto;aspect-ratio:3/2;margin-top:12px;border-radius:14px;border:2px solid #3a2570}
+@media(max-width:560px){.meetpic{display:none}}
+.handle{display:block;text-align:center;margin:0 auto 14px;line-height:0}.handle img{width:100%;max-width:500px;height:auto;aspect-ratio:500/208}
+.partyban{display:block;width:100%;max-width:800px;height:auto;aspect-ratio:800/300;margin:0 auto 16px;border-radius:14px}
+@media(min-width:900px){.hero2.hero3{padding:10px 0 34px}.hero3 .wrap{align-items:center}.mhead{padding-bottom:0}.hero3 .herocta{margin:6px 0 12px}}
+@media(max-width:699px){.occgrid{gap:10px}.occgrid li{flex-basis:calc(33.333% - 7px)}.occgrid a{min-height:118px;padding:10px 4px 8px;font-size:11px;gap:4px}.occgrid img{width:64px;height:64px}.occ{padding:22px 0 18px}}
+.aboutban .aboutpic{width:34%;max-width:240px;height:auto;aspect-ratio:560/746;object-fit:contain;display:block}
+.aboutban .meetpic{width:100%;max-width:420px;height:auto;aspect-ratio:3/2;display:block}
+.aboutban .aboutrow{align-items:center;justify-content:center;max-width:900px;margin:0 auto}
+@media(max-width:699px){.aboutban .aboutpic{width:40%}}
+/* shorter phone page */
+@media(max-width:699px){
+.igtiles{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.igtiles .igcap{font-size:9px;padding:14px 4px 4px;-webkit-line-clamp:4}
+.handle img{max-width:300px}
+.cl-home .logos-row,.clients .logos-row{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}
+.logos-row li{min-height:56px;padding:5px}.logos-row img{max-height:40px}
+.hero3 .heropic img{max-width:min(70%,300px)}
+.band{padding-top:26px;padding-bottom:26px}
+.what .wrap,.joy .wrap{padding-top:0;padding-bottom:0}
+.trust{padding:10px 0}.trustlist{gap:6px}
+}

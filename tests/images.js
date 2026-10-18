@@ -12,7 +12,7 @@ ok('blog page uses the live frame and background',/blogban/.test(fs.readFileSync
 const src=s=>(raw.match(new RegExp('src="'+s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'"','g'))||[]).length;
 const counts={};const cat=(k,v,exp)=>{counts[k]=v;ok('count '+k+' = '+exp,v===exp,v);};
 cat('header artwork',src('assets/live/header-art.webp'),1);
-cat('six service icons',(raw.match(/assets\/live\/icon-(birthday|communion|weddings|corporate|christmas|festivals)\.webp/g)||[]).length,6);
+cat('six service icons',(raw.match(/assets\/live\/occ-(birthday|communion|weddings|corporate|christmas|festivals)\.webp/g)||[]).length,6);
 cat('hero (magician with children)',src('assets/live/hero-kids.webp'),1);
 cat('about banner',src('assets/live/about-banner.webp'),1);
 cat('instagram banner',src('assets/live/instagram-banner.webp'),1);
